@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,21 +7,21 @@
 <meta name="description" content="DesignMitra AI - Premium Creative Design Studio">
 <title>DesignMitra AI | Create • Promote • Grow</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
+
 :root{
-  --bg:#080806;
-  --bg2:#11100d;
-  --card:#15130f;
-  --gold:#d9aa55;
-  --gold2:#f5d48a;
+  --bg:#070605;
+  --bg2:#0e0c09;
+  --card:#14110d;
+  --card2:#19150f;
+  --gold:#d6a64d;
+  --gold2:#f5d58d;
   --cream:#fff5df;
-  --muted:#bdb5a5;
-  --line:rgba(217,170,85,.28);
-  --shadow:0 20px 60px rgba(0,0,0,.55);
+  --muted:#b9ae9b;
+  --line:rgba(214,166,77,.30);
+  --green:#25d366;
+  --red:#e94b5f;
 }
 
 *{
@@ -35,12 +36,16 @@ html{
 
 body{
   background:
-    radial-gradient(circle at 80% 15%,rgba(217,170,85,.08),transparent 25%),
-    radial-gradient(circle at 10% 60%,rgba(217,170,85,.05),transparent 30%),
+    radial-gradient(circle at 80% 15%,rgba(214,166,77,.10),transparent 28%),
+    radial-gradient(circle at 10% 70%,rgba(214,166,77,.06),transparent 30%),
     var(--bg);
   color:var(--cream);
   font-family:Inter,Arial,sans-serif;
   overflow-x:hidden;
+}
+
+body.modal-open{
+  overflow:hidden;
 }
 
 a{
@@ -48,8 +53,11 @@ a{
   text-decoration:none;
 }
 
-button{
+button,input,select,textarea{
   font-family:inherit;
+}
+
+button{
   cursor:pointer;
 }
 
@@ -66,61 +74,61 @@ header{
   left:0;
   width:100%;
   z-index:1000;
-  background:rgba(5,5,4,.88);
+  background:rgba(5,5,4,.90);
   backdrop-filter:blur(18px);
   border-bottom:1px solid var(--line);
 }
 
 .nav{
-  min-height:70px;
+  min-height:72px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:25px;
+  gap:20px;
 }
 
 .logo{
   display:flex;
   align-items:center;
   gap:10px;
+  flex-shrink:0;
 }
 
 .logo-mark{
-  width:43px;
-  height:43px;
-  border:2px solid var(--gold);
+  width:44px;
+  height:44px;
+  border:2px solid var(--gold2);
   border-radius:50%;
   display:grid;
   place-items:center;
   color:var(--gold2);
   font-family:Georgia,serif;
-  font-size:22px;
-  box-shadow:0 0 20px rgba(217,170,85,.16);
+  font-size:24px;
+  box-shadow:0 0 25px rgba(214,166,77,.16);
 }
 
 .logo-text strong{
   display:block;
   font-family:"Cormorant Garamond",serif;
   font-size:25px;
-  line-height:20px;
-  color:var(--cream);
+  line-height:21px;
 }
 
 .logo-text small{
   color:var(--gold2);
-  font-size:9px;
+  font-size:8px;
   letter-spacing:2px;
 }
 
 .nav-links{
   display:flex;
   align-items:center;
-  gap:24px;
+  gap:21px;
 }
 
 .nav-links a{
-  color:#ddd4c1;
-  font-size:13px;
+  color:#d5ccbc;
+  font-size:12px;
   transition:.3s;
 }
 
@@ -131,63 +139,74 @@ header{
 .email-btn{
   border:1px solid var(--gold);
   border-radius:30px;
-  padding:10px 16px;
-  font-size:12px;
+  padding:10px 14px;
+  font-size:11px;
   color:var(--gold2);
+  white-space:nowrap;
 }
 
 .menu{
   display:none;
-  font-size:25px;
+  border:1px solid var(--line);
+  background:#12100d;
   color:var(--gold2);
-  background:none;
-  border:0;
+  border-radius:8px;
+  font-size:22px;
+  width:42px;
+  height:42px;
 }
 
 /* ================= HERO ================= */
 
 .hero{
-  min-height:730px;
+  min-height:760px;
   padding-top:120px;
   display:flex;
   align-items:center;
   position:relative;
   overflow:hidden;
+  border-bottom:1px solid var(--line);
+  background:
+    linear-gradient(90deg,#050403 0%,rgba(5,4,3,.96) 35%,rgba(5,4,3,.50) 70%,rgba(5,4,3,.85) 100%);
 }
 
-.hero:before{
+.hero::after{
   content:"";
   position:absolute;
-  inset:0;
-  background:
-    linear-gradient(90deg,rgba(5,5,4,.98) 0%,rgba(5,5,4,.82) 42%,rgba(5,5,4,.18) 100%),
-    radial-gradient(circle at 75% 50%,rgba(217,170,85,.12),transparent 35%);
-  pointer-events:none;
+  width:600px;
+  height:600px;
+  border-radius:50%;
+  right:-180px;
+  top:80px;
+  background:rgba(214,166,77,.10);
+  filter:blur(100px);
 }
 
 .hero-content{
+  width:52%;
   position:relative;
-  z-index:2;
-  width:50%;
+  z-index:5;
 }
 
 .badge{
   display:inline-flex;
+  align-items:center;
+  gap:7px;
   border:1px solid var(--line);
-  padding:9px 16px;
+  padding:8px 14px;
   border-radius:30px;
   color:var(--gold2);
-  font-size:12px;
-  margin-bottom:22px;
-  background:rgba(217,170,85,.06);
+  background:rgba(214,166,77,.06);
+  font-size:11px;
+  margin-bottom:20px;
 }
 
 .hero h1{
   font-family:"Cormorant Garamond",serif;
-  font-size:clamp(50px,6vw,78px);
-  line-height:.88;
+  font-size:clamp(54px,6vw,82px);
+  line-height:.86;
   margin-bottom:25px;
-  font-weight:700;
+  letter-spacing:-1px;
 }
 
 .hero h1 span{
@@ -196,101 +215,119 @@ header{
 }
 
 .hero p{
-  max-width:570px;
-  color:#c7c0b2;
+  color:#c9c0b0;
+  max-width:580px;
   line-height:1.8;
-  font-size:15px;
+  font-size:14px;
 }
 
 .hero-buttons{
   display:flex;
-  gap:13px;
-  margin-top:30px;
   flex-wrap:wrap;
+  gap:12px;
+  margin-top:28px;
 }
 
 .btn{
-  border:1px solid var(--gold);
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
   padding:13px 22px;
+  border:1px solid var(--gold);
   border-radius:30px;
-  color:#17120a;
   background:linear-gradient(135deg,var(--gold2),var(--gold));
-  font-weight:700;
+  color:#161108;
+  font-size:12px;
+  font-weight:800;
   transition:.3s;
 }
 
 .btn:hover{
   transform:translateY(-3px);
-  box-shadow:0 10px 30px rgba(217,170,85,.2);
+  box-shadow:0 12px 30px rgba(214,166,77,.20);
 }
 
 .btn-outline{
-  background:transparent;
   color:var(--gold2);
+  background:transparent;
 }
 
-/* HERO SHOWCASE */
+/* HERO ART */
 
 .hero-art{
   position:absolute;
-  right:2%;
-  top:110px;
-  width:52%;
-  height:560px;
+  right:1%;
+  top:105px;
+  width:53%;
+  height:590px;
+  z-index:2;
 }
 
 .glow{
   position:absolute;
-  width:420px;
-  height:420px;
+  width:430px;
+  height:430px;
   border-radius:50%;
-  background:rgba(217,170,85,.12);
+  background:rgba(214,166,77,.11);
   filter:blur(70px);
-  top:70px;
-  left:150px;
+  left:170px;
+  top:80px;
 }
 
-.mockup{
+.design-card{
   position:absolute;
-  border:1px solid rgba(245,212,138,.45);
-  background:#17140e;
-  border-radius:14px;
-  box-shadow:var(--shadow);
   overflow:hidden;
+  border:1px solid rgba(245,213,141,.48);
+  background:#15110b;
+  box-shadow:0 30px 70px rgba(0,0,0,.65);
 }
 
-.mockup img{
+.design-card img{
   width:100%;
   height:100%;
   object-fit:cover;
 }
 
-.poster-one{
+.food-card{
   width:220px;
-  height:310px;
+  height:300px;
   left:20px;
-  top:70px;
-  transform:rotate(-7deg);
-  animation:float1 5s ease-in-out infinite;
+  top:95px;
+  transform:rotate(-8deg);
+  animation:floatA 5s ease-in-out infinite;
+  border-radius:14px;
 }
 
-.phone{
+.wedding-card{
+  width:210px;
+  height:290px;
+  right:20px;
+  top:55px;
+  transform:rotate(7deg);
+  animation:floatB 5s ease-in-out infinite;
+  border-radius:14px;
+}
+
+.phone-card{
   width:235px;
-  height:430px;
-  left:245px;
-  top:50px;
-  border-radius:30px;
+  height:450px;
+  left:235px;
+  top:55px;
+  border-radius:31px;
   padding:8px;
-  animation:float2 5s ease-in-out infinite;
+  animation:floatC 5s ease-in-out infinite;
 }
 
-.phone-inner{
-  width:100%;
+.phone-screen{
   height:100%;
+  width:100%;
   border-radius:24px;
-  background:
-    linear-gradient(145deg,#251b0d,#080806);
   border:1px solid var(--line);
+  background:
+    radial-gradient(circle at 30% 25%,#6d4c20,transparent 25%),
+    radial-gradient(circle at 70% 70%,#3e2810,transparent 28%),
+    linear-gradient(145deg,#16110a,#050403);
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -298,102 +335,134 @@ header{
   text-align:center;
 }
 
-.phone-inner .bigD{
+.bigD{
+  width:75px;
+  height:75px;
+  border:2px solid var(--gold2);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
   font-family:Georgia,serif;
-  font-size:65px;
+  font-size:48px;
   color:var(--gold2);
+  margin-bottom:18px;
 }
 
-.phone-inner h3{
+.phone-screen h3{
   font-family:"Cormorant Garamond",serif;
   font-size:29px;
 }
 
-.phone-inner p{
-  font-size:10px;
-  margin-top:8px;
+.phone-screen p{
+  font-size:9px;
+  margin-top:5px;
 }
 
-.invite{
-  width:220px;
-  height:300px;
-  right:5px;
-  top:45px;
-  transform:rotate(6deg);
-  animation:float3 5s ease-in-out infinite;
+.phone-screen .gold-copy{
+  color:var(--gold2);
+  font-family:"Cormorant Garamond",serif;
+  font-size:20px;
+  margin-top:20px;
 }
 
-.banner{
+.small-banner{
   width:270px;
   height:145px;
-  right:35px;
-  bottom:30px;
+  right:50px;
+  bottom:40px;
   transform:rotate(-3deg);
+  border-radius:12px;
+  animation:floatB 6s ease-in-out infinite;
 }
 
-@keyframes float1{
-  0%,100%{transform:rotate(-7deg) translateY(0)}
+@keyframes floatA{
+  0%,100%{transform:rotate(-8deg) translateY(0)}
   50%{transform:rotate(-5deg) translateY(-15px)}
 }
-@keyframes float2{
+
+@keyframes floatB{
+  0%,100%{transform:rotate(7deg) translateY(0)}
+  50%{transform:rotate(4deg) translateY(-13px)}
+}
+
+@keyframes floatC{
   0%,100%{transform:translateY(0)}
   50%{transform:translateY(12px)}
 }
-@keyframes float3{
-  0%,100%{transform:rotate(6deg) translateY(0)}
-  50%{transform:rotate(4deg) translateY(-12px)}
+
+/* ================= TRUST ================= */
+
+.trust{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  margin-top:35px;
 }
 
-/* ================= COMMON ================= */
+.trust-item{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  color:#d4c9b7;
+  font-size:10px;
+}
+
+.trust-item b{
+  color:var(--gold2);
+  font-size:18px;
+}
+
+/* ================= SECTIONS ================= */
 
 section{
   padding:80px 0;
-  border-top:1px solid rgba(217,170,85,.12);
+  border-bottom:1px solid rgba(214,166,77,.13);
 }
 
 .section-title{
   text-align:center;
-  margin-bottom:45px;
+  margin-bottom:40px;
 }
 
 .section-title .mini{
   color:var(--gold2);
   text-transform:uppercase;
   letter-spacing:3px;
-  font-size:10px;
+  font-size:9px;
 }
 
 .section-title h2{
   font-family:"Cormorant Garamond",serif;
-  font-size:48px;
-  margin:8px 0;
+  font-size:50px;
+  margin:6px 0;
 }
 
 .section-title p{
   color:var(--muted);
-  font-size:13px;
+  font-size:12px;
 }
 
-/* ================= CATEGORIES ================= */
+/* ================= CATEGORY ================= */
 
 .categories{
   display:grid;
   grid-template-columns:repeat(9,1fr);
-  gap:10px;
+  gap:9px;
 }
 
 .category{
   min-height:100px;
   border:1px solid var(--line);
   border-radius:12px;
-  background:linear-gradient(145deg,#17140f,#0c0b09);
+  background:linear-gradient(145deg,#18140e,#0b0907);
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
   text-align:center;
-  padding:10px;
+  padding:9px;
   transition:.35s;
+  user-select:none;
 }
 
 .category:hover{
@@ -402,13 +471,15 @@ section{
   box-shadow:0 15px 30px rgba(0,0,0,.35);
 }
 
-.category .icon{
+.category-icon{
   font-size:25px;
+  color:var(--gold2);
   margin-bottom:8px;
 }
 
 .category span{
-  font-size:11px;
+  font-size:10px;
+  color:#e4dac8;
 }
 
 /* ================= SERVICES ================= */
@@ -420,80 +491,82 @@ section{
 }
 
 .service{
+  min-height:205px;
   border:1px solid var(--line);
-  background:linear-gradient(145deg,#17140f,#0d0c09);
   border-radius:15px;
-  padding:20px;
-  min-height:190px;
-  transition:.35s;
+  padding:21px;
+  background:linear-gradient(145deg,#18140e,#0c0a08);
   position:relative;
   overflow:hidden;
+  transition:.35s;
+  cursor:pointer;
 }
 
-.service:after{
+.service::after{
   content:"";
   position:absolute;
-  width:100px;
-  height:100px;
-  background:rgba(217,170,85,.08);
+  width:120px;
+  height:120px;
+  right:-55px;
+  top:-55px;
   border-radius:50%;
-  right:-40px;
-  top:-40px;
+  background:rgba(214,166,77,.08);
 }
 
 .service:hover{
   transform:translateY(-6px);
   border-color:var(--gold2);
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
 }
 
 .service-icon{
-  font-size:27px;
+  font-size:28px;
   color:var(--gold2);
-  margin-bottom:18px;
+  margin-bottom:16px;
 }
 
 .service h3{
   font-family:"Cormorant Garamond",serif;
-  font-size:23px;
+  font-size:25px;
 }
 
 .service p{
   color:var(--muted);
   font-size:11px;
-  line-height:1.6;
+  line-height:1.7;
   margin:7px 0 15px;
 }
 
-.learn{
+.view{
   color:var(--gold2);
-  font-size:11px;
-  background:none;
-  border:0;
+  font-size:10px;
+  font-weight:700;
 }
 
-/* ================= SAMPLES ================= */
+/* ================= GALLERY ================= */
 
 .filters{
   display:flex;
   justify-content:center;
   flex-wrap:wrap;
   gap:8px;
-  margin-bottom:30px;
+  margin-bottom:28px;
 }
 
 .filter{
   border:1px solid var(--line);
   background:transparent;
-  color:#cfc5b2;
-  padding:8px 15px;
+  color:#cfc4b1;
   border-radius:20px;
-  font-size:11px;
+  padding:8px 15px;
+  font-size:10px;
+  transition:.3s;
 }
 
-.filter.active,
-.filter:hover{
+.filter:hover,
+.filter.active{
   background:var(--gold);
-  color:#100d08;
+  color:#100d07;
 }
 
 .gallery{
@@ -503,13 +576,13 @@ section{
 }
 
 .sample{
-  aspect-ratio:3/4;
-  border-radius:13px;
-  overflow:hidden;
   position:relative;
-  cursor:pointer;
+  aspect-ratio:3/4;
+  overflow:hidden;
   border:1px solid var(--line);
-  background:#17130e;
+  border-radius:13px;
+  cursor:pointer;
+  background:#17120c;
 }
 
 .sample img{
@@ -525,14 +598,17 @@ section{
 
 .sample-overlay{
   position:absolute;
-  inset:auto 0 0;
-  padding:25px 10px 10px;
-  background:linear-gradient(transparent,rgba(0,0,0,.9));
+  left:0;
+  right:0;
+  bottom:0;
+  padding:35px 11px 11px;
+  background:linear-gradient(transparent,rgba(0,0,0,.95));
   font-size:11px;
 }
 
 .sample-overlay small{
   color:var(--gold2);
+  font-size:9px;
 }
 
 /* ================= FEATURE ================= */
@@ -540,19 +616,17 @@ section{
 .feature{
   display:grid;
   grid-template-columns:1.1fr 1fr 1fr;
-  gap:20px;
-  align-items:stretch;
+  gap:18px;
 }
 
-.feature-main{
+.feature-image{
   min-height:390px;
   border:1px solid var(--line);
   border-radius:18px;
   overflow:hidden;
-  position:relative;
 }
 
-.feature-main img{
+.feature-image img{
   width:100%;
   height:100%;
   object-fit:cover;
@@ -560,38 +634,38 @@ section{
 
 .feature-info,
 .get-box{
+  padding:28px;
   border:1px solid var(--line);
   border-radius:18px;
-  background:linear-gradient(145deg,#17140f,#0d0c09);
-  padding:30px;
+  background:linear-gradient(145deg,#17130d,#0b0907);
 }
 
 .feature-info h2{
   font-family:"Cormorant Garamond",serif;
-  font-size:42px;
   color:var(--gold2);
+  font-size:43px;
 }
 
-.feature-info p{
+.feature-info p,
+.get-box p{
   color:var(--muted);
+  font-size:12px;
   line-height:1.8;
-  font-size:13px;
-  margin:15px 0;
+  margin:12px 0;
 }
 
 .checks{
   list-style:none;
-  display:grid;
-  gap:12px;
-  margin:20px 0;
+  margin:18px 0;
 }
 
 .checks li{
-  color:#d8d0c0;
-  font-size:12px;
+  color:#ddd3c1;
+  font-size:11px;
+  padding:7px 0;
 }
 
-.checks li:before{
+.checks li::before{
   content:"✓";
   color:var(--gold2);
   margin-right:8px;
@@ -599,110 +673,185 @@ section{
 
 .get-box h3{
   font-family:"Cormorant Garamond",serif;
-  font-size:28px;
+  font-size:29px;
 }
 
 .price{
+  font-family:"Cormorant Garamond",serif;
   font-size:42px;
   color:var(--gold2);
-  margin:25px 0;
-  font-family:"Cormorant Garamond",serif;
+  margin:18px 0;
 }
 
-/* ================= WHY ================= */
+/* ================= INFO ================= */
 
 .three{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:18px;
+  gap:17px;
 }
 
 .info-card{
+  padding:28px;
   border:1px solid var(--line);
   border-radius:17px;
-  padding:28px;
-  background:#11100d;
+  background:#11100c;
 }
 
 .info-card h3{
   font-family:"Cormorant Garamond",serif;
-  font-size:27px;
   color:var(--gold2);
-  margin-bottom:15px;
+  font-size:28px;
+  margin-bottom:10px;
 }
 
 .info-card p{
   color:var(--muted);
-  font-size:12px;
   line-height:1.8;
+  font-size:12px;
 }
 
 .steps{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:12px;
+  gap:15px;
 }
 
 .step{
   text-align:center;
+  padding:20px;
 }
 
 .number{
-  width:50px;
-  height:50px;
-  margin:0 auto 15px;
+  width:54px;
+  height:54px;
+  margin:auto auto 15px;
   border:1px solid var(--gold);
   border-radius:50%;
   display:grid;
   place-items:center;
   color:var(--gold2);
   font-family:Georgia,serif;
-  font-size:20px;
+  font-size:19px;
+}
+
+/* ================= PACKAGES ================= */
+
+.package{
+  position:relative;
+}
+
+.package.popular{
+  border-color:var(--gold2);
+  box-shadow:0 0 30px rgba(214,166,77,.08);
+}
+
+.popular-label{
+  position:absolute;
+  top:-12px;
+  right:20px;
+  background:var(--gold);
+  color:#100c06;
+  border-radius:20px;
+  padding:5px 12px;
+  font-size:9px;
+  font-weight:800;
+}
+
+/* ================= FAQ ================= */
+
+.faq{
+  max-width:850px;
+  margin:auto;
+}
+
+.faq-item{
+  border:1px solid var(--line);
+  border-radius:12px;
+  margin-bottom:10px;
+  overflow:hidden;
+  background:#11100c;
+}
+
+.faq-question{
+  width:100%;
+  border:0;
+  background:none;
+  color:var(--cream);
+  text-align:left;
+  padding:18px;
+  display:flex;
+  justify-content:space-between;
+  font-size:12px;
+  font-weight:600;
+}
+
+.faq-answer{
+  display:none;
+  padding:0 18px 18px;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.7;
+}
+
+.faq-item.open .faq-answer{
+  display:block;
+}
+
+.faq-item.open .plus{
+  transform:rotate(45deg);
 }
 
 /* ================= CONTACT ================= */
 
 .contact-box{
-  border:1px solid var(--line);
-  border-radius:20px;
-  padding:40px;
-  background:
-    radial-gradient(circle at 90% 20%,rgba(217,170,85,.1),transparent 35%),
-    #11100d;
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:40px;
+  gap:35px;
+  padding:40px;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:
+    radial-gradient(circle at 90% 20%,rgba(214,166,77,.12),transparent 35%),
+    #11100c;
 }
 
 .contact-box h2{
   font-family:"Cormorant Garamond",serif;
-  font-size:48px;
+  font-size:50px;
+}
+
+.contact-box h2 span{
+  color:var(--gold2);
 }
 
 .contact-box p{
   color:var(--muted);
+  font-size:12px;
   line-height:1.8;
-  font-size:13px;
-  margin:15px 0;
+  margin:14px 0;
 }
 
 .form{
   display:grid;
-  gap:12px;
+  gap:11px;
 }
 
-input,select,textarea{
+input,
+select,
+textarea{
   width:100%;
   padding:14px;
   border-radius:9px;
   border:1px solid var(--line);
-  background:#080806;
-  color:white;
   outline:none;
+  background:#080705;
+  color:white;
+  font-size:12px;
 }
 
 textarea{
-  min-height:100px;
+  min-height:110px;
   resize:vertical;
 }
 
@@ -710,7 +859,7 @@ textarea{
 
 footer{
   padding:35px 0;
-  border-top:1px solid var(--line);
+  background:#050403;
 }
 
 .footer{
@@ -720,23 +869,34 @@ footer{
   gap:20px;
 }
 
+.footer-links{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.footer-links a{
+  color:#aaa293;
+  font-size:10px;
+}
+
 .footer p{
-  color:#8f897d;
-  font-size:11px;
+  color:#777066;
+  font-size:9px;
 }
 
 /* ================= MODAL ================= */
 
 .modal{
+  display:none;
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,.82);
+  z-index:3000;
+  background:rgba(0,0,0,.86);
   backdrop-filter:blur(12px);
-  z-index:2000;
-  display:none;
   align-items:center;
   justify-content:center;
-  padding:20px;
+  padding:18px;
 }
 
 .modal.show{
@@ -745,24 +905,28 @@ footer{
 
 .modal-box{
   width:min(900px,100%);
-  max-height:90vh;
+  max-height:92vh;
   overflow:auto;
-  background:#12100c;
   border:1px solid var(--gold);
   border-radius:20px;
-  padding:30px;
-  position:relative;
+  padding:28px;
+  background:#110e09;
   box-shadow:0 30px 100px #000;
+  position:relative;
 }
 
 .close{
   position:absolute;
-  top:15px;
-  right:18px;
-  background:none;
-  border:0;
+  right:16px;
+  top:12px;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  border:1px solid var(--line);
+  background:#090806;
   color:white;
-  font-size:25px;
+  font-size:22px;
+  z-index:5;
 }
 
 .modal-grid{
@@ -773,6 +937,8 @@ footer{
 
 .modal-img{
   width:100%;
+  max-height:470px;
+  object-fit:cover;
   border-radius:14px;
   border:1px solid var(--line);
 }
@@ -780,36 +946,84 @@ footer{
 .modal-box h2{
   font-family:"Cormorant Garamond",serif;
   color:var(--gold2);
-  font-size:42px;
+  font-size:43px;
+  padding-right:40px;
 }
 
 .modal-box p{
-  color:#bbb3a5;
+  color:var(--muted);
+  font-size:12px;
   line-height:1.8;
-  font-size:13px;
   margin:12px 0;
 }
 
 .modal-list{
   list-style:none;
-  margin:15px 0;
+  margin:18px 0;
 }
 
 .modal-list li{
+  color:#ded5c5;
+  font-size:11px;
   padding:7px 0;
-  color:#ddd3c1;
-  font-size:12px;
 }
 
-.modal-list li:before{
+.modal-list li::before{
   content:"✦";
   color:var(--gold2);
   margin-right:8px;
 }
 
-/* ================= RESPONSIVE ================= */
+/* SAMPLE MODAL */
+
+.sample-preview{
+  width:100%;
+  max-height:65vh;
+  object-fit:contain;
+  border-radius:12px;
+}
+
+.sample-modal-title{
+  text-align:center;
+  margin-top:15px;
+}
+
+/* ================= TOAST ================= */
+
+.toast{
+  position:fixed;
+  bottom:25px;
+  left:50%;
+  transform:translate(-50%,20px);
+  background:#17130c;
+  border:1px solid var(--gold);
+  color:var(--gold2);
+  padding:13px 20px;
+  border-radius:30px;
+  font-size:11px;
+  opacity:0;
+  pointer-events:none;
+  transition:.3s;
+  z-index:5000;
+}
+
+.toast.show{
+  opacity:1;
+  transform:translate(-50%,0);
+}
+
+/* ================= MOBILE ================= */
 
 @media(max-width:1000px){
+
+  .nav-links{
+    gap:12px;
+  }
+
+  .email-btn{
+    display:none;
+  }
+
   .categories{
     grid-template-columns:repeat(3,1fr);
   }
@@ -830,63 +1044,60 @@ footer{
     opacity:.65;
     right:-12%;
   }
+
 }
 
 @media(max-width:700px){
 
-  header{
-    height:auto;
-  }
-
   .nav{
     min-height:65px;
-  }
-
-  .nav-links{
-    position:absolute;
-    top:65px;
-    left:0;
-    width:100%;
-    background:#090806;
-    border-bottom:1px solid var(--line);
-    display:none;
-    flex-direction:column;
-    padding:25px;
-  }
-
-  .nav-links.open{
-    display:flex;
-  }
-
-  .email-btn{
-    display:none;
   }
 
   .menu{
     display:block;
   }
 
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:65px;
+    left:0;
+    width:100%;
+    padding:22px;
+    background:#080705;
+    border-bottom:1px solid var(--line);
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .nav-links.open{
+    display:flex;
+  }
+
   .hero{
-    min-height:800px;
-    padding-top:110px;
+    min-height:850px;
+    padding-top:105px;
     align-items:flex-start;
   }
 
   .hero-content{
     width:100%;
-    z-index:5;
   }
 
   .hero h1{
-    font-size:53px;
+    font-size:55px;
   }
 
   .hero-art{
-    width:100%;
-    right:-30%;
-    top:400px;
-    transform:scale(.72);
-    opacity:.7;
+    width:120%;
+    right:-35%;
+    top:450px;
+    transform:scale(.70);
+    opacity:.72;
+  }
+
+  .trust{
+    grid-template-columns:repeat(2,1fr);
   }
 
   section{
@@ -894,7 +1105,7 @@ footer{
   }
 
   .section-title h2{
-    font-size:40px;
+    font-size:42px;
   }
 
   .categories{
@@ -919,7 +1130,6 @@ footer{
 
   .steps{
     grid-template-columns:1fr 1fr;
-    gap:30px;
   }
 
   .contact-box{
@@ -928,7 +1138,7 @@ footer{
   }
 
   .contact-box h2{
-    font-size:40px;
+    font-size:42px;
   }
 
   .modal-grid{
@@ -936,14 +1146,18 @@ footer{
   }
 
   .modal-img{
-    max-height:350px;
-    object-fit:cover;
+    max-height:330px;
   }
 
   .footer{
     flex-direction:column;
     text-align:center;
   }
+
+  .footer-links{
+    justify-content:center;
+  }
+
 }
 </style>
 </head>
@@ -966,18 +1180,18 @@ footer{
 <button class="menu" onclick="toggleMenu()">☰</button>
 
 <nav class="nav-links" id="navLinks">
-  <a href="#home">Home</a>
-  <a href="#services">Services</a>
-  <a href="#samples">Samples</a>
-  <a href="#about">About</a>
-  <a href="#how">How It Works</a>
-  <a href="#packages">Packages</a>
-  <a href="#faq">FAQ</a>
-  <a href="#contact">Contact</a>
+  <a href="#home" onclick="closeMenu()">Home</a>
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#samples" onclick="closeMenu()">Samples</a>
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#how" onclick="closeMenu()">How It Works</a>
+  <a href="#packages" onclick="closeMenu()">Packages</a>
+  <a href="#faq" onclick="closeMenu()">FAQ</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
 </nav>
 
-<a class="email-btn" href="mailto:jatavneeraj479@gmail.com">
-  ✉ jatavneeraj479@gmail.com
+<a href="mailto:jatavneeraj479@gmail.com" class="email-btn">
+✉ Email Us
 </a>
 
 </div>
@@ -1011,34 +1225,39 @@ professionally designed to make your brand stand out.
 <a href="#samples" class="btn btn-outline">View Samples</a>
 </div>
 
+<div class="trust">
+<div class="trust-item"><b>✦</b> Premium Quality</div>
+<div class="trust-item"><b>◷</b> Fast Delivery</div>
+<div class="trust-item"><b>◇</b> 100% Custom</div>
+<div class="trust-item"><b>₹</b> Affordable</div>
 </div>
 
+</div>
 </div>
 
 <div class="hero-art">
 
 <div class="glow"></div>
 
-<div class="mockup poster-one">
-<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600&q=85">
+<div class="design-card food-card">
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=90" alt="Food Poster">
 </div>
 
-<div class="mockup phone">
-<div class="phone-inner">
+<div class="design-card phone-card">
+<div class="phone-screen">
 <div class="bigD">D</div>
 <h3>DesignMitra AI</h3>
 <p>Create • Promote • Grow</p>
-<br>
-<span style="color:#f5d48a">Your Vision<br>Our Design</span>
+<div class="gold-copy">Your Vision<br>Our Design</div>
 </div>
 </div>
 
-<div class="mockup invite">
-<img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=85">
+<div class="design-card wedding-card">
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=90" alt="Wedding Invitation">
 </div>
 
-<div class="mockup banner">
-<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=85">
+<div class="design-card small-banner">
+<img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=90" alt="Business Banner">
 </div>
 
 </div>
@@ -1046,53 +1265,63 @@ professionally designed to make your brand stand out.
 </section>
 
 
-<!-- ================= CATEGORY ================= -->
+<!-- ================= CATEGORIES ================= -->
 
 <section>
+
 <div class="container">
 
 <div class="section-title">
-<div class="mini">Explore</div>
+<div class="mini">Explore Our Work</div>
 <h2>What We Create</h2>
-<p>Premium creative solutions for every need.</p>
+<p>Click any category to explore its designs.</p>
 </div>
 
 <div class="categories">
 
 <div class="category" onclick="openService('Poster Maker')">
-<div class="icon">▣</div><span>Posters</span>
+<div class="category-icon">▣</div>
+<span>Posters</span>
 </div>
 
 <div class="category" onclick="openService('Invitation Card')">
-<div class="icon">✉</div><span>Invitations</span>
+<div class="category-icon">✉</div>
+<span>Invitations</span>
 </div>
 
 <div class="category" onclick="openService('Instagram Post')">
-<div class="icon">◎</div><span>Social Media</span>
+<div class="category-icon">◎</div>
+<span>Social Media</span>
 </div>
 
 <div class="category" onclick="openService('Visiting Card')">
-<div class="icon">▤</div><span>Business Cards</span>
+<div class="category-icon">▤</div>
+<span>Business Cards</span>
 </div>
 
 <div class="category" onclick="openService('Logo Design')">
-<div class="icon">✦</div><span>Logo Design</span>
+<div class="category-icon">✦</div>
+<span>Logo Design</span>
 </div>
 
 <div class="category" onclick="openService('Menu Card')">
-<div class="icon">☷</div><span>Menu Cards</span>
+<div class="category-icon">☷</div>
+<span>Menu Cards</span>
 </div>
 
 <div class="category" onclick="openService('Product Catalogue')">
-<div class="icon">▥</div><span>Catalogue</span>
+<div class="category-icon">▥</div>
+<span>Catalogue</span>
 </div>
 
 <div class="category" onclick="openService('Branding')">
-<div class="icon">◆</div><span>Branding</span>
+<div class="category-icon">◆</div>
+<span>Branding</span>
 </div>
 
 <div class="category" onclick="openService('Custom Design')">
-<div class="icon">✧</div><span>Custom</span>
+<div class="category-icon">✧</div>
+<span>Custom</span>
 </div>
 
 </div>
@@ -1104,12 +1333,13 @@ professionally designed to make your brand stand out.
 <!-- ================= SERVICES ================= -->
 
 <section id="services">
+
 <div class="container">
 
 <div class="section-title">
 <div class="mini">Our Expertise</div>
 <h2>Our Creative Services</h2>
-<p>Click any service to explore complete details and samples.</p>
+<p>Tap any service — complete information and samples will open.</p>
 </div>
 
 <div class="services">
@@ -1117,50 +1347,1267 @@ professionally designed to make your brand stand out.
 <div class="service" onclick="openService('Poster Maker')">
 <div class="service-icon">▣</div>
 <h3>Poster Maker</h3>
-<p>Business, festival, product and promotional posters.</p>
-<button class="learn">View Details →</button>
+<p>Business, festival, product, event and promotional posters.</p>
+<div class="view">View Details →</div>
 </div>
 
 <div class="service" onclick="openService('Invitation Card')">
 <div class="service-icon">✉</div>
 <h3>Invitation Card</h3>
 <p>Wedding, birthday, engagement and event invitations.</p>
-<button class="learn">View Details →</button>
+<div class="view">View Details →</div>
 </div>
 
 <div class="service" onclick="openService('Visiting Card')">
 <div class="service-icon">▤</div>
 <h3>Visiting Card</h3>
 <p>Premium professional business card designs.</p>
-<button class="learn">View Details →</button>
+<div class="view">View Details →</div>
 </div>
 
 <div class="service" onclick="openService('WhatsApp Status')">
 <div class="service-icon">◉</div>
 <h3>WhatsApp Status</h3>
-<p>Promotional and festival status creatives.</p>
-<button class="learn">View Details →</button>
+<p>Promotional, festival and business status creatives.</p>
+<div class="view">View Details →</div>
 </div>
 
 <div class="service" onclick="openService('Instagram Post')">
 <div class="service-icon">◎</div>
 <h3>Instagram Post</h3>
-<p>Professional social media content for brands.</p>
-<button class="learn">View Details →</button>
+<p>Modern social media creatives for businesses and creators.</p>
+<div class="view">View Details →</div>
 </div>
 
 <div class="service" onclick="openService('YouTube Thumbnail')">
 <div class="service-icon">▶</div>
 <h3>YouTube Thumbnail</h3>
-<p>High-click visual thumbnails for creators.</p>
-<button class="learn">View Details →</button>
+<p>High-impact thumbnails for creators and channels.</p>
+<div class="view">View Details →</div>
 </div>
 
 <div class="service" onclick="openService('Menu Card')">
 <div class="service-icon">☷</div>
 <h3>Menu Card</h3>
-<p>Restaurant, cafe and food menu designs.</p>
-<button class="learn">View Details →</button>
+<p>Restaurant, cafe and food business menu designs.</p>
+<div class="view">View Details →</div>
 </div>
 
-<div class="service" onclick="open
+<div class="service" onclick="openService('Offer / Sale Poster')">
+<div class="service-icon">%</div>
+<h3>Offer / Sale Poster</h3>
+<p>Sale, discount, launch and promotional creatives.</p>
+<div class="view">View Details →</div>
+</div>
+
+<div class="service" onclick="openService('Product Catalogue')">
+<div class="service-icon">▥</div>
+<h3>Product Catalogue</h3>
+<p>Professional catalogues for products and collections.</p>
+<div class="view">View Details →</div>
+</div>
+
+<div class="service" onclick="openService('Business Flyer')">
+<div class="service-icon">◈</div>
+<h3>Business Flyer</h3>
+<p>Promotional flyers for shops, services and events.</p>
+<div class="view">View Details →</div>
+</div>
+
+<div class="service" onclick="openService('AI Advertisement')">
+<div class="service-icon">✦</div>
+<h3>AI Advertisement</h3>
+<p>Modern AI-assisted promotional concepts and creatives.</p>
+<div class="view">View Details →</div>
+</div>
+
+<div class="service" onclick="openService('Caption Generator')">
+<div class="service-icon">●</div>
+<h3>Caption Generator</h3>
+<p>Creative captions for Instagram, Facebook and marketing.</p>
+<div class="view">View Details →</div>
+</div>
+
+<div class="service" onclick="openService('Logo Design')">
+<div class="service-icon">◇</div>
+<h3>Logo Design</h3>
+<p>Elegant logo concepts for businesses and personal brands.</p>
+<div class="view">View Details →</div>
+</div>
+
+<div class="service" onclick="openService('Branding')">
+<div class="service-icon">◆</div>
+<h3>Branding & Identity</h3>
+<p>Complete visual identity for professional brands.</p>
+<div class="view">View Details →</div>
+</div>
+
+<div class="service" onclick="openService('Custom Design')">
+<div class="service-icon">✧</div>
+<h3>Custom Design</h3>
+<p>Have a unique idea? We'll create it around your needs.</p>
+<div class="view">View Details →</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= SAMPLES ================= -->
+
+<section id="samples">
+
+<div class="container">
+
+<div class="section-title">
+<div class="mini">Portfolio</div>
+<h2>Latest Design Samples</h2>
+<p>Tap a sample to open a large preview.</p>
+</div>
+
+<div class="filters">
+<button class="filter active" onclick="filterSamples('all',this)">All</button>
+<button class="filter" onclick="filterSamples('poster',this)">Posters</button>
+<button class="filter" onclick="filterSamples('food',this)">Food</button>
+<button class="filter" onclick="filterSamples('wedding',this)">Wedding</button>
+<button class="filter" onclick="filterSamples('business',this)">Business</button>
+<button class="filter" onclick="filterSamples('fitness',this)">Fitness</button>
+</div>
+
+<div class="gallery">
+
+<div class="sample" data-cat="poster"
+onclick="openSample(this)">
+<img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=600&q=90">
+<div class="sample-overlay">
+Festival Poster<br>
+<small>Poster Design</small>
+</div>
+</div>
+
+<div class="sample" data-cat="food"
+onclick="openSample(this)">
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=90">
+<div class="sample-overlay">
+Burger Promotion<br>
+<small>Food Advertisement</small>
+</div>
+</div>
+
+<div class="sample" data-cat="wedding"
+onclick="openSample(this)">
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=90">
+<div class="sample-overlay">
+Wedding Invitation<br>
+<small>Invitation Card</small>
+</div>
+</div>
+
+<div class="sample" data-cat="business"
+onclick="openSample(this)">
+<img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=600&q=90">
+<div class="sample-overlay">
+Business Branding<br>
+<small>Business Design</small>
+</div>
+</div>
+
+<div class="sample" data-cat="fitness"
+onclick="openSample(this)">
+<img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=90">
+<div class="sample-overlay">
+Fitness Promotion<br>
+<small>Social Media Poster</small>
+</div>
+</div>
+
+<div class="sample" data-cat="poster"
+onclick="openSample(this)">
+<img src="https://images.unsplash.com/photo-1504274066651-8d31a536b11a?auto=format&fit=crop&w=600&q=90">
+<div class="sample-overlay">
+Premium Banner<br>
+<small>Advertisement</small>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= ANIMATED SHOWCASE ================= -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<div class="mini">Live Showcase</div>
+<h2>Creative Motion Gallery</h2>
+<p>Premium animated-style presentation for your designs.</p>
+</div>
+
+<div style="
+border:1px solid var(--line);
+border-radius:20px;
+padding:30px;
+background:
+radial-gradient(circle at 50% 50%,rgba(214,166,77,.10),transparent 40%),
+#0d0b08;
+overflow:hidden;
+">
+
+<div style="
+display:flex;
+gap:18px;
+width:max-content;
+animation:slideGallery 25s linear infinite;
+">
+
+<div class="design-card" style="position:relative;width:210px;height:280px;transform:none;border-radius:12px">
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=90">
+</div>
+
+<div class="design-card" style="position:relative;width:210px;height:280px;transform:none;border-radius:12px">
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=500&q=90">
+</div>
+
+<div class="design-card" style="position:relative;width:210px;height:280px;transform:none;border-radius:12px">
+<img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=500&q=90">
+</div>
+
+<div class="design-card" style="position:relative;width:210px;height:280px;transform:none;border-radius:12px">
+<img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=500&q=90">
+</div>
+
+<div class="design-card" style="position:relative;width:210px;height:280px;transform:none;border-radius:12px">
+<img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=500&q=90">
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<style>
+@keyframes slideGallery{
+  from{transform:translateX(0)}
+  to{transform:translateX(-650px)}
+}
+</style>
+
+
+<!-- ================= FEATURE ================= -->
+
+<section>
+
+<div class="container">
+
+<div class="feature">
+
+<div class="feature-image">
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=90">
+</div>
+
+<div class="feature-info">
+
+<h2>Poster Maker</h2>
+
+<p>
+Get eye-catching professional posters for your business,
+product, event, festival or promotion.
+</p>
+
+<ul class="checks">
+<li>High Resolution</li>
+<li>Custom Size</li>
+<li>JPG / PNG / PDF</li>
+<li>Social Media Ready</li>
+<li>Fast Delivery</li>
+<li>Multiple Revisions</li>
+</ul>
+
+<button class="btn" onclick="openService('Poster Maker')">
+Order Poster →
+</button>
+
+</div>
+
+<div class="get-box">
+
+<h3>What You Get</h3>
+
+<ul class="checks">
+<li>Unique Creative Design</li>
+<li>Professional Typography</li>
+<li>High Quality Graphics</li>
+<li>Print & Digital Formats</li>
+<li>Custom Requirements</li>
+</ul>
+
+<div class="price">₹199+</div>
+
+<a href="#contact" class="btn">
+Get Started →
+</a>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-title">
+<div class="mini">The Difference</div>
+<h2>Why Choose Us?</h2>
+<p>Professional design with a premium visual approach.</p>
+</div>
+
+<div class="three">
+
+<div class="info-card">
+<h3>✦ Creative & Unique</h3>
+<p>
+We focus on strong visual composition, typography,
+branding and creative presentation.
+</p>
+</div>
+
+<div class="info-card">
+<h3>◷ On-Time Delivery</h3>
+<p>
+We keep communication simple and aim for quick,
+professional delivery according to your requirements.
+</p>
+</div>
+
+<div class="info-card">
+<h3>◇ Custom Solutions</h3>
+<p>
+From one poster to complete brand creatives,
+your idea stays at the center of the design.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= HOW ================= -->
+
+<section id="how">
+
+<div class="container">
+
+<div class="section-title">
+<div class="mini">Simple Process</div>
+<h2>How It Works</h2>
+<p>Four simple steps from idea to final design.</p>
+</div>
+
+<div class="steps">
+
+<div class="step">
+<div class="number">01</div>
+<h3>Select Service</h3>
+<p>Choose the design you need.</p>
+</div>
+
+<div class="step">
+<div class="number">02</div>
+<h3>Share Details</h3>
+<p>Send your content and requirements.</p>
+</div>
+
+<div class="step">
+<div class="number">03</div>
+<h3>Confirm Order</h3>
+<p>Discuss pricing and design.</p>
+</div>
+
+<div class="step">
+<div class="number">04</div>
+<h3>Get Your Design</h3>
+<p>Receive your final creative.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= PACKAGES ================= -->
+
+<section id="packages">
+
+<div class="container">
+
+<div class="section-title">
+<div class="mini">Flexible Plans</div>
+<h2>Design Packages</h2>
+<p>Choose a package or request a custom quote.</p>
+</div>
+
+<div class="three">
+
+<div class="info-card package">
+
+<h3>Basic</h3>
+
+<div class="price">₹199+</div>
+
+<p>
+Perfect for one poster, social post, status or simple creative.
+</p>
+
+<ul class="checks">
+<li>1 Creative Design</li>
+<li>JPG / PNG</li>
+<li>Custom Size</li>
+<li>Basic Revisions</li>
+</ul>
+
+<button class="btn" onclick="openService('Basic Package')">
+Choose Basic
+</button>
+
+</div>
+
+
+<div class="info-card package popular">
+
+<div class="popular-label">POPULAR</div>
+
+<h3>Standard</h3>
+
+<div class="price">₹499+</div>
+
+<p>
+Best for businesses needing multiple promotional creatives.
+</p>
+
+<ul class="checks">
+<li>Multiple Creatives</li>
+<li>Social Media Formats</li>
+<li>Custom Branding</li>
+<li>Priority Support</li>
+</ul>
+
+<button class="btn" onclick="openService('Standard Package')">
+Choose Standard
+</button>
+
+</div>
+
+
+<div class="info-card package">
+
+<h3>Premium</h3>
+
+<div class="price">Custom</div>
+
+<p>
+Complete creative support for brands, shops and businesses.
+</p>
+
+<ul class="checks">
+<li>Complete Design Solution</li>
+<li>Brand Consistency</li>
+<li>Multiple Formats</li>
+<li>Dedicated Support</li>
+</ul>
+
+<button class="btn" onclick="openService('Premium Package')">
+Get Premium Quote
+</button>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= FAQ ================= -->
+
+<section id="faq">
+
+<div class="container">
+
+<div class="section-title">
+<div class="mini">Need Help?</div>
+<h2>Frequently Asked Questions</h2>
+</div>
+
+<div class="faq">
+
+<div class="faq-item">
+<button class="faq-question" onclick="toggleFaq(this)">
+How do I order a design?
+<span class="plus">+</span>
+</button>
+<div class="faq-answer">
+Choose a service, check the samples and click Order Now.
+You can then contact DesignMitra AI through WhatsApp or email.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question" onclick="toggleFaq(this)">
+Can I request a custom size?
+<span class="plus">+</span>
+</button>
+<div class="faq-answer">
+Yes. Tell us the required size, platform or print dimensions
+when sending your requirements.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question" onclick="toggleFaq(this)">
+Which file formats can I receive?
+<span class="plus">+</span>
+</button>
+<div class="faq-answer">
+Depending on the design, JPG, PNG and PDF formats can be provided.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question" onclick="toggleFaq(this)">
+Can you create designs for Instagram and WhatsApp?
+<span class="plus">+</span>
+</button>
+<div class="faq-answer">
+Yes. We can create platform-specific creatives for Instagram,
+WhatsApp, Facebook and other digital platforms.
+</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question" onclick="toggleFaq(this)">
+Can I request a completely custom design?
+<span class="plus">+</span>
+</button>
+<div class="faq-answer">
+Yes. Choose Custom Design and describe your idea. We'll discuss
+the design requirement and provide a suitable quote.
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="contact-box">
+
+<div>
+
+<div class="badge">✦ Start Your Project</div>
+
+<h2>
+Let's Create<br>
+<span>Something Amazing.</span>
+</h2>
+
+<p>
+Have a custom design requirement?
+Tell us what you need and we'll get back to you.
+</p>
+
+<p>
+<strong style="color:var(--gold2)">Email</strong><br>
+jatavneeraj479@gmail.com
+</p>
+
+<a
+class="btn"
+target="_blank"
+href="https://wa.me/917047489820?text=Hello%20DesignMitra%20AI%2C%20I%20want%20a%20design.">
+WhatsApp Us →
+</a>
+
+</div>
+
+
+<form class="form" onsubmit="sendEmail(event)">
+
+<input id="name" type="text" placeholder="Your Name" required>
+
+<input id="email" type="email" placeholder="Your Email" required>
+
+<input id="phone" type="tel" placeholder="WhatsApp Number">
+
+<select id="serviceSelect">
+
+<option>Poster Maker</option>
+<option>Invitation Card</option>
+<option>Visiting Card</option>
+<option>WhatsApp Status</option>
+<option>Instagram Post</option>
+<option>YouTube Thumbnail</option>
+<option>Menu Card</option>
+<option>Offer / Sale Poster</option>
+<option>Product Catalogue</option>
+<option>Business Flyer</option>
+<option>Logo Design</option>
+<option>Branding</option>
+<option>Custom Design</option>
+
+</select>
+
+<textarea
+id="requirements"
+placeholder="Tell us your design requirements..."
+required></textarea>
+
+<button class="btn" type="submit">
+Send Enquiry →
+</button>
+
+</form>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="container footer">
+
+<div class="logo">
+
+<div class="logo-mark">D</div>
+
+<div class="logo-text">
+<strong>DesignMitra AI</strong>
+<small>CREATE • PROMOTE • GROW</small>
+</div>
+
+</div>
+
+<div class="footer-links">
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#samples">Samples</a>
+<a href="#about">About</a>
+<a href="#packages">Packages</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+</div>
+
+<p>
+© 2026 DesignMitra AI. All rights reserved.
+</p>
+
+</div>
+
+</footer>
+
+
+<!-- ================= SERVICE MODAL ================= -->
+
+<div class="modal" id="serviceModal">
+
+<div class="modal-box">
+
+<button class="close" onclick="closeService()">×</button>
+
+<div class="modal-grid">
+
+<div>
+
+<img
+id="modalImg"
+class="modal-img"
+src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=90"
+alt="Service">
+
+</div>
+
+<div>
+
+<h2 id="modalTitle">Poster Maker</h2>
+
+<p id="modalDescription"></p>
+
+<ul class="modal-list" id="modalList"></ul>
+
+<p>
+<strong style="color:var(--gold2)">
+Starting Price:
+</strong>
+
+<span id="modalPrice">₹199+</span>
+</p>
+
+<div class="hero-buttons">
+
+<a id="modalWhatsApp"
+class="btn"
+target="_blank">
+Order on WhatsApp →
+</a>
+
+<a href="#contact"
+class="btn btn-outline"
+onclick="closeService()">
+Send Enquiry
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ================= SAMPLE MODAL ================= -->
+
+<div class="modal" id="sampleModal">
+
+<div class="modal-box" style="max-width:700px">
+
+<button class="close" onclick="closeSample()">×</button>
+
+<img
+id="samplePreview"
+class="sample-preview"
+src=""
+alt="Sample Preview">
+
+<div class="sample-modal-title">
+
+<h2 id="sampleTitle">Design Sample</h2>
+
+<p>
+Want a similar design for your business?
+</p>
+
+<a
+href="#contact"
+class="btn"
+onclick="closeSample()">
+Customize This Design →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ================= TOAST ================= -->
+
+<div class="toast" id="toast">
+Message sent successfully
+</div>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+/* ================= SERVICE DATA ================= */
+
+const services = {
+
+"Poster Maker":{
+description:"Professional posters for businesses, products, festivals, events, offers and promotional campaigns.",
+price:"₹199+",
+image:"https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=700&q=90",
+items:[
+"Custom creative concept",
+"High resolution design",
+"JPG / PNG / PDF",
+"Custom dimensions",
+"Social media ready",
+"Multiple revisions"
+]
+},
+
+"Invitation Card":{
+description:"Elegant invitation designs for weddings, birthdays, engagements, parties and special events.",
+price:"₹299+",
+image:"https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=700&q=90",
+items:[
+"Wedding invitation",
+"Birthday invitation",
+"Engagement invitation",
+"Digital & print format",
+"Custom text",
+"Premium typography"
+]
+},
+
+"Visiting Card":{
+description:"Premium business card designs that create a strong professional first impression.",
+price:"₹199+",
+image:"https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=700&q=90",
+items:[
+"Front & back design",
+"Professional layout",
+"Print-ready PDF",
+"Social sharing version",
+"Custom branding",
+"High resolution"
+]
+},
+
+"WhatsApp Status":{
+description:"Eye-catching vertical creatives for WhatsApp business promotions, offers and festivals.",
+price:"₹149+",
+image:"https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=700&q=90",
+items:[
+"9:16 vertical design",
+"Business promotion",
+"Festival creatives",
+"Offer announcements",
+"Brand colours",
+"Social media ready"
+]
+},
+
+"Instagram Post":{
+description:"Premium Instagram creatives designed to make your content look professional and attractive.",
+price:"₹149+",
+image:"https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=700&q=90",
+items:[
+"Instagram post design",
+"Product promotion",
+"Festival posts",
+"Business promotion",
+"Brand consistency",
+"High quality export"
+]
+},
+
+"YouTube Thumbnail":{
+description:"High-impact YouTube thumbnails designed to improve visual appeal and attract attention.",
+price:"₹149+",
+image:"https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?auto=format&fit=crop&w=700&q=90",
+items:[
+"16:9 format",
+"Bold typography",
+"Creator branding",
+"High-impact composition",
+"High resolution",
+"Fast delivery"
+]
+},
+
+"Menu Card":{
+description:"Elegant menu designs for restaurants, cafes, food businesses and cloud kitchens.",
+price:"₹399+",
+image:"https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=700&q=90",
+items:[
+"Restaurant menu",
+"Cafe menu",
+"Food catalogue",
+"Digital menu",
+"Print-ready design",
+"Custom layout"
+]
+},
+
+"Offer / Sale Poster":{
+description:"Powerful promotional creatives for sales, discounts, launches and special offers.",
+price:"₹199+",
+image:"https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=700&q=90",
+items:[
+"Sale poster",
+"Discount campaign",
+"Grand opening",
+"Product launch",
+"Festival offer",
+"Social media format"
+]
+},
+
+"Product Catalogue":{
+description:"Professional catalogues that showcase products in an organized and attractive format.",
+price:"₹499+",
+image:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=90",
+items:[
+"Product presentation",
+"Multiple pages",
+"Product descriptions",
+"Pricing layout",
+"PDF catalogue",
+"Custom branding"
+]
+},
+
+"Business Flyer":{
+description:"Professional flyers for companies, shops, services, events and local businesses.",
+price:"₹199+",
+image:"https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=700&q=90",
+items:[
+"Business promotion",
+"Event flyer",
+"Service flyer",
+"Print-ready PDF",
+"Social media version",
+"Custom design"
+]
+},
+
+"AI Advertisement":{
+description:"Modern AI-assisted advertising creatives using visual storytelling and premium composition.",
+price:"₹299+",
+image:"https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=700&q=90",
+items:[
+"Creative concept",
+"AI-assisted visuals",
+"Advertising copy",
+"Brand integration",
+"Social media formats",
+"High resolution"
+]
+},
+
+"Caption Generator":{
+description:"Creative captions and short marketing copy for Instagram, Facebook and business promotions.",
+price:"₹99+",
+image:"https://images.unsplash.com/photo-1611162612560-3a4b6b4b5b5d?auto=format&fit=crop&w=700&q=90",
+items:[
+"Instagram captions",
+"Marketing copy",
+"Promotional text",
+"Festival captions",
+"Product captions",
+"Call-to-action ideas"
+]
+},
+
+"Logo Design":{
+description:"Elegant and memorable logo concepts for businesses, creators, shops and brands.",
+price:"₹499+",
+image:"https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=700&q=90",
+items:[
+"Original logo concept",
+"Multiple concepts",
+"Transparent PNG",
+"High resolution",
+"Brand colours",
+"Print-ready files"
+]
+},
+
+"Branding":{
+description:"Complete visual branding solutions to create a consistent and professional brand identity.",
+price:"Custom",
+image:"https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=700&q=90",
+items:[
+"Brand identity",
+"Logo design",
+"Business card",
+"Social media style",
+"Brand colours",
+"Creative guidelines"
+]
+},
+
+"Custom Design":{
+description:"Have something different in mind? Tell us your idea and we will create a design around your requirements.",
+price:"Custom Quote",
+image:"https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=700&q=90",
+items:[
+"100% custom concept",
+"Any design category",
+"Custom dimensions",
+"Reference-based design",
+"Premium quality",
+"Dedicated support"
+]
+},
+
+"Basic Package":{
+description:"A simple package for one professional creative design.",
+price:"₹199+",
+image:"https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=700&q=90",
+items:[
+"1 creative design",
+"JPG / PNG",
+"Custom size",
+"Basic revisions"
+]
+},
+
+"Standard Package":{
+description:"A balanced package for businesses needing multiple promotional creatives.",
+price:"₹499+",
+image:"https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=700&q=90",
+items:[
+"Multiple creatives",
+"Social media formats",
+"Custom branding",
+"Priority delivery"
+]
+},
+
+"Premium Package":{
+description:"Complete creative support for businesses and professional brands.",
+price:"Custom",
+image:"https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=700&q=90",
+items:[
+"Complete creative solution",
+"Brand consistency",
+"Multiple formats",
+"Dedicated support"
+]
+}
+
+};
+
+
+/* ================= MOBILE MENU ================= */
+
+function toggleMenu(){
+  document.getElementById("navLinks").classList.toggle("open");
+}
+
+function closeMenu(){
+  document.getElementById("navLinks").classList.remove("open");
+}
+
+
+/* ================= SERVICE MODAL ================= */
+
+function openService(name){
+
+  const data = services[name] || services["Custom Design"];
+
+  document.getElementById("modalTitle").textContent = name;
+
+  document.getElementById("modalDescription").textContent =
+    data.description;
+
+  document.getElementById("modalPrice").textContent =
+    data.price;
+
+  document.getElementById("modalImg").src =
+    data.image;
+
+  const list = document.getElementById("modalList");
+
+  list.innerHTML = "";
+
+  data.items.forEach(function(item){
+
+    const li = document.createElement("li");
+
+    li.textContent = item;
+
+    list.appendChild(li);
+
+  });
+
+  const message =
+    "Hello DesignMitra AI,%0A%0A" +
+    "I want to order: " +
+    encodeURIComponent(name) +
+    "%0A%0APlease share details and pricing.";
+
+  document.getElementById("modalWhatsApp").href =
+    "https://wa.me/917047489820?text=" + message;
+
+  document.getElementById("serviceModal").classList.add("show");
+
+  document.body.classList.add("modal-open");
+}
+
+
+/* ================= CLOSE SERVICE ================= */
+
+function closeService(){
+
+  document.getElementById("serviceModal").classList.remove("show");
+
+  document.body.classList.remove("modal-open");
+
+}
+
+
+/* ================= SAMPLE PREVIEW ================= */
+
+function openSample(element){
+
+  const img = element.querySelector("img");
+
+  const title =
+    element.querySelector(".sample-overlay").childNodes[0].textContent.trim();
+
+  document.getElementById("samplePreview").src =
+    img.src;
+
+  document.getElementById("sampleTitle").textContent =
+    title;
+
+  document.getElementById("sampleModal").classList.add("show");
+
+  document.body.classList.add("modal-open");
+}
+
+
+function closeSample(){
+
+  document.getElementById("sampleModal").classList.remove("show");
+
+  document.body.classList.remove("modal-open");
+
+}
+
+
+/* ================= SAMPLE FILTER ================= */
+
+function filterSamples(category,button){
+
+  document.querySelectorAll(".filter").forEach(function(btn){
+
+    btn.classList.remove("active");
+
+  });
+
+  button.classList.add("active");
+
+  document.querySelectorAll(".sample").forEach(function(sample){
+
+    if(category === "all"){
+
+      sample.style.display = "block";
+
+    }else{
+
+      sample.style.display =
+        sample.dataset.cat === category
+        ? "block"
+        : "none";
+
+    }
+
+  });
+
+}
+
+
+/* ================= FAQ ================= */
+
+function toggleFaq(button){
+
+  const item = button.parentElement;
+
+  item.classList.toggle("open");
+
+}
+
+
+/* ================= EMAIL FORM ================= */
+
+function sendEmail(event){
+
+  event.preventDefault();
+
+  const name =
+    document.getElementById("name").value.trim();
+
+  const email =
+    document.getElementById("email").value.trim();
+
+  const phone =
+    document.getElementById("phone").value.trim();
+
+  const service =
+    document.getElementById("serviceSelect").value;
+
+  const requirements =
+    document.getElementById("requirements").value.trim();
+
+  const subject =
+    "DesignMitra AI Enquiry - " + service;
+
+  const body =
+    "Hello DesignMitra AI,%0D%0A%0D%0A" +
+    "Name: " + encodeURIComponent(name) +
+    "%0D%0AEmail: " + encodeURIComponent(email) +
+    "%0D%0AWhatsApp: " + encodeURIComponent(phone) +
+    "%0D%0AService: " + encodeURIComponent(service) +
+    "%0D%0ARequirements: " +
+    encodeURIComponent(requirements);
+
+  window.location.href =
+    "mailto:jatavneeraj479@gmail.com" +
+    "?subject=" +
+    encodeURIComponent(subject) +
+    "&body=" +
+    body;
+
+}
+
+
+/* ================= MODAL OUTSIDE CLICK ================= */
+
+window.addEventListener("click",function(event){
+
+  if(event.target.id === "serviceModal"){
+    closeService();
+  }
+
+  if(event.target.id === "sampleModal"){
+    closeSample();
+  }
+
+});
+
+
+/* ================= ESCAPE KEY ================= */
+
+document.addEventListener("keydown",function(event){
+
+  if(event.key === "Escape"){
+
+    closeService();
+    closeSample();
+
+  }
+
+});
+
+</script>
+
+</body>
+</html>
