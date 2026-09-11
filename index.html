@@ -2,1348 +2,1316 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="DesignMitra AI - Premium Creative Design Studio">
-<meta name="theme-color" content="#08090d">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>DesignMitra AI | Create • Promote • Grow</title>
+
+<meta name="description" content="DesignMitra AI - Premium Posters, Banners, Invitations, Business Cards, Social Media Designs and Creative Services.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
---bg:#07080c;
---bg2:#0d1017;
---card:#11151e;
---card2:#161b25;
---gold:#dcb566;
---gold2:#ffe0a0;
---white:#fff;
---muted:#aeb6c5;
---line:rgba(255,255,255,.11);
---pink:#ff3dbd;
---purple:#7947ff;
---blue:#28a8ff;
---green:#25d366;
---shadow:0 25px 80px rgba(0,0,0,.5);
+--black:#080706;
+--black2:#11100d;
+--black3:#181510;
+--gold:#d9aa55;
+--gold2:#f4cf82;
+--gold3:#ffe7aa;
+--white:#fffaf0;
+--muted:#c9c0ad;
+--border:rgba(217,170,85,.45);
+--shadow:0 20px 60px rgba(0,0,0,.55);
 }
-*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
 body{
-font-family:"DM Sans",sans-serif;
+font-family:Inter,Arial,sans-serif;
 background:
-radial-gradient(circle at 10% 0%,rgba(121,71,255,.15),transparent 28%),
-radial-gradient(circle at 90% 15%,rgba(255,61,189,.10),transparent 25%),
-var(--bg);
+radial-gradient(circle at 20% 10%,rgba(217,170,85,.08),transparent 25%),
+radial-gradient(circle at 80% 40%,rgba(255,180,60,.06),transparent 30%),
+linear-gradient(120deg,#070605,#14100b,#080706);
 color:var(--white);
+line-height:1.6;
 overflow-x:hidden;
 }
+
 body:before{
 content:"";
-position:fixed;inset:0;z-index:-1;pointer-events:none;
-background-image:
-linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
-linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
-background-size:55px 55px;
+position:fixed;
+inset:0;
+pointer-events:none;
+background:
+linear-gradient(rgba(255,255,255,.015) 1px,transparent 1px),
+linear-gradient(90deg,rgba(255,255,255,.015) 1px,transparent 1px);
+background-size:50px 50px;
+z-index:-1;
 }
-a{text-decoration:none;color:inherit}
-button,input,textarea,select{font:inherit}
-button{cursor:pointer}
-img{max-width:100%}
 
-/* HEADER */
+a{
+text-decoration:none;
+color:inherit;
+}
+
+button{
+font-family:inherit;
+}
+
+.container{
+width:min(1180px,92%);
+margin:auto;
+}
+
+/* ================= HEADER ================= */
+
 header{
-position:sticky;top:0;z-index:9000;
-background:rgba(5,7,11,.88);
-backdrop-filter:blur(20px);
-border-bottom:1px solid rgba(220,181,102,.20);
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(8,7,6,.92);
+backdrop-filter:blur(18px);
+border-bottom:1px solid var(--border);
 }
+
 .nav{
-max-width:1400px;margin:auto;height:76px;padding:0 25px;
-display:flex;align-items:center;justify-content:space-between;gap:15px;
-}
-.logo{display:flex;align-items:center;gap:11px}
-.logo-icon{
-width:47px;height:47px;border-radius:15px;
-display:grid;place-items:center;
-font-size:25px;font-weight:800;
-background:linear-gradient(135deg,var(--pink),var(--purple),var(--blue));
-box-shadow:0 0 30px rgba(121,71,255,.25);
-}
-.logo h2{font:700 23px "Playfair Display",serif}
-.logo small{display:block;color:#9fa9ba;font-size:9px;letter-spacing:2px}
-.navlinks{display:flex;gap:4px}
-.navlinks a{
-padding:10px 11px;border-radius:10px;color:#d8deea;font-size:12px;
-}
-.navlinks a:hover{background:rgba(255,255,255,.07);color:var(--gold2)}
-.mail{
-border:1px solid rgba(220,181,102,.5);
-padding:10px 13px;border-radius:25px;font-size:11px;
-}
-.menu{
-display:none;width:43px;height:43px;border-radius:12px;
-border:1px solid var(--line);background:var(--card);color:white;font-size:21px;
+height:72px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
 }
 
-/* HERO */
-.hero{
-max-width:1400px;min-height:650px;margin:auto;padding:75px 30px 65px;
-display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:50px;
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+min-width:max-content;
 }
-.badge{
-display:inline-flex;padding:8px 14px;border-radius:25px;
-border:1px solid rgba(220,181,102,.35);
-background:rgba(220,181,102,.05);
-color:var(--gold2);font-size:11px;margin-bottom:18px;
+
+.logo-mark{
+width:46px;
+height:46px;
+border:2px solid var(--gold);
+border-radius:50%;
+display:grid;
+place-items:center;
+font-family:"Cormorant Garamond",serif;
+font-size:29px;
+font-weight:700;
+color:var(--gold2);
+box-shadow:0 0 20px rgba(217,170,85,.15);
 }
-.hero h1{
-font:700 clamp(45px,6vw,78px)/1.03 "Playfair Display",serif;
-margin-bottom:20px;
+
+.logo-text{
+font-family:"Cormorant Garamond",serif;
+font-size:30px;
+font-weight:700;
+letter-spacing:.5px;
+color:var(--gold3);
+line-height:1;
 }
-.grad{
-background:linear-gradient(90deg,#36a9ff,#9b45ff,#ff40bd,#ffd06e);
--webkit-background-clip:text;background-clip:text;color:transparent;
+
+.logo-sub{
+font-size:10px;
+letter-spacing:2px;
+color:#cfc4ae;
+margin-top:4px;
 }
-.hero p{max-width:650px;color:#b7c0cf;line-height:1.8;font-size:15px;margin-bottom:26px}
-.actions{display:flex;gap:11px;flex-wrap:wrap}
-.btn{
-border:0;padding:13px 19px;border-radius:12px;font-size:12px;font-weight:800;
+
+.nav-links{
+display:flex;
+align-items:center;
+gap:25px;
+font-size:13px;
+}
+
+.nav-links a{
+color:#e8dfcf;
 transition:.3s;
-}
-.primary{
-background:linear-gradient(100deg,var(--pink),var(--purple),var(--blue));
-color:#fff;box-shadow:0 15px 40px rgba(121,71,255,.25);
-}
-.primary:hover{transform:translateY(-3px)}
-.outline{
-background:rgba(255,255,255,.03);
-border:1px solid rgba(220,181,102,.45);color:#fff;
-}
-.outline:hover{background:rgba(220,181,102,.10)}
-
-/* HERO VISUAL */
-.visual{height:500px;position:relative;display:grid;place-items:center}
-.glow{
-position:absolute;width:360px;height:360px;border-radius:50%;
-background:radial-gradient(circle,#773cff,transparent 67%);
-filter:blur(20px);opacity:.42;
-}
-.phone{
-width:245px;height:465px;border:8px solid #171b24;border-radius:38px;
-background:#090d14;padding:12px;z-index:2;
-box-shadow:0 35px 90px rgba(0,0,0,.7);
-transform:rotate(-3deg);
-animation:float 5s ease-in-out infinite;
-}
-@keyframes float{50%{transform:translateY(-13px) rotate(1deg)}}
-.notch{width:90px;height:19px;background:#030408;margin:auto;border-radius:0 0 14px 14px}
-.screen{
-height:395px;margin-top:10px;border-radius:25px;padding:20px 15px;
-display:flex;flex-direction:column;justify-content:space-between;
-background:
-radial-gradient(circle at 20% 10%,#ff38c4,transparent 28%),
-radial-gradient(circle at 90% 80%,#365eff,transparent 35%),
-linear-gradient(145deg,#1b112b,#061728);
-}
-.screen strong{font-size:12px}
-.screen h3{font:600 29px "Playfair Display",serif}
-.screen p{font-size:10px;color:#d7dfea}
-.offer{
-padding:15px;border:1px solid rgba(255,255,255,.16);
-border-radius:15px;background:rgba(255,255,255,.09);
-backdrop-filter:blur(8px);
-}
-.floatcard{
-position:absolute;z-index:3;padding:16px;width:175px;border-radius:17px;
-background:rgba(14,18,27,.91);border:1px solid var(--line);
-box-shadow:var(--shadow);backdrop-filter:blur(14px);
-}
-.floatcard h4{font-size:13px;margin-bottom:5px}
-.floatcard p{font-size:10px;color:#9faabd;line-height:1.5}
-.f1{top:45px;left:0;transform:rotate(-7deg)}
-.f2{right:0;bottom:60px;transform:rotate(7deg)}
-
-/* SECTIONS */
-.section{max-width:1400px;margin:auto;padding:80px 30px}
-.heading{text-align:center;margin-bottom:38px}
-.heading .eyebrow{color:var(--gold);font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:9px}
-.heading h2{font:600 42px "Playfair Display",serif;margin-bottom:8px}
-.heading p{color:#9faabd;font-size:13px}
-
-/* SERVICES */
-.search{
-max-width:600px;margin:0 auto 28px;
-display:flex;border:1px solid var(--line);border-radius:13px;overflow:hidden;
-background:rgba(255,255,255,.03);
-}
-.search input{
-flex:1;padding:14px;background:transparent;border:0;outline:0;color:white;
-}
-.search button{width:52px;background:rgba(255,255,255,.06);border:0;color:white}
-.grid{
-display:grid;grid-template-columns:repeat(4,1fr);gap:15px;
-}
-.service{
-min-height:195px;padding:22px 19px;border-radius:19px;
-border:1px solid var(--line);
-background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.015));
-cursor:pointer;transition:.3s;position:relative;overflow:hidden;
-}
-.service:after{
-content:"";position:absolute;width:130px;height:130px;right:-70px;top:-70px;
-border-radius:50%;background:radial-gradient(circle,rgba(121,71,255,.3),transparent 70%);
-}
-.service:hover{
-transform:translateY(-7px);border-color:rgba(220,181,102,.55);
-box-shadow:0 20px 50px rgba(0,0,0,.35);
-}
-.icon{
-width:47px;height:47px;border-radius:14px;display:grid;place-items:center;
-font-size:21px;background:linear-gradient(135deg,var(--pink),var(--purple));
-margin-bottom:15px;
-}
-.service h3{font-size:15px;margin-bottom:7px}
-.service p{color:#9da8b8;font-size:11px;line-height:1.55;margin-bottom:12px}
-.more{font-size:10px;color:var(--gold2);font-weight:800}
-
-/* SAMPLE BANNERS */
-.samples{
-display:grid;grid-template-columns:repeat(3,1fr);gap:15px;
-}
-.poster{
-height:300px;border-radius:20px;overflow:hidden;position:relative;
-border:1px solid var(--line);cursor:pointer;transition:.3s;
-}
-.poster:hover{transform:translateY(-5px) scale(1.01);border-color:var(--gold)}
-.poster:before{
-content:"";position:absolute;inset:0;
-background:linear-gradient(to top,rgba(0,0,0,.9),transparent 65%);
-}
-.p1{background:radial-gradient(circle at 50% 30%,#ffd05a,transparent 20%),linear-gradient(135deg,#7d1d00,#d67b08,#310d00)}
-.p2{background:radial-gradient(circle at 20% 20%,#43ff92,transparent 22%),linear-gradient(145deg,#063c28,#08895a,#001810)}
-.p3{background:radial-gradient(circle at 80% 20%,#ffcaad,transparent 20%),linear-gradient(135deg,#762632,#f0bea2,#571827)}
-.p4{background:radial-gradient(circle at 50% 20%,#63cfff,transparent 22%),linear-gradient(135deg,#071b39,#0a6da0,#03101e)}
-.p5{background:radial-gradient(circle at 70% 20%,#ff7543,transparent 20%),linear-gradient(135deg,#151820,#454b55,#08090c)}
-.p6{background:radial-gradient(circle at 30% 20%,#d98cff,transparent 22%),linear-gradient(135deg,#2a0c42,#6d32a8,#090512)}
-.postertext{position:absolute;bottom:0;padding:23px}
-.postertext h3{font:600 27px "Playfair Display",serif}
-.postertext p{font-size:10px;color:#d8dfea}
-
-/* ANIMATION SHOWCASE */
-.showcase{
-margin-top:35px;height:310px;border-radius:25px;position:relative;overflow:hidden;
-border:1px solid var(--line);display:grid;place-items:center;text-align:center;
-background:
-radial-gradient(circle at 20% 40%,rgba(255,55,194,.28),transparent 30%),
-radial-gradient(circle at 80% 60%,rgba(40,168,255,.27),transparent 30%),#0c1018;
-}
-.orb{
-position:absolute;width:210px;height:210px;border-radius:50%;
-background:linear-gradient(135deg,var(--pink),var(--purple),var(--blue));
-filter:blur(1px);opacity:.5;animation:spin 7s linear infinite;
-}
-@keyframes spin{to{transform:rotate(360deg) scale(1.2)}}
-.showtext{position:relative;z-index:2}
-.showtext h2{font:600 42px "Playfair Display",serif;margin:10px}
-.showtext p{color:#d0d8e4}
-
-/* FEATURES */
-.four{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.feature{
-padding:27px;text-align:center;border:1px solid var(--line);
-border-radius:19px;background:rgba(255,255,255,.03);
-}
-.feature b{font-size:28px;display:block;margin-bottom:12px}
-.feature h3{font-size:14px;margin-bottom:7px}
-.feature p{font-size:10px;color:#9da8b7;line-height:1.6}
-
-/* STEPS */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.step{padding:26px;border-radius:19px;border:1px solid var(--line);background:rgba(255,255,255,.03)}
-.num{
-width:42px;height:42px;border-radius:50%;display:grid;place-items:center;
-background:linear-gradient(135deg,var(--pink),var(--purple));
-font-weight:800;margin-bottom:16px;
-}
-.step h3{font-size:14px;margin-bottom:7px}
-.step p{font-size:11px;color:#9faabd;line-height:1.6}
-
-/* PACKAGES */
-.packages{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.package{
-padding:28px;border-radius:23px;border:1px solid var(--line);
-background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.015));
 position:relative;
 }
-.package.pop{border-color:var(--gold);box-shadow:0 0 45px rgba(220,181,102,.08)}
-.popular{
-position:absolute;top:16px;right:16px;background:var(--gold);color:#111;
-font-size:9px;font-weight:900;padding:6px 9px;border-radius:20px;
-}
-.package h3{font:600 26px "Playfair Display",serif}
-.price{font-size:27px;font-weight:800;margin:15px 0}
-.package ul{list-style:none;margin-bottom:22px}
-.package li{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:11px;color:#b8c1cf}
 
-/* FAQ */
-.faq{max-width:850px;margin:auto}
-.faqitem{border:1px solid var(--line);border-radius:13px;overflow:hidden;margin-bottom:9px;background:rgba(255,255,255,.025)}
-.question{
-width:100%;padding:17px;background:transparent;border:0;color:#fff;
-display:flex;justify-content:space-between;text-align:left;font-weight:700;font-size:12px;
+.nav-links a:hover{
+color:var(--gold2);
 }
-.answer{max-height:0;overflow:hidden;padding:0 17px;color:#aab4c4;font-size:11px;line-height:1.7;transition:.3s}
-.faqitem.open .answer{max-height:180px;padding:0 17px 17px}
 
-/* CONTACT */
-.contact{
-display:grid;grid-template-columns:1fr 1fr;gap:25px;padding:32px;
-border-radius:25px;border:1px solid rgba(220,181,102,.2);
-background:radial-gradient(circle at 90% 10%,rgba(121,71,255,.15),transparent 35%),rgba(255,255,255,.025);
+.nav-links a:after{
+content:"";
+position:absolute;
+left:0;
+bottom:-9px;
+width:0;
+height:2px;
+background:var(--gold2);
+transition:.3s;
 }
-.contact h2{font:600 38px "Playfair Display",serif;margin:8px 0 12px}
-.contact p{font-size:12px;color:#aab5c5;line-height:1.8}
-.contactlinks{margin-top:22px;display:grid;gap:9px}
-.contactlinks a{padding:13px;border:1px solid var(--line);border-radius:11px;font-size:12px}
-.form{display:grid;gap:11px}
-.form input,.form select,.form textarea{
-width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:11px;
-background:#0a0f17;color:#fff;outline:0;
-}
-.form textarea{min-height:125px;resize:vertical}
 
-/* FOOTER */
-footer{border-top:1px solid var(--line);background:#05070b;padding:35px 25px}
-.footer{max-width:1400px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.footerlinks{display:flex;gap:15px;color:#909bad;font-size:10px;flex-wrap:wrap;justify-content:center}
-.social{display:flex;gap:7px}
-.social a{width:33px;height:33px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center}
-.copy{max-width:1400px;margin:22px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.06);text-align:center;color:#657184;font-size:9px}
+.nav-links a:hover:after{
+width:100%;
+}
 
-/* MODAL */
-.modal{
-display:none;position:fixed;inset:0;z-index:10000;padding:18px;
-background:rgba(0,0,0,.8);backdrop-filter:blur(12px);
-align-items:center;justify-content:center;
+.email-pill{
+border:1px solid var(--gold);
+border-radius:30px;
+padding:10px 16px;
+display:flex;
+align-items:center;
+gap:8px;
+font-size:12px;
+color:var(--gold3);
 }
-.modal.show{display:flex}
-.modalbox{
-width:min(900px,100%);max-height:90vh;overflow:auto;
-border:1px solid rgba(220,181,102,.35);border-radius:25px;
-background:radial-gradient(circle at 90% 0%,rgba(121,71,255,.18),transparent 30%),#0b1018;
-box-shadow:0 35px 100px rgba(0,0,0,.7);
-}
-.close{
-position:absolute;top:14px;right:14px;width:39px;height:39px;
-border:1px solid var(--line);border-radius:50%;background:rgba(255,255,255,.07);
-color:#fff;font-size:20px;
-}
-.modalhead{position:relative;padding:31px;display:flex;align-items:center;gap:17px}
-.modalicon{
-width:62px;height:62px;border-radius:18px;display:grid;place-items:center;font-size:29px;
-background:linear-gradient(135deg,var(--pink),var(--purple));
-}
-.modalhead h2{font:600 33px "Playfair Display",serif}
-.modalhead p{font-size:11px;color:#9eaabc;margin-top:4px}
-.modalbody{padding:0 31px 31px}
-.modalbody h3{font:600 21px "Playfair Display",serif;color:var(--gold2);margin:22px 0 8px}
-.modalbody>p{font-size:12px;line-height:1.8;color:#b4bfce}
-.featurelist{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
-.featurelist div{padding:12px;border:1px solid var(--line);border-radius:10px;font-size:11px;color:#cbd4df;background:rgba(255,255,255,.025)}
-.modalbuttons{display:flex;gap:9px;flex-wrap:wrap;margin-top:23px}
 
-/* LANGUAGE */
+.email-pill span{
+font-size:18px;
+}
+
 .language{
-position:fixed;right:16px;bottom:16px;z-index:8500;
-padding:7px;border:1px solid rgba(220,181,102,.35);border-radius:25px;
-background:rgba(7,9,14,.92);backdrop-filter:blur(12px);
+background:#16120d;
+color:var(--gold3);
+border:1px solid var(--gold);
+border-radius:20px;
+padding:8px 10px;
+outline:none;
 }
-.goog-te-gadget{font-size:0!important}
-.goog-te-gadget .goog-te-combo{
-margin:0!important;background:#0d121b;color:white;border:1px solid var(--line);
-border-radius:20px;padding:7px 11px;font-size:11px;outline:0;
-}
-.goog-logo-link,.goog-te-gadget span{display:none!important}
-.goog-te-banner-frame{display:none!important}
-body{top:0!important}
 
-/* WHATSAPP FLOAT */
-.whatsapp{
-position:fixed;left:17px;bottom:17px;z-index:8500;
-width:52px;height:52px;border-radius:50%;display:grid;place-items:center;
-background:#25d366;color:#fff;font-size:26px;
-box-shadow:0 10px 35px rgba(37,211,102,.3);
+.menu-btn{
+display:none;
+font-size:25px;
+color:var(--gold2);
+background:none;
+border:0;
 }
-.whatsapp:hover{transform:scale(1.08)}
 
-/* TOAST */
+/* ================= HERO ================= */
+
+.hero{
+min-height:590px;
+position:relative;
+overflow:hidden;
+border-bottom:1px solid var(--border);
+}
+
+.hero-bg{
+position:absolute;
+inset:0;
+background:
+linear-gradient(90deg,rgba(5,4,3,.98) 0%,rgba(8,6,4,.92) 38%,rgba(8,6,4,.35) 72%,rgba(8,6,4,.75)),
+radial-gradient(circle at 80% 50%,rgba(218,157,63,.2),transparent 35%);
+}
+
+.hero-bg:after{
+content:"";
+position:absolute;
+inset:0;
+background:
+linear-gradient(120deg,transparent 30%,rgba(255,196,85,.07),transparent 60%);
+animation:shine 6s linear infinite;
+}
+
+@keyframes shine{
+0%{transform:translateX(-100%)}
+100%{transform:translateX(100%)}
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+display:grid;
+grid-template-columns:45% 55%;
+align-items:center;
+min-height:590px;
+gap:20px;
+}
+
+.badge{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:7px 14px;
+border:1px solid var(--gold);
+border-radius:30px;
+color:var(--gold2);
+font-size:12px;
+margin-bottom:18px;
+background:rgba(217,170,85,.06);
+}
+
+.hero h1{
+font-family:"Cormorant Garamond",serif;
+font-size:64px;
+line-height:.95;
+margin-bottom:22px;
+font-weight:700;
+}
+
+.hero h1 span{
+color:var(--gold2);
+font-style:italic;
+}
+
+.hero p{
+color:#d4ccbd;
+font-size:14px;
+max-width:600px;
+margin-bottom:28px;
+}
+
+.hero-features{
+display:flex;
+gap:12px;
+margin-bottom:28px;
+flex-wrap:wrap;
+}
+
+.feature{
+padding:9px 13px;
+border-left:1px solid var(--gold);
+font-size:11px;
+color:#ded5c4;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+padding:14px 25px;
+border-radius:30px;
+border:1px solid var(--gold);
+background:linear-gradient(90deg,#e3ad50,#ffe09b);
+color:#100d08;
+font-weight:700;
+font-size:13px;
+cursor:pointer;
+transition:.3s;
+box-shadow:0 8px 25px rgba(217,170,85,.15);
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 12px 35px rgba(217,170,85,.3);
+}
+
+.btn.dark{
+background:rgba(20,16,11,.8);
+color:var(--gold2);
+}
+
+.hero-visual{
+height:500px;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* Animated GIF-style display */
+
+.gif-stage{
+width:260px;
+height:410px;
+border:2px solid var(--gold);
+border-radius:35px;
+background:
+linear-gradient(145deg,#241b10,#050403 50%,#1d160d);
+box-shadow:
+0 0 50px rgba(217,170,85,.25),
+inset 0 0 40px rgba(217,170,85,.08);
+position:relative;
+overflow:hidden;
+animation:phoneFloat 4s ease-in-out infinite;
+}
+
+@keyframes phoneFloat{
+0%,100%{transform:translateY(0) rotate(0)}
+50%{transform:translateY(-13px) rotate(1deg)}
+}
+
+.phone-top{
+height:28px;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.camera{
+width:55px;
+height:10px;
+background:#030303;
+border-radius:20px;
+}
+
+.gif-slide{
+position:absolute;
+inset:28px 12px 15px;
+border-radius:22px;
+overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+animation:slides 12s infinite;
+}
+
+.slide1{
+background:
+linear-gradient(135deg,#30180c,#9b521a,#180c06);
+}
+
+.slide2{
+background:
+linear-gradient(135deg,#0a2018,#315f39,#07100b);
+animation-delay:4s;
+}
+
+.slide3{
+background:
+linear-gradient(135deg,#281018,#8e354b,#16070c);
+animation-delay:8s;
+}
+
+@keyframes slides{
+0%,27%{opacity:1;transform:scale(1)}
+33%,94%{opacity:0;transform:scale(1.06)}
+100%{opacity:1}
+}
+
+.slide-content h2{
+font-family:"Cormorant Garamond",serif;
+font-size:38px;
+color:#fff0c9;
+line-height:1;
+margin-bottom:12px;
+}
+
+.slide-content p{
+font-size:12px;
+color:white;
+}
+
+.floating-card{
+position:absolute;
+padding:16px;
+border:1px solid var(--gold);
+border-radius:14px;
+background:rgba(10,8,5,.85);
+backdrop-filter:blur(10px);
+box-shadow:var(--shadow);
+font-size:12px;
+}
+
+.card-one{
+left:10px;
+top:95px;
+transform:rotate(-8deg);
+}
+
+.card-two{
+right:0;
+top:80px;
+transform:rotate(8deg);
+}
+
+.card-three{
+right:10px;
+bottom:70px;
+transform:rotate(-5deg);
+}
+
+/* ================= SECTION ================= */
+
+section{
+padding:65px 0;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:40px;
+}
+
+.section-title .line{
+width:110px;
+height:1px;
+background:var(--gold);
+margin:12px auto;
+}
+
+.section-title h2{
+font-family:"Cormorant Garamond",serif;
+font-size:43px;
+color:var(--gold3);
+}
+
+.section-title p{
+font-size:13px;
+color:#aaa294;
+}
+
+/* ================= SERVICES ================= */
+
+.service-search{
+max-width:520px;
+margin:0 auto 30px;
+display:flex;
+border:1px solid var(--border);
+border-radius:30px;
+overflow:hidden;
+background:#100d09;
+}
+
+.service-search input{
+flex:1;
+padding:13px 18px;
+border:0;
+outline:0;
+background:transparent;
+color:white;
+}
+
+.service-search button{
+width:55px;
+border:0;
+background:var(--gold);
+cursor:pointer;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:13px;
+}
+
+.service-card{
+border:1px solid var(--border);
+background:
+linear-gradient(145deg,rgba(255,255,255,.035),rgba(217,170,85,.025));
+border-radius:14px;
+padding:23px 12px;
+text-align:center;
+cursor:pointer;
+transition:.35s;
+min-height:150px;
+position:relative;
+overflow:hidden;
+}
+
+.service-card:before{
+content:"";
+position:absolute;
+width:100px;
+height:100px;
+border-radius:50%;
+background:rgba(217,170,85,.1);
+filter:blur(30px);
+left:50%;
+top:-30px;
+transform:translateX(-50%);
+}
+
+.service-card:hover{
+transform:translateY(-7px);
+border-color:var(--gold2);
+box-shadow:0 15px 35px rgba(0,0,0,.4);
+}
+
+.service-icon{
+font-size:29px;
+margin-bottom:8px;
+position:relative;
+}
+
+.service-card h3{
+font-family:"Cormorant Garamond",serif;
+font-size:20px;
+color:#fff4d8;
+position:relative;
+}
+
+.service-card p{
+font-size:10px;
+color:#aaa294;
+margin:5px 0;
+position:relative;
+}
+
+.view{
+font-size:10px;
+color:var(--gold2);
+position:relative;
+}
+
+/* ================= SAMPLES ================= */
+
+.samples{
+display:grid;
+grid-template-columns:repeat(6,1fr);
+gap:12px;
+}
+
+.sample{
+height:250px;
+border:1px solid var(--border);
+border-radius:12px;
+overflow:hidden;
+position:relative;
+cursor:pointer;
+background:#15100b;
+}
+
+.sample-art{
+height:100%;
+padding:20px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+transition:.4s;
+}
+
+.sample:hover .sample-art{
+transform:scale(1.06);
+}
+
+.sample:nth-child(1) .sample-art{
+background:linear-gradient(135deg,#541a0b,#e48b28,#3c1608);
+}
+
+.sample:nth-child(2) .sample-art{
+background:linear-gradient(135deg,#10291d,#3e713f,#101a12);
+}
+
+.sample:nth-child(3) .sample-art{
+background:linear-gradient(135deg,#fff1d2,#e4b78a,#fff6e5);
+color:#5e251d;
+}
+
+.sample:nth-child(4) .sample-art{
+background:linear-gradient(135deg,#0b0b0b,#312719,#080808);
+}
+
+.sample:nth-child(5) .sample-art{
+background:linear-gradient(135deg,#151515,#555,#050505);
+}
+
+.sample:nth-child(6) .sample-art{
+background:linear-gradient(135deg,#092e4c,#258bc3,#092238);
+}
+
+.sample-art h3{
+font-family:"Cormorant Garamond",serif;
+font-size:31px;
+line-height:.95;
+}
+
+.sample-art p{
+font-size:10px;
+margin-top:10px;
+}
+
+/* ================= INFO ================= */
+
+.info-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
+}
+
+.info-box{
+border:1px solid var(--border);
+border-radius:16px;
+padding:25px;
+background:rgba(20,15,10,.72);
+}
+
+.info-box h3{
+font-family:"Cormorant Garamond",serif;
+font-size:28px;
+color:var(--gold2);
+margin-bottom:14px;
+}
+
+.info-box p{
+font-size:12px;
+color:#c9c0ad;
+}
+
+.steps{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+}
+
+.step{
+border:1px solid var(--border);
+padding:25px 15px;
+border-radius:15px;
+text-align:center;
+}
+
+.step-number{
+width:42px;
+height:42px;
+border:1px solid var(--gold);
+border-radius:50%;
+display:grid;
+place-items:center;
+margin:0 auto 13px;
+color:var(--gold2);
+font-weight:700;
+}
+
+.step h3{
+font-family:"Cormorant Garamond",serif;
+font-size:20px;
+color:var(--gold3);
+}
+
+.step p{
+font-size:11px;
+color:#aaa294;
+margin-top:5px;
+}
+
+/* ================= PACKAGES ================= */
+
+.packages{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.package{
+border:1px solid var(--border);
+border-radius:18px;
+padding:30px 22px;
+background:linear-gradient(145deg,#15100b,#0b0907);
+transition:.3s;
+}
+
+.package:hover{
+transform:translateY(-8px);
+border-color:var(--gold2);
+}
+
+.package.featured{
+border:2px solid var(--gold);
+position:relative;
+}
+
+.popular{
+position:absolute;
+right:15px;
+top:15px;
+font-size:9px;
+background:var(--gold);
+color:#100d08;
+padding:5px 9px;
+border-radius:20px;
+font-weight:700;
+}
+
+.package h3{
+font-family:"Cormorant Garamond",serif;
+font-size:30px;
+color:var(--gold2);
+}
+
+.price{
+font-size:28px;
+font-weight:700;
+margin:10px 0 18px;
+}
+
+.package ul{
+list-style:none;
+font-size:12px;
+color:#cfc6b5;
+margin-bottom:22px;
+}
+
+.package li{
+margin:8px 0;
+}
+
+.package li:before{
+content:"✓";
+color:var(--gold2);
+margin-right:8px;
+}
+
+/* ================= FAQ ================= */
+
+.faq{
+max-width:850px;
+margin:auto;
+}
+
+.faq-item{
+border:1px solid var(--border);
+border-radius:12px;
+margin-bottom:10px;
+overflow:hidden;
+background:#100d09;
+}
+
+.faq-question{
+padding:17px 20px;
+cursor:pointer;
+display:flex;
+justify-content:space-between;
+color:var(--gold3);
+font-weight:600;
+font-size:13px;
+}
+
+.faq-answer{
+display:none;
+padding:0 20px 18px;
+font-size:12px;
+color:#aaa294;
+}
+
+.faq-item.open .faq-answer{
+display:block;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-box{
+border:1px solid var(--gold);
+border-radius:20px;
+padding:35px;
+background:
+radial-gradient(circle at 80% 20%,rgba(217,170,85,.1),transparent 35%),
+#100d09;
+text-align:center;
+}
+
+.contact-box h2{
+font-family:"Cormorant Garamond",serif;
+font-size:45px;
+color:var(--gold2);
+}
+
+.contact-box p{
+color:#bbb09e;
+font-size:13px;
+margin:8px auto 25px;
+}
+
+.contact-buttons{
+display:flex;
+justify-content:center;
+gap:12px;
+flex-wrap:wrap;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+border-top:1px solid var(--border);
+padding:35px 0;
+background:#070605;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr 1fr;
+gap:30px;
+}
+
+footer h3{
+font-family:"Cormorant Garamond",serif;
+color:var(--gold2);
+font-size:23px;
+}
+
+footer p,footer a{
+font-size:11px;
+color:#9e9688;
+display:block;
+margin:6px 0;
+}
+
+.social{
+display:flex;
+gap:10px;
+margin-top:15px;
+}
+
+.social a{
+width:35px;
+height:35px;
+border:1px solid var(--border);
+border-radius:50%;
+display:grid;
+place-items:center;
+color:var(--gold2);
+font-size:14px;
+}
+
+.copyright{
+text-align:center;
+border-top:1px solid rgba(217,170,85,.15);
+margin-top:25px;
+padding-top:20px;
+font-size:10px;
+color:#777064;
+}
+
+/* ================= MODAL ================= */
+
+.modal{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.8);
+backdrop-filter:blur(12px);
+z-index:2000;
+display:none;
+align-items:center;
+justify-content:center;
+padding:20px;
+}
+
+.modal.show{
+display:flex;
+}
+
+.modal-box{
+width:min(720px,100%);
+max-height:90vh;
+overflow:auto;
+border:1px solid var(--gold);
+border-radius:20px;
+background:
+radial-gradient(circle at top right,rgba(217,170,85,.1),transparent 35%),
+#0d0a07;
+padding:30px;
+position:relative;
+box-shadow:0 30px 100px rgba(0,0,0,.8);
+animation:modalIn .3s ease;
+}
+
+@keyframes modalIn{
+from{opacity:0;transform:translateY(30px) scale(.96)}
+to{opacity:1;transform:none}
+}
+
+.close{
+position:absolute;
+right:18px;
+top:14px;
+width:35px;
+height:35px;
+border-radius:50%;
+border:1px solid var(--gold);
+background:none;
+color:var(--gold2);
+font-size:20px;
+cursor:pointer;
+}
+
+.modal-box h2{
+font-family:"Cormorant Garamond",serif;
+font-size:42px;
+color:var(--gold2);
+margin-bottom:10px;
+}
+
+.modal-box h3{
+color:#fff0cb;
+margin:20px 0 8px;
+}
+
+.modal-box p,
+.modal-box li{
+font-size:13px;
+color:#c9c0ad;
+}
+
+.modal-box ul{
+padding-left:20px;
+}
+
+.modal-sample{
+height:230px;
+border-radius:15px;
+border:1px solid var(--border);
+margin:20px 0;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:linear-gradient(135deg,#33200c,#c48732,#120c06);
+}
+
+.modal-sample h3{
+font-family:"Cormorant Garamond",serif;
+font-size:50px;
+color:#fff0c9;
+}
+
+/* ================= TOAST ================= */
+
 .toast{
-position:fixed;left:50%;bottom:25px;z-index:12000;
-transform:translate(-50%,120px);padding:12px 19px;border-radius:25px;
-background:#151d29;border:1px solid var(--gold);font-size:11px;transition:.35s;
+position:fixed;
+bottom:25px;
+left:50%;
+transform:translateX(-50%) translateY(100px);
+background:#19130b;
+border:1px solid var(--gold);
+color:var(--gold3);
+padding:12px 20px;
+border-radius:30px;
+z-index:3000;
+font-size:12px;
+opacity:0;
+transition:.4s;
 }
-.toast.show{transform:translate(-50%,0)}
 
-/* MOBILE */
-@media(max-width:1100px){
-.navlinks{display:none}.menu{display:block}
-.hero{grid-template-columns:1fr;text-align:center}
-.hero p{margin-left:auto;margin-right:auto}.actions{justify-content:center}
-.grid{grid-template-columns:repeat(3,1fr)}
+.toast.show{
+opacity:1;
+transform:translateX(-50%) translateY(0);
 }
-@media(max-width:700px){
-.nav{padding:0 14px}.mail{display:none}
-.hero{padding:55px 18px 35px}.hero h1{font-size:43px}
-.visual{height:460px}.phone{width:210px;height:415px}.screen{height:345px}
-.f1{left:-5px}.f2{right:-5px}.floatcard{width:140px}
-.section{padding:60px 17px}.heading h2{font-size:34px}
-.grid{grid-template-columns:repeat(2,1fr)}
-.samples{grid-template-columns:repeat(2,1fr)}
-.poster{height:245px}.four,.steps,.packages{grid-template-columns:repeat(2,1fr)}
-.contact{grid-template-columns:1fr;padding:23px}
-.footer{flex-direction:column;text-align:center}
+
+/* ================= FLOATING BUTTONS ================= */
+
+.float-whatsapp,
+.float-mail{
+position:fixed;
+right:18px;
+width:52px;
+height:52px;
+border-radius:50%;
+display:grid;
+place-items:center;
+z-index:900;
+font-size:22px;
+border:1px solid var(--gold);
+box-shadow:0 10px 30px rgba(0,0,0,.5);
 }
-@media(max-width:470px){
-.grid,.samples,.four,.steps,.packages{grid-template-columns:1fr}
-.hero h1{font-size:38px}.poster{height:285px}
-.featurelist{grid-template-columns:1fr}
-.modalhead{padding:25px 20px}.modalbody{padding:0 20px 25px}
+
+.float-whatsapp{
+bottom:85px;
+background:#168c49;
+color:white;
 }
+
+.float-mail{
+bottom:20px;
+background:#16110b;
+color:var(--gold2);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1000px){
+
+.nav-links{
+gap:14px;
+}
+
+.email-pill{
+display:none;
+}
+
+.services-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+.samples{
+grid-template-columns:repeat(3,1fr);
+}
+
+.hero-content{
+grid-template-columns:1fr 1fr;
+}
+
+.hero h1{
+font-size:52px;
+}
+
+}
+
+@media(max-width:760px){
+
+.nav{
+height:65px;
+}
+
+.logo-text{
+font-size:24px;
+}
+
+.logo-mark{
+width:40px;
+height:40px;
+font-size:24px;
+}
+
+.nav-links{
+display:none;
+position:absolute;
+top:65px;
+left:0;
+right:0;
+background:#0b0907;
+border-bottom:1px solid var(--border);
+padding:20px;
+flex-direction:column;
+align-items:flex-start;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.menu-btn{
+display:block;
+}
+
+.hero{
+min-height:auto;
+}
+
+.hero-content{
+grid-template-columns:1fr;
+padding:60px 0;
+}
+
+.hero h1{
+font-size:47px;
+}
+
+.hero-visual{
+height:440px;
+order:-1;
+}
+
+.gif-stage{
+width:210px;
+height:330px;
+}
+
+.floating-card{
+font-size:9px;
+padding:10px;
+}
+
+.services-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.samples{
+grid-template-columns:repeat(2,1fr);
+}
+
+.sample{
+height:220px;
+}
+
+.info-grid,
+.packages{
+grid-template-columns:1fr;
+}
+
+.steps{
+grid-template-columns:repeat(2,1fr);
+}
+
+.footer-grid{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:450px){
+
+.container{
+width:94%;
+}
+
+.hero h1{
+font-size:41px;
+}
+
+.hero p{
+font-size:12px;
+}
+
+.services-grid{
+gap:8px;
+}
+
+.service-card{
+padding:18px 7px;
+}
+
+.service-card h3{
+font-size:17px;
+}
+
+.samples{
+gap:8px;
+}
+
+.sample{
+height:190px;
+}
+
+.sample-art h3{
+font-size:25px;
+}
+
+.steps{
+grid-template-columns:1fr;
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+.contact-box{
+padding:25px 15px;
+}
+
+.contact-box h2{
+font-size:37px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
-<nav class="nav">
+<!-- ================= HEADER ================= -->
 
-<a class="logo" href="#home">
-<div class="logo-icon">D</div>
+<header>
+
+<div class="container nav">
+
+<a href="#home" class="logo">
+
+<div class="logo-mark">D</div>
+
 <div>
-<h2>DesignMitra AI</h2>
-<small>CREATE • PROMOTE • GROW</small>
+<div class="logo-text">DesignMitra AI</div>
+<div class="logo-sub">CREATE • PROMOTE • GROW</div>
 </div>
+
 </a>
 
-<div class="navlinks" id="navlinks">
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#samples">Samples</a>
-<a href="#about">About</a>
-<a href="#how">How It Works</a>
-<a href="#packages">Packages</a>
-<a href="#faq">FAQ</a>
-<a href="#contact">Contact</a>
-</div>
+<nav class="nav-links" id="navLinks">
 
-<div style="display:flex;align-items:center;gap:9px">
-<a class="mail" href="mailto:jatavneeraj479@gmail.com">✉ Email</a>
-<button class="menu" onclick="mobileMenu()">☰</button>
-</div>
+<a href="#home" data-i18n="home">Home</a>
+<a href="#services" data-i18n="services">Services</a>
+<a href="#about" data-i18n="about">About</a>
+<a href="#how" data-i18n="how">How It Works</a>
+<a href="#packages" data-i18n="packages">Packages</a>
+<a href="#faq" data-i18n="faq">FAQ</a>
+<a href="#contact" data-i18n="contact">Contact</a>
 
 </nav>
+
+<select class="language" id="language">
+<option value="en">English</option>
+<option value="hi">हिन्दी</option>
+<option value="hinglish">Hinglish</option>
+<option value="mr">मराठी</option>
+<option value="bn">বাংলা</option>
+<option value="gu">ગુજરાતી</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="kn">ಕನ್ನಡ</option>
+<option value="ml">മലയാളം</option>
+<option value="pa">ਪੰਜਾਬੀ</option>
+<option value="or">ଓଡ଼ିଆ</option>
+</select>
+
+<a class="email-pill" href="mailto:jatavneeraj479@gmail.com">
+<span>✉</span>
+jatavneeraj479@gmail.com
+</a>
+
+<button class="menu-btn" id="menuBtn">☰</button>
+
+</div>
+
 </header>
 
-<main id="home">
 
-<!-- HERO -->
-<section class="hero">
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-bg"></div>
+
+<div class="container hero-content">
 
 <div>
-<div class="badge">✦ PREMIUM CREATIVE DESIGN STUDIO</div>
+
+<div class="badge">♛ Professional Design Services</div>
 
 <h1>
-Your Vision.<br>
-Our Creative<br>
-<span class="grad">Designs.</span>
+Designs Jo<br>
+Aapke <span>Business</span> Ko<br>
+Banaye <span>Strong!</span>
 </h1>
 
 <p>
-Posters, banners, invitation cards, social media posts,
-business cards, menus, catalogues, advertisements and much more —
-professionally designed to make your brand stand out.
+Posters, Invitation Cards, Social Media Posts, Business Cards,
+Menu Cards aur bhi bahut kuch... Sab kuch ek hi jagah,
+professional quality ke saath.
 </p>
 
-<div class="actions">
-<button class="btn primary" onclick="go('services')">
+<div class="hero-features">
+
+<div class="feature">✦ Premium Quality</div>
+<div class="feature">◷ Fast Delivery</div>
+<div class="feature">✧ 100% Custom</div>
+<div class="feature">♢ Affordable Pricing</div>
+
+</div>
+
+<a href="#services" class="btn">
 Explore All Services →
-</button>
-<button class="btn outline" onclick="go('samples')">
-View Samples
-</button>
-</div>
-</div>
-
-<div class="visual">
-
-<div class="glow"></div>
-
-<div class="floatcard f1">
-<h4>🔥 Special Offer</h4>
-<p>Creative promotional designs for your business.</p>
-</div>
-
-<div class="floatcard f2">
-<h4>💎 Premium Design</h4>
-<p>Elegant branding and social media creatives.</p>
-</div>
-
-<div class="phone">
-<div class="notch"></div>
-
-<div class="screen">
-<strong>✦ DesignMitra AI</strong>
-
-<div>
-<h3>Make Your<br>Brand <span class="grad">Stand Out.</span></h3>
-<p>Creative designs for a better tomorrow.</p>
-</div>
-
-<div class="offer">
-<strong>50% OFF</strong><br>
-<small>Special Promotion</small>
-</div>
-</div>
-</div>
-
-</div>
-</section>
-
-
-<!-- SERVICES -->
-<section class="section" id="services">
-
-<div class="heading">
-<div class="eyebrow">WHAT WE CREATE</div>
-<h2>Our Creative Services</h2>
-<p>Click any service to explore complete details, features and order options.</p>
-</div>
-
-<div class="search">
-<input id="search" placeholder="Search service..." oninput="searchServices()">
-<button>⌕</button>
-</div>
-
-<div class="grid" id="serviceGrid">
-
-<div class="service" data-search="poster maker business festival product promotional" onclick="openService('poster')">
-<div class="icon">🖼️</div>
-<h3>Poster Maker</h3>
-<p>Business, festival, product and promotional posters.</p>
-<div class="more">View Details →</div>
-</div>
-
-<div class="service" data-search="invitation wedding birthday engagement event" onclick="openService('invitation')">
-<div class="icon">💌</div>
-<h3>Invitation Card</h3>
-<p>Wedding, birthday, engagement and event invitations.</p>
-<div class="more">View Details →</div>
-</div>
-
-<div class="service" data-search="visiting business card professional" onclick="openService('visiting')">
-<div class="icon">💼</div>
-<h3>Visiting Card</h3>
-<p>Premium professional business card designs.</p>
-<div class="more">View Details →</div>
-</div>
-
-<div class="service" data-search="whatsapp status promotional festival" onclick="openService('whatsapp')">
-<div class="icon">💬</div>
-<h3>WhatsApp Status</h3>
-<p>Promotional and festival status creatives.</p>
-<div class="more">View Details →</div>
-</div>
-
-<div class="service" data-search="instagram social media post" onclick="openService('instagram')">
-<div class="icon">📸</div>
-<h3>Instagram Post</h3>
-<p>Professional social media content for brands.</p>
-<div class="more">View Details →</div>
-</div>
-
-<div class="service" data-search="youtube thumbnail creator video" onclick="openService('youtube')">
-<div class="icon">▶️</div>
-<h3>YouTube Thumbnail</h3>
-<p>High-click visual thumbnails for creators.</p>
-<div class="more">View Details →</div>
-</div>
-
-<div class="service" data-search="menu restaurant cafe food" onclick="openService('menu')">
-<div class="icon">🍽️</div>
-<h3>Menu Card</h3>
-<p>Restaurant, cafe and food menu designs.</p>
-<div class="more">View Details →</div>
-</div>
-
-<div class="service" data-search="sale offer discount festival" onclick="openService('offer')">
-<div class="icon">🔥</div>
-<h3>Offer / Sale Poster</h3>
-<p>Discount, festival and promotional campaigns.</p>
-<div class="more">View Details →</div>
-</div>
-
-<div class="service" data-search="catalogue product products" onclick="openService('catalogue')">
-<div class="icon">📖</div>
-<h3>Product Catalogue</h3>
-<p>Professional product presentation catalogues.</p>
-<div class="more">View Details →</div>
-</div>
-
-<div class="service" data-search="flyer business promotion event" onclick="openService('flyer')">
-<div class="icon">📄</div>
-<h3>Business Flyer</h3>
-<p>Company, service, event and promotional flyers.</p>
-<div class="more">View Details →</div>
-</div>
-
-<div class="service" data-search="ai advertisement ads marketing" onclick="openService('advertisement')">
-<div class="icon">✨</div>
-<h3>AI Advertisement</h3>
-<p>Smart advertising creatives for business growth.</p>
-<div class="more">View Details →</div>
-</div>
-
-<div class="service" data-search="caption generator social media copy" onclick="openService('caption')">
-<div class="icon">✍️</div>
-<h3>Caption Generator</h3>
-<p>Social media captions, hooks and marketing copy.</p>
-<div class="more">View Details →</div>
-</div>
-
-<div class="service" data-search="logo branding brand identity" onclick="openService('logo')">
-<div class="icon">✦</div>
-<h3>Logo Design</h3>
-<p>Memorable logos and visual identity concepts.</p>
-<div class="more">View Details →</div>
-</div>
-
-<div class="service" data-search="banner flex hoarding advertising" onclick="openService('banner')">
-<div class="icon">🪧</div>
-<h3>Banner Design</h3>
-<p>Digital, shop, event and promotional banners.</p>
-<div class="more">View Details →</div>
-</div>
-
-<div class="service" data-search="social media package branding" onclick="openService('social')">
-<div class="icon">📱</div>
-<h3>Social Media Kit</h3>
-<p>Consistent creatives for your social profiles.</p>
-<div class="more">View Details →</div>
-</div>
-
-<div class="service" data-search="custom design special requirement" onclick="openService('custom')">
-<div class="icon">🎨</div>
-<h3>Custom Design</h3>
-<p>Have a unique requirement? We can discuss it.</p>
-<div class="more">View Details →</div>
-</div>
-
-</div>
-</section>
-
-
-<!-- SAMPLES -->
-<section class="section" id="samples">
-
-<div class="heading">
-<div class="eyebrow">CREATIVE SHOWCASE</div>
-<h2>Poster • Banner • Design Samples</h2>
-<p>Click any sample to see its information and order a similar creative.</p>
-</div>
-
-<div class="samples">
-
-<div class="poster p1" onclick="sample('Festival Promotional Poster')">
-<div class="postertext"><h3>Festival Offer</h3><p>Premium promotional poster</p></div>
-</div>
-
-<div class="poster p2" onclick="sample('Food Business Advertisement')">
-<div class="postertext"><h3>Fresh & Healthy</h3><p>Food business creative</p></div>
-</div>
-
-<div class="poster p3" onclick="sample('Wedding Invitation')">
-<div class="postertext"><h3>Wedding</h3><p>Elegant invitation concept</p></div>
-</div>
-
-<div class="poster p4" onclick="sample('Real Estate Banner')">
-<div class="postertext"><h3>Dream Home</h3><p>Real estate banner concept</p></div>
-</div>
-
-<div class="poster p5" onclick="sample('Fitness Advertisement')">
-<div class="postertext"><h3>Fitness</h3><p>Social media advertisement</p></div>
-</div>
-
-<div class="poster p6" onclick="sample('Premium Brand Creative')">
-<div class="postertext"><h3>Premium Brand</h3><p>Luxury creative concept</p></div>
-</div>
-
-</div>
-
-<div class="showcase">
-<div class="orb"></div>
-<div class="showtext">
-<div class="badge">🎬 ANIMATED CREATIVE SHOWCASE</div>
-<h2>Ideas Into <span class="grad">Visuals.</span></h2>
-<p>Poster • Banner • Social Media • Advertisement • Branding</p>
-<br>
-<button class="btn primary" onclick="openService('advertisement')">Create Something Amazing →</button>
-</div>
-</div>
-
-</section>
-
-
-<!-- ABOUT -->
-<section class="section" id="about">
-
-<div class="heading">
-<div class="eyebrow">WHY DESIGNMITRA</div>
-<h2>Creative. Modern. Business Focused.</h2>
-<p>Designed to help your business look more professional online and offline.</p>
-</div>
-
-<div class="four">
-
-<div class="feature"><b>💎</b><h3>Premium Quality</h3><p>Clean, modern and professional visual designs.</p></div>
-<div class="feature"><b>⚡</b><h3>Fast Delivery</h3><p>Quick creative turnaround for urgent requirements.</p></div>
-<div class="feature"><b>💰</b><h3>Affordable</h3><p>Flexible options for individuals and businesses.</p></div>
-<div class="feature"><b>🤝</b><h3>Support</h3><p>Easy communication from idea to final design.</p></div>
-
-</div>
-</section>
-
-
-<!-- HOW -->
-<section class="section" id="how">
-
-<div class="heading">
-<div class="eyebrow">SIMPLE PROCESS</div>
-<h2>How It Works?</h2>
-<p>Four simple steps to start your design.</p>
-</div>
-
-<div class="steps">
-
-<div class="step"><div class="num">1</div><h3>Select Service</h3><p>Choose the design service you need.</p></div>
-<div class="step"><div class="num">2</div><h3>Send Details</h3><p>Share your logo, photos, text and requirements.</p></div>
-<div class="step"><div class="num">3</div><h3>Confirm Order</h3><p>Discuss your requirement and confirm the project.</p></div>
-<div class="step"><div class="num">4</div><h3>Get Design</h3><p>Receive the final creative after confirmation.</p></div>
-
-</div>
-</section>
-
-
-<!-- PACKAGES -->
-<section class="section" id="packages">
-
-<div class="heading">
-<div class="eyebrow">FLEXIBLE OPTIONS</div>
-<h2>Creative Packages</h2>
-<p>Choose an option or contact us for a custom quotation.</p>
-</div>
-
-<div class="packages">
-
-<div class="package">
-<h3>Starter</h3>
-<div class="price">₹299+</div>
-<ul>
-<li>✓ 1 Creative Design</li>
-<li>✓ Professional Layout</li>
-<li>✓ Basic Revision</li>
-<li>✓ Digital Delivery</li>
-</ul>
-<button class="btn outline" onclick="choosePackage('Starter')">Choose Starter</button>
-</div>
-
-<div class="package pop">
-<div class="popular">POPULAR</div>
-<h3>Business</h3>
-<div class="price">₹799+</div>
-<ul>
-<li>✓ 3 Creative Designs</li>
-<li>✓ Premium Layout</li>
-<li>✓ Multiple Revisions</li>
-<li>✓ Social Media Sizes</li>
-<li>✓ Fast Delivery</li>
-</ul>
-<button class="btn primary" onclick="choosePackage('Business')">Choose Business</button>
-</div>
-
-<div class="package">
-<h3>Premium</h3>
-<div class="price">Custom</div>
-<ul>
-<li>✓ Multiple Designs</li>
-<li>✓ Brand Creative Direction</li>
-<li>✓ Premium Advertisement</li>
-<li>✓ Social Media Kit</li>
-<li>✓ Dedicated Support</li>
-</ul>
-<button class="btn outline" onclick="choosePackage('Premium')">Get Custom Quote</button>
-</div>
-
-</div>
-</section>
-
-
-<!-- FAQ -->
-<section class="section" id="faq">
-
-<div class="heading">
-<div class="eyebrow">NEED HELP?</div>
-<h2>Frequently Asked Questions</h2>
-<p>Quick answers to common questions.</p>
-</div>
-
-<div class="faq">
-
-<div class="faqitem">
-<button class="question" onclick="faq(this)">How do I order a design?<span>+</span></button>
-<div class="answer">Select any service, read its details and click Start This Design. You can then send your requirement through WhatsApp.</div>
-</div>
-
-<div class="faqitem">
-<button class="question" onclick="faq(this)">Can I provide my own photos and logo?<span>+</span></button>
-<div class="answer">Yes. You can provide your logo, product photos, text, contact information and other material required for the design.</div>
-</div>
-
-<div class="faqitem">
-<button class="question" onclick="faq(this)">Can I request revisions?<span>+</span></button>
-<div class="answer">Revision availability depends on the selected package and project requirement. Discuss it before confirming your order.</div>
-</div>
-
-<div class="faqitem">
-<button class="question" onclick="faq(this)">Do you create social media designs?<span>+</span></button>
-<div class="answer">Yes. Instagram posts, WhatsApp status, YouTube thumbnails, promotional banners and other social media creatives are available.</div>
-</div>
-
-<div class="faqitem">
-<button class="question" onclick="faq(this)">Can I request a custom design?<span>+</span></button>
-<div class="answer">Yes. If your requirement is not listed, use the Custom Design service or contact us directly.</div>
-</div>
-
-</div>
-</section>
-
-
-<!-- CONTACT -->
-<section class="section" id="contact">
-
-<div class="contact">
-
-<div>
-<div class="eyebrow" style="color:var(--gold)">ORDER / ENQUIRY</div>
-
-<h2>Let's Create Something <span class="grad">Beautiful.</span></h2>
-
-<p>
-Tell us what you need and we'll discuss the best creative solution for your business.
-You can directly contact us on WhatsApp.
-</p>
-
-<div class="contactlinks">
-<a href="https://wa.me/917047489824" target="_blank">💬 WhatsApp: 7047489824</a>
-<a href="mailto:jatavneeraj479@gmail.com">📧 jatavneeraj479@gmail.com</a>
-</div>
-</div>
-
-<form class="form" onsubmit="sendForm(event)">
-
-<input id="name" required placeholder="Your Name">
-<input id="business" placeholder="Business / Brand Name">
-
-<select id="serviceSelect" required>
-<option value="">Select Service</option>
-<option>Poster Maker</option>
-<option>Invitation Card</option>
-<option>Visiting Card</option>
-<option>WhatsApp Status</option>
-<option>Instagram Post</option>
-<option>YouTube Thumbnail</option>
-<option>Menu Card</option>
-<option>Offer / Sale Poster</option>
-<option>Product Catalogue</option>
-<option>Business Flyer</option>
-<option>AI Advertisement</option>
-<option>Caption Generator</option>
-<option>Logo Design</option>
-<option>Banner Design</option>
-<option>Social Media Kit</option>
-<option>Custom Design</option>
-</select>
-
-<textarea id="message" required placeholder="Tell us about your requirement..."></textarea>
-
-<button class="btn primary" type="submit">Send Enquiry on WhatsApp →</button>
-
-</form>
-</div>
-</section>
-
-</main>
-
-
-<!-- FOOTER -->
-<footer>
-
-<div class="footer">
-
-<div class="logo">
-<div class="logo-icon">D</div>
-<div><h2>DesignMitra AI</h2><small>CREATE • PROMOTE • GROW</small></div>
-</div>
-
-<div class="footerlinks">
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#samples">Samples</a>
-<a href="#packages">Packages</a>
-<a href="#faq">FAQ</a>
-<a href="#contact">Contact</a>
-</div>
-
-<div class="social">
-<a href="https://instagram.com/" target="_blank">◎</a>
-<a href="https://facebook.com/" target="_blank">f</a>
-<a href="https://youtube.com/" target="_blank">▶</a>
-<a href="https://wa.me/917047489824" target="_blank">☏</a>
-</div>
-
-</div>
-
-<div class="copy">
-© 2026 DesignMitra AI • Create • Promote • Grow • All Rights Reserved
-</div>
-
-</footer>
-
-
-<!-- SERVICE MODAL -->
-<div class="modal" id="serviceModal">
-
-<div class="modalbox">
-
-<div class="modalhead">
-
-<button class="close" onclick="closeModal()">×</button>
-
-<div class="modalicon" id="mIcon">🎨</div>
-
-<div>
-<h2 id="mTitle">Service</h2>
-<p id="mSub">Professional creative service</p>
-</div>
-
-</div>
-
-<div class="modalbody">
-
-<h3>About This Service</h3>
-<p id="mDesc"></p>
-
-<h3>What You Get</h3>
-<div class="featurelist" id="mFeatures"></div>
-
-<h3>Perfect For</h3>
-<p id="mPerfect"></p>
-
-<div class="modalbuttons">
-<button class="btn primary" onclick="startService()">Start This Design →</button>
-<button class="btn outline" onclick="closeModal();go('samples')">View Samples</button>
-</div>
-
-</div>
-</div>
-</div>
-
-
-<!-- SAMPLE MODAL -->
-<div class="modal" id="sampleModal">
-
-<div class="modalbox">
-
-<div class="modalhead">
-<button class="close" onclick="closeSample()">×</button>
-<div class="modalicon">🖼️</div>
-<div>
-<h2 id="sampleTitle">Design Sample</h2>
-<p>Creative design concept</p>
-</div>
-</div>
-
-<div class="modalbody">
-<h3>Sample Information</h3>
-
-<p>
-This sample represents a creative concept for business,
-promotion, event or social media use. Your final design
-can be customised with your own logo, photos, colours,
-text and contact details.
-</p>
-
-<h3>Want A Similar Design?</h3>
-
-<p>
-Send your requirement and we can discuss the style,
-content and format needed for your project.
-</p>
-
-<div class="modalbuttons">
-<button class="btn primary" onclick="closeSample();go('contact')">
-Request Similar Design →
-</button>
-</div>
-</div>
-
-</div>
-</div>
-
-
-<!-- LANGUAGE -->
-<div class="language">
-<div id="google_translate_element"></div>
-</div>
-
-
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/917047489824" target="_blank" aria-label="WhatsApp">
-💬
 </a>
 
-
-<div class="toast" id="toast">Done!</div>
-
-
-<script>
-
-/* SERVICE DATA */
-const data={
-
-poster:{
-i:"🖼️",t:"Poster Maker",s:"Professional Poster Design",
-d:"Create powerful and attractive posters for businesses, products, festivals, events and promotions. The design focuses on strong visual hierarchy, readable typography and premium presentation.",
-f:["Business Promotion","Festival Posters","Product Posters","Event Posters","Social Media Sizes","Custom Brand Colors","Professional Typography","High Quality Design"],
-p:"Shops, restaurants, coaching centres, clothing brands, events, festivals, product launches and local businesses."
-},
-
-invitation:{
-i:"💌",t:"Invitation Card",s:"Elegant Invitation Designs",
-d:"Beautiful invitation cards for weddings, birthdays, anniversaries, engagements, parties and special events.",
-f:["Wedding Invitations","Birthday Invitations","Anniversary Cards","Engagement Invitations","Event Invitations","Traditional Designs","Modern Luxury Designs","Digital Format"],
-p:"Weddings, birthdays, engagements, family events, parties and special occasions."
-},
-
-visiting:{
-i:"💼",t:"Visiting Card",s:"Premium Business Card Design",
-d:"Professional visiting cards that create a strong first impression and clearly communicate your brand identity.",
-f:["Business Name","Contact Details","Logo","QR Code","Social Media","Premium Layout","Modern Typography","Print Ready"],
-p:"Business owners, professionals, shops, agencies, freelancers and service providers."
-},
-
-whatsapp:{
-i:"💬",t:"WhatsApp Status",s:"Promotional WhatsApp Creative",
-d:"Engaging WhatsApp status designs for offers, new products, announcements and daily business promotion.",
-f:["Offer Status","Product Status","Festival Status","Business Promotion","New Arrival","Sale Announcement","Vertical Format","Branding"],
-p:"Local shops, retailers, restaurants, salons, boutiques and service businesses."
-},
-
-instagram:{
-i:"📸",t:"Instagram Post",s:"Social Media Creative",
-d:"Modern Instagram posts designed to make your brand look professional and visually consistent.",
-f:["Product Posts","Quote Posts","Promotional Posts","Offer Posts","Carousel Concepts","Branding","Modern Layout","Social Ready"],
-p:"Creators, influencers, businesses, restaurants, fashion brands and online stores."
-},
-
-youtube:{
-i:"▶️",t:"YouTube Thumbnail",s:"High-Impact Thumbnail",
-d:"Eye-catching thumbnails designed around strong headlines, visual hierarchy and attention-grabbing compositions.",
-f:["Video Thumbnail","Bold Headline","Product Highlight","Subject Focus","High Contrast","Channel Branding","Multiple Concepts","Web Optimized"],
-p:"YouTubers, gaming channels, educational channels, vloggers and business creators."
-},
-
-menu:{
-i:"🍽️",t:"Menu Card",s:"Restaurant & Food Menu",
-d:"Professional food menus for restaurants, cafes, hotels, food trucks and home food businesses.",
-f:["Food Menu","Restaurant Menu","Cafe Menu","Price List","Combo Menu","Digital Menu","QR Menu Concept","Premium Layout"],
-p:"Restaurants, cafes, hotels, bakeries, food trucks and home food businesses."
-},
-
-offer:{
-i:"🔥",t:"Offer / Sale Poster",s:"Promotional Sales Creative",
-d:"High-impact promotional posters for discounts, festive offers, launches, clearance sales and special campaigns.",
-f:["Discount Campaign","Festival Sale","Flash Sale","New Launch","Limited Offer","Price Highlight","Call To Action","Social Format"],
-p:"Retail stores, fashion shops, electronics stores, restaurants and online businesses."
-},
-
-catalogue:{
-i:"📖",t:"Product Catalogue",s:"Product Presentation",
-d:"Present products in a clean catalogue layout that customers can easily understand and browse.",
-f:["Product Photos","Product Names","Prices","Descriptions","Specifications","Branding","Multi-Page","Digital Catalogue"],
-p:"Fashion, jewellery, electronics, footwear, cosmetics and product businesses."
-},
-
-flyer:{
-i:"📄",t:"Business Flyer",s:"Promotional Flyer",
-d:"Compact and informative flyers that communicate your offer, service or event quickly.",
-f:["Business Flyer","Service Flyer","Event Flyer","Opening Flyer","Promotion Flyer","Contact Details","QR Code","Print Format"],
-p:"Businesses, events, coaching centres, agencies, shops and local service providers."
-},
-
-advertisement:{
-i:"✨",t:"AI Advertisement",s:"Smart Advertising Creative",
-d:"Modern advertising creatives using visual storytelling, premium layouts and AI-assisted creative direction.",
-f:["Ad Creative","Product Promotion","Social Media Ad","Campaign Concept","Visual Hook","CTA Design","Multiple Formats","Brand Focus"],
-p:"Businesses looking for modern advertising creatives and social media campaigns."
-},
-
-caption:{
-i:"✍️",t:"Caption Generator",s:"Social Media Copy",
-d:"Engaging captions, hooks and promotional copy ideas for social media content.",
-f:["Instagram Captions","Business Captions","Product Captions","Offer Captions","Reels Hooks","CTA Ideas","Hashtag Ideas","Marketing Copy"],
-p:"Creators, businesses, influencers, shops and social media managers."
-},
-
-logo:{
-i:"✦",t:"Logo Design",s:"Brand Identity Concept",
-d:"Memorable logo concepts designed to give your business a professional and recognisable identity.",
-f:["Logo Concept","Typography","Icon Concept","Colour Direction","Brand Style","Social Profile Version","Digital Format","Revision"],
-p:"New businesses, shops, creators, startups, agencies and professionals."
-},
-
-banner:{
-i:"🪧",t:"Banner Design",s:"Promotional Banner",
-d:"Large-format and digital banner designs for shops, events, promotions, campaigns and advertisements.",
-f:["Shop Banner","Event Banner","Sale Banner","Digital Banner","Festival Banner","Contact Details","Branding","Multiple Sizes"],
-p:"Shops, events, campaigns, businesses, institutions and local promotions."
-},
-
-social:{
-i:"📱",t:"Social Media Kit",s:"Complete Social Creative Set",
-d:"A consistent set of social media creatives designed around your brand identity.",
-f:["Instagram Post","Story Design","WhatsApp Status","Profile Creative","Offer Creative","Brand Templates","Consistent Style","Content Direction"],
-p:"Businesses, creators, influencers, brands and social media pages."
-},
-
-custom:{
-i:"🎨",t:"Custom Design",s:"Your Unique Requirement",
-d:"Have something different in mind? Tell us what you need and we can discuss a custom creative solution.",
-f:["Custom Concept","Custom Size","Brand Style","Special Requirement","Creative Direction","Digital Format","Revision Discussion","Personalised Design"],
-p:"Any business, event, creator or individual with a unique design requirement."
-}
-
-};
-
-let current="";
-
-
-/* OPEN SERVICE */
-function openService(key){
-
-if(!data[key])return;
-
-current=key;
-
-let x=data[key];
-
-document.getElementById("mIcon").textContent=x.i;
-document.getElementById("mTitle").textContent=x.t;
-document.getElementById("mSub").textContent=x.s;
-document.getElementById("mDesc").textContent=x.d;
-document.getElementById("mPerfect").textContent=x.p;
-
-let box=document.getElementById("mFeatures");
-box.innerHTML="";
-
-x.f.forEach(v=>{
-let el=document.createElement("div");
-el.textContent="✓ "+v;
-box.appendChild(el);
-});
-
-document.getElementById("serviceModal").classList.add("show");
-document.body.style.overflow="hidden";
-
-}
-
-
-/* START */
-function startService(){
-
-closeModal();
-
-let title=data[current].t;
-
-document.getElementById("serviceSelect").value=title;
-
-document.getElementById("message").value=
-"I want to order "+title+". Please share complete details and requirements.";
-
-go("contact");
-
-toast(title+" selected");
-
-}
-
-
-/* CLOSE */
-function closeModal(){
-document.getElementById("serviceModal").classList.remove("show");
-document.body.style.overflow="";
-}
-
-function sample(name){
-document.getElementById("sampleTitle").textContent=name;
-document.getElementById("sampleModal").classList.add("show");
-document.body.style.overflow="hidden";
-}
-
-function closeSample(){
-document.getElementById("sampleModal").classList.remove("show");
-document.body.style.overflow="";
-}
-
-
-/* NAV */
-function go(id){
-document.getElementById(id).scrollIntoView({behavior:"smooth"});
-}
-
-
-/* SEARCH */
-function searchServices(){
-
-let q=document.getElementById("search").value.toLowerCase();
-
-document.querySelectorAll(".service").forEach(el=>{
-el.style.display=el.dataset.search.includes(q)?"":"none";
-});
-
-}
-
-
-/* FAQ */
-function faq(btn){
-
-let item=btn.parentElement;
-
-document.querySelectorAll(".faqitem").forEach(x=>{
-if(x!==item)x.classList.remove("open");
-});
-
-item.classList.toggle("open");
-
-}
-
-
-/* PACKAGE */
-function choosePackage(name){
-
-document.getElementById("message").value=
-"I am interested in the "+name+
-" package. Please share complete details.";
-
-go("contact");
-
-toast(name+" package selected");
-
-}
-
-
-/* CONTACT → WHATSAPP */
-function sendForm(e){
-
-e.preventDefault();
-
-let name=document.getElementById("name").value;
-let business=document.getElementById("business").value;
-let service=document.getElementById("serviceSelect").value;
-let message=document.getElementById("message").value;
-
-let text=
-"Hello DesignMitra AI!%0A%0A"+
-"Name: "+encodeURIComponent(name)+"%0A"+
-"Business: "+encodeURIComponent(business)+"%0A"+
-"Service: "+encodeURIComponent(service)+"%0A%0A"+
-"Requirement: "+encodeURIComponent(message);
-
-window.open(
-"https://wa.me/917047489824?text="+text,
-"_blank"
-);
-
-}
-
-
-/* MOBILE MENU */
-function mobileMenu(){
-
-let n=document.getElementById("navlinks");
-
-if(n.style.display==="flex"){
-n.style.display="none";
-return;
-}
-
-n.style.display="flex";
-n.style.position="absolute";
-n.style.top="76px";
-n.style.left="10px";
-n.style.right="10px";
-n.style.padding="14px";
-n.style.flexDirection="column";
-n.style.background="#0b1018";
-n.style.border="1px solid rgba(255,255,255,.12)";
-n.style.borderRadius="15px";
-
-}
-
-
-/* TOAST */
-function toast(msg){
-
-let t=document.getElementById("toast");
-
-t.textContent=msg;
-t.classList.add("show");
-
-setTimeout(()=>t.classList.remove("show"),2400);
-
-}
-
-
-/* CLOSE MODALS */
-document.getElementById("serviceModal").onclick=function(e){
-if(e.target===this)closeModal();
-};
-
-document.getElementById("sampleModal").onclick=function(e){
-if(e.target===this)closeSample();
-};
-
-document.addEventListener("keydown",e=>{
-if(e.key==="Escape"){
-closeModal();
-closeSample();
-}
-});
-
-</script>
-
-
-<!-- GOOGLE TRANSLATE -->
-<script>
-function googleTranslateElementInit(){
-new google.translate.TranslateElement({
-pageLanguage:"en",
-includedLanguages:"en,hi,bn,mr,te,ta,gu,kn,ml,pa,or,as,ur,ne,fr,de,es,it,pt,ru,ja,ko,zh,ar,tr,id,th,vi",
-autoDisplay:false
-},"google_translate_element");
-}
-</script>
-
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-</body>
-</html>
+</div>
+
+
+<div class="hero-visual">
+
+<div class="floating-card card-one">
+🍔<br>
+<b>Special Offer</b><br>
+50% OFF
+</div>
+
+<div class="floating-card card-two">
+💍<br>
+<b>Wedding Invitation</b><br>
+Premium Design
+</div>
+
+<div class="floating-card card-three">
+📢<br>
+<b>New Collection</b><br>
+C
