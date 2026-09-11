@@ -6,7 +6,8 @@
 
 <title>DesignMitra AI | Create • Promote • Grow</title>
 
-<meta name="description" content="DesignMitra AI - Premium Posters, Banners, Invitations, Business Cards, Social Media Designs and Creative Services.">
+<meta name="description"
+content="DesignMitra AI - Premium creative design services for businesses, brands, events and social media.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,36 +17,32 @@
 <style>
 
 :root{
---black:#080706;
---black2:#11100d;
---black3:#181510;
---gold:#d9aa55;
---gold2:#f4cf82;
---gold3:#ffe7aa;
---white:#fffaf0;
---muted:#c9c0ad;
---border:rgba(217,170,85,.45);
---shadow:0 20px 60px rgba(0,0,0,.55);
+--bg:#080604;
+--bg2:#110d08;
+--card:#15100b;
+--card2:#1b140c;
+--gold:#e8b95f;
+--gold2:#ffd98a;
+--cream:#fff5df;
+--muted:#c8bda9;
+--line:rgba(232,185,95,.35);
+--shadow:0 15px 50px rgba(0,0,0,.55);
 }
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-}
-
-html{
 scroll-behavior:smooth;
 }
 
 body{
 font-family:Inter,Arial,sans-serif;
 background:
-radial-gradient(circle at 20% 10%,rgba(217,170,85,.08),transparent 25%),
-radial-gradient(circle at 80% 40%,rgba(255,180,60,.06),transparent 30%),
-linear-gradient(120deg,#070605,#14100b,#080706);
-color:var(--white);
-line-height:1.6;
+radial-gradient(circle at 20% 10%,rgba(190,130,35,.12),transparent 25%),
+radial-gradient(circle at 90% 30%,rgba(255,180,60,.08),transparent 25%),
+linear-gradient(135deg,#050403,#100c08,#050403);
+color:#fff;
 overflow-x:hidden;
 }
 
@@ -54,16 +51,17 @@ content:"";
 position:fixed;
 inset:0;
 pointer-events:none;
-background:
-linear-gradient(rgba(255,255,255,.015) 1px,transparent 1px),
-linear-gradient(90deg,rgba(255,255,255,.015) 1px,transparent 1px);
-background-size:50px 50px;
+opacity:.09;
+background-image:
+linear-gradient(rgba(255,210,130,.18) 1px,transparent 1px),
+linear-gradient(90deg,rgba(255,210,130,.18) 1px,transparent 1px);
+background-size:45px 45px;
 z-index:-1;
 }
 
 a{
-text-decoration:none;
 color:inherit;
+text-decoration:none;
 }
 
 button{
@@ -81,9 +79,10 @@ header{
 position:sticky;
 top:0;
 z-index:1000;
-background:rgba(8,7,6,.92);
+height:72px;
+background:rgba(5,4,3,.92);
 backdrop-filter:blur(18px);
-border-bottom:1px solid var(--border);
+border-bottom:1px solid var(--line);
 }
 
 .nav{
@@ -91,170 +90,176 @@ height:72px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:20px;
+gap:25px;
 }
 
 .logo{
 display:flex;
 align-items:center;
 gap:10px;
-min-width:max-content;
+cursor:pointer;
 }
 
 .logo-mark{
-width:46px;
-height:46px;
+width:48px;
+height:48px;
 border:2px solid var(--gold);
 border-radius:50%;
 display:grid;
 place-items:center;
 font-family:"Cormorant Garamond",serif;
-font-size:29px;
-font-weight:700;
-color:var(--gold2);
-box-shadow:0 0 20px rgba(217,170,85,.15);
-}
-
-.logo-text{
-font-family:"Cormorant Garamond",serif;
 font-size:30px;
 font-weight:700;
-letter-spacing:.5px;
-color:var(--gold3);
-line-height:1;
+color:var(--gold2);
+box-shadow:0 0 22px rgba(232,185,95,.2);
 }
 
-.logo-sub{
-font-size:10px;
+.logo-text h2{
+font-family:"Cormorant Garamond",serif;
+font-size:26px;
+letter-spacing:.5px;
+color:var(--cream);
+line-height:.9;
+}
+
+.logo-text small{
+font-size:9px;
 letter-spacing:2px;
-color:#cfc4ae;
-margin-top:4px;
+color:var(--gold);
 }
 
 .nav-links{
 display:flex;
 align-items:center;
 gap:25px;
+}
+
+.nav-links a,
+.dropbtn{
 font-size:13px;
-}
-
-.nav-links a{
-color:#e8dfcf;
+color:#eee;
+cursor:pointer;
 transition:.3s;
-position:relative;
+background:none;
+border:0;
 }
 
-.nav-links a:hover{
+.nav-links a:hover,
+.dropbtn:hover{
 color:var(--gold2);
 }
 
-.nav-links a:after{
-content:"";
+.dropdown{
+position:relative;
+}
+
+.dropdown-menu{
 position:absolute;
+top:35px;
 left:0;
-bottom:-9px;
-width:0;
-height:2px;
-background:var(--gold2);
+width:210px;
+display:none;
+padding:10px;
+background:#100c08;
+border:1px solid var(--line);
+border-radius:14px;
+box-shadow:var(--shadow);
+}
+
+.dropdown:hover .dropdown-menu{
+display:block;
+}
+
+.dropdown-menu button{
+display:block;
+width:100%;
+text-align:left;
+background:none;
+border:0;
+padding:11px;
+color:#eee;
+border-radius:8px;
+cursor:pointer;
+}
+
+.dropdown-menu button:hover{
+background:rgba(232,185,95,.12);
+color:var(--gold2);
+}
+
+.contact-pill{
+border:1px solid var(--gold);
+border-radius:30px;
+padding:11px 17px;
+font-size:12px;
+display:flex;
+align-items:center;
+gap:9px;
 transition:.3s;
 }
 
-.nav-links a:hover:after{
-width:100%;
-}
-
-.email-pill{
-border:1px solid var(--gold);
-border-radius:30px;
-padding:10px 16px;
-display:flex;
-align-items:center;
-gap:8px;
-font-size:12px;
-color:var(--gold3);
-}
-
-.email-pill span{
-font-size:18px;
-}
-
-.language{
-background:#16120d;
-color:var(--gold3);
-border:1px solid var(--gold);
-border-radius:20px;
-padding:8px 10px;
-outline:none;
+.contact-pill:hover{
+background:var(--gold);
+color:#111;
 }
 
 .menu-btn{
 display:none;
 font-size:25px;
-color:var(--gold2);
 background:none;
 border:0;
+color:white;
+cursor:pointer;
 }
 
 /* ================= HERO ================= */
 
 .hero{
-min-height:590px;
+min-height:610px;
+display:flex;
+align-items:center;
 position:relative;
 overflow:hidden;
-border-bottom:1px solid var(--border);
+border-bottom:1px solid var(--line);
 }
 
 .hero-bg{
 position:absolute;
 inset:0;
 background:
-linear-gradient(90deg,rgba(5,4,3,.98) 0%,rgba(8,6,4,.92) 38%,rgba(8,6,4,.35) 72%,rgba(8,6,4,.75)),
-radial-gradient(circle at 80% 50%,rgba(218,157,63,.2),transparent 35%);
-}
-
-.hero-bg:after{
-content:"";
-position:absolute;
-inset:0;
-background:
-linear-gradient(120deg,transparent 30%,rgba(255,196,85,.07),transparent 60%);
-animation:shine 6s linear infinite;
-}
-
-@keyframes shine{
-0%{transform:translateX(-100%)}
-100%{transform:translateX(100%)}
+linear-gradient(90deg,#050403 0%,rgba(5,4,3,.94) 38%,rgba(5,4,3,.25) 75%,#050403 100%),
+url("https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1800&q=85")
+center/cover;
+opacity:.82;
 }
 
 .hero-content{
 position:relative;
 z-index:2;
-display:grid;
-grid-template-columns:45% 55%;
-align-items:center;
-min-height:590px;
-gap:20px;
+width:52%;
+padding:75px 0;
 }
 
 .badge{
 display:inline-flex;
 align-items:center;
-gap:8px;
-padding:7px 14px;
+gap:7px;
 border:1px solid var(--gold);
 border-radius:30px;
-color:var(--gold2);
+padding:9px 15px;
 font-size:12px;
-margin-bottom:18px;
-background:rgba(217,170,85,.06);
+color:var(--gold2);
+margin-bottom:20px;
+background:rgba(0,0,0,.3);
 }
 
 .hero h1{
 font-family:"Cormorant Garamond",serif;
-font-size:64px;
-line-height:.95;
-margin-bottom:22px;
+font-size:clamp(48px,6vw,82px);
+line-height:.88;
 font-weight:700;
+letter-spacing:-1px;
+margin-bottom:24px;
 }
 
 .hero h1 span{
@@ -263,392 +268,414 @@ font-style:italic;
 }
 
 .hero p{
-color:#d4ccbd;
 font-size:14px;
-max-width:600px;
-margin-bottom:28px;
+line-height:1.8;
+color:#d9d0c0;
+max-width:620px;
+margin-bottom:27px;
 }
 
 .hero-features{
 display:flex;
-gap:12px;
-margin-bottom:28px;
 flex-wrap:wrap;
+gap:0;
+margin-bottom:30px;
 }
 
 .feature{
-padding:9px 13px;
-border-left:1px solid var(--gold);
-font-size:11px;
-color:#ded5c4;
+padding:10px 20px;
+border-right:1px solid var(--line);
+font-size:12px;
+color:#e9ddc9;
 }
 
-.btn{
+.feature:first-child{
+padding-left:0;
+}
+
+.feature b{
+display:block;
+color:var(--gold2);
+margin-bottom:3px;
+}
+
+.primary-btn{
+border:0;
+cursor:pointer;
 display:inline-flex;
 align-items:center;
-justify-content:center;
-gap:10px;
-padding:14px 25px;
+gap:12px;
+padding:15px 25px;
 border-radius:30px;
-border:1px solid var(--gold);
-background:linear-gradient(90deg,#e3ad50,#ffe09b);
-color:#100d08;
+background:linear-gradient(135deg,#ffe3a0,#d99b35);
+color:#130e08;
 font-weight:700;
-font-size:13px;
-cursor:pointer;
+box-shadow:0 10px 35px rgba(232,185,95,.2);
 transition:.3s;
-box-shadow:0 8px 25px rgba(217,170,85,.15);
 }
 
-.btn:hover{
+.primary-btn:hover{
 transform:translateY(-3px);
-box-shadow:0 12px 35px rgba(217,170,85,.3);
+box-shadow:0 15px 45px rgba(232,185,95,.4);
 }
 
-.btn.dark{
-background:rgba(20,16,11,.8);
-color:var(--gold2);
-}
+/* HERO VISUAL */
 
 .hero-visual{
-height:500px;
-position:relative;
-display:flex;
-align-items:center;
-justify-content:center;
+position:absolute;
+right:4%;
+width:47%;
+height:520px;
+z-index:2;
 }
 
-/* Animated GIF-style display */
-
-.gif-stage{
-width:260px;
-height:410px;
-border:2px solid var(--gold);
-border-radius:35px;
+.phone{
+position:absolute;
+left:28%;
+top:55px;
+width:230px;
+height:430px;
+border:5px solid #b98b42;
+border-radius:34px;
 background:
-linear-gradient(145deg,#241b10,#050403 50%,#1d160d);
+linear-gradient(145deg,#050505,#25190d),
+url("https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?auto=format&fit=crop&w=500&q=80")
+center/cover;
 box-shadow:
-0 0 50px rgba(217,170,85,.25),
-inset 0 0 40px rgba(217,170,85,.08);
-position:relative;
-overflow:hidden;
-animation:phoneFloat 4s ease-in-out infinite;
-}
-
-@keyframes phoneFloat{
-0%,100%{transform:translateY(0) rotate(0)}
-50%{transform:translateY(-13px) rotate(1deg)}
-}
-
-.phone-top{
-height:28px;
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
-.camera{
-width:55px;
-height:10px;
-background:#030303;
-border-radius:20px;
-}
-
-.gif-slide{
-position:absolute;
-inset:28px 12px 15px;
-border-radius:22px;
-overflow:hidden;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:20px;
-animation:slides 12s infinite;
-}
-
-.slide1{
-background:
-linear-gradient(135deg,#30180c,#9b521a,#180c06);
-}
-
-.slide2{
-background:
-linear-gradient(135deg,#0a2018,#315f39,#07100b);
-animation-delay:4s;
-}
-
-.slide3{
-background:
-linear-gradient(135deg,#281018,#8e354b,#16070c);
-animation-delay:8s;
-}
-
-@keyframes slides{
-0%,27%{opacity:1;transform:scale(1)}
-33%,94%{opacity:0;transform:scale(1.06)}
-100%{opacity:1}
-}
-
-.slide-content h2{
-font-family:"Cormorant Garamond",serif;
-font-size:38px;
-color:#fff0c9;
-line-height:1;
-margin-bottom:12px;
-}
-
-.slide-content p{
-font-size:12px;
-color:white;
-}
-
-.floating-card{
-position:absolute;
-padding:16px;
-border:1px solid var(--gold);
-border-radius:14px;
-background:rgba(10,8,5,.85);
-backdrop-filter:blur(10px);
-box-shadow:var(--shadow);
-font-size:12px;
-}
-
-.card-one{
-left:10px;
-top:95px;
-transform:rotate(-8deg);
-}
-
-.card-two{
-right:0;
-top:80px;
-transform:rotate(8deg);
-}
-
-.card-three{
-right:10px;
-bottom:70px;
-transform:rotate(-5deg);
-}
-
-/* ================= SECTION ================= */
-
-section{
-padding:65px 0;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:40px;
-}
-
-.section-title .line{
-width:110px;
-height:1px;
-background:var(--gold);
-margin:12px auto;
-}
-
-.section-title h2{
-font-family:"Cormorant Garamond",serif;
-font-size:43px;
-color:var(--gold3);
-}
-
-.section-title p{
-font-size:13px;
-color:#aaa294;
-}
-
-/* ================= SERVICES ================= */
-
-.service-search{
-max-width:520px;
-margin:0 auto 30px;
-display:flex;
-border:1px solid var(--border);
-border-radius:30px;
-overflow:hidden;
-background:#100d09;
-}
-
-.service-search input{
-flex:1;
-padding:13px 18px;
-border:0;
-outline:0;
-background:transparent;
-color:white;
-}
-
-.service-search button{
-width:55px;
-border:0;
-background:var(--gold);
-cursor:pointer;
-}
-
-.services-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:13px;
-}
-
-.service-card{
-border:1px solid var(--border);
-background:
-linear-gradient(145deg,rgba(255,255,255,.035),rgba(217,170,85,.025));
-border-radius:14px;
-padding:23px 12px;
-text-align:center;
-cursor:pointer;
-transition:.35s;
-min-height:150px;
-position:relative;
+0 30px 80px #000,
+0 0 45px rgba(232,185,95,.18);
+transform:rotate(-1deg);
 overflow:hidden;
 }
 
-.service-card:before{
+.phone:before{
 content:"";
 position:absolute;
-width:100px;
-height:100px;
-border-radius:50%;
-background:rgba(217,170,85,.1);
-filter:blur(30px);
+top:8px;
 left:50%;
-top:-30px;
 transform:translateX(-50%);
+width:75px;
+height:20px;
+border-radius:20px;
+background:#020202;
 }
 
-.service-card:hover{
-transform:translateY(-7px);
-border-color:var(--gold2);
-box-shadow:0 15px 35px rgba(0,0,0,.4);
-}
-
-.service-icon{
-font-size:29px;
-margin-bottom:8px;
-position:relative;
-}
-
-.service-card h3{
-font-family:"Cormorant Garamond",serif;
-font-size:20px;
-color:#fff4d8;
-position:relative;
-}
-
-.service-card p{
-font-size:10px;
-color:#aaa294;
-margin:5px 0;
-position:relative;
-}
-
-.view{
-font-size:10px;
-color:var(--gold2);
-position:relative;
-}
-
-/* ================= SAMPLES ================= */
-
-.samples{
-display:grid;
-grid-template-columns:repeat(6,1fr);
-gap:12px;
-}
-
-.sample{
-height:250px;
-border:1px solid var(--border);
-border-radius:12px;
-overflow:hidden;
-position:relative;
-cursor:pointer;
-background:#15100b;
-}
-
-.sample-art{
-height:100%;
-padding:20px;
+.phone-inner{
+position:absolute;
+inset:50px 15px 15px;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-transition:.4s;
+background:linear-gradient(135deg,rgba(0,0,0,.2),rgba(150,100,30,.15));
 }
 
-.sample:hover .sample-art{
-transform:scale(1.06);
-}
-
-.sample:nth-child(1) .sample-art{
-background:linear-gradient(135deg,#541a0b,#e48b28,#3c1608);
-}
-
-.sample:nth-child(2) .sample-art{
-background:linear-gradient(135deg,#10291d,#3e713f,#101a12);
-}
-
-.sample:nth-child(3) .sample-art{
-background:linear-gradient(135deg,#fff1d2,#e4b78a,#fff6e5);
-color:#5e251d;
-}
-
-.sample:nth-child(4) .sample-art{
-background:linear-gradient(135deg,#0b0b0b,#312719,#080808);
-}
-
-.sample:nth-child(5) .sample-art{
-background:linear-gradient(135deg,#151515,#555,#050505);
-}
-
-.sample:nth-child(6) .sample-art{
-background:linear-gradient(135deg,#092e4c,#258bc3,#092238);
-}
-
-.sample-art h3{
+.phone-inner strong{
 font-family:"Cormorant Garamond",serif;
 font-size:31px;
-line-height:.95;
+color:var(--gold2);
 }
 
-.sample-art p{
+.phone-inner small{
+margin-top:5px;
+color:#fff;
+}
+
+.float-card{
+position:absolute;
+padding:20px;
+width:170px;
+border:1px solid var(--gold);
+border-radius:15px;
+background:rgba(13,9,6,.82);
+backdrop-filter:blur(10px);
+box-shadow:var(--shadow);
+animation:float 4s ease-in-out infinite;
+}
+
+.float-card h4{
+font-family:"Cormorant Garamond",serif;
+font-size:22px;
+color:var(--gold2);
+}
+
+.float-card p{
 font-size:10px;
-margin-top:10px;
+color:#ddd;
+margin-top:5px;
+}
+
+.card-one{
+left:0;
+top:80px;
+transform:rotate(-7deg);
+}
+
+.card-two{
+right:0;
+top:55px;
+transform:rotate(6deg);
+animation-delay:1s;
+}
+
+.card-three{
+right:3%;
+bottom:55px;
+transform:rotate(-5deg);
+animation-delay:2s;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0) rotate(-5deg)}
+50%{transform:translateY(-13px) rotate(-3deg)}
+}
+
+/* ================= SECTION ================= */
+
+section{
+padding:75px 0;
+}
+
+.section-head{
+text-align:center;
+margin-bottom:38px;
+}
+
+.section-head .mini{
+color:var(--gold);
+font-size:12px;
+letter-spacing:2px;
+text-transform:uppercase;
+margin-bottom:8px;
+}
+
+.section-head h2{
+font-family:"Cormorant Garamond",serif;
+font-size:48px;
+color:var(--cream);
+}
+
+.section-head p{
+font-size:13px;
+color:#bfb4a3;
+margin-top:7px;
+}
+
+/* ================= SERVICES ================= */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:14px;
+}
+
+.service-card{
+background:
+linear-gradient(145deg,rgba(255,255,255,.025),rgba(0,0,0,.2)),
+var(--card);
+border:1px solid rgba(232,185,95,.3);
+border-radius:15px;
+padding:24px 15px;
+text-align:center;
+cursor:pointer;
+transition:.3s;
+min-height:180px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.service-card:hover{
+transform:translateY(-7px);
+border-color:var(--gold2);
+box-shadow:0 15px 40px rgba(0,0,0,.5);
+background:linear-gradient(145deg,rgba(232,185,95,.08),var(--card));
+}
+
+.service-icon{
+font-size:32px;
+margin-bottom:13px;
+filter:drop-shadow(0 0 8px rgba(232,185,95,.25));
+}
+
+.service-card h3{
+font-family:"Cormorant Garamond",serif;
+font-size:21px;
+color:#fff;
+margin-bottom:7px;
+}
+
+.service-card p{
+font-size:10px;
+color:#bcb2a2;
+margin-bottom:11px;
+}
+
+.view{
+font-size:10px;
+color:var(--gold2);
+}
+
+/* ================= BANNER ================= */
+
+.banner-section{
+padding-top:10px;
+}
+
+.banner-wrap{
+height:250px;
+border:1px solid var(--line);
+border-radius:22px;
+overflow:hidden;
+position:relative;
+background:#0d0906;
+box-shadow:var(--shadow);
+}
+
+.banner-slide{
+position:absolute;
+inset:0;
+display:flex;
+align-items:center;
+padding:35px;
+opacity:0;
+animation:banner 15s infinite;
+}
+
+.banner-slide:nth-child(1){
+animation-delay:0s;
+background:
+linear-gradient(90deg,#100904 20%,rgba(16,9,4,.25)),
+url("https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1500&q=80")
+center/cover;
+}
+
+.banner-slide:nth-child(2){
+animation-delay:5s;
+background:
+linear-gradient(90deg,#080705 20%,rgba(8,7,5,.3)),
+url("https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1500&q=80")
+center/cover;
+}
+
+.banner-slide:nth-child(3){
+animation-delay:10s;
+background:
+linear-gradient(90deg,#080705 20%,rgba(8,7,5,.25)),
+url("https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=1500&q=80")
+center/cover;
+}
+
+@keyframes banner{
+0%,28%{opacity:1}
+33%,95%{opacity:0}
+100%{opacity:1}
+}
+
+.banner-content{
+max-width:530px;
+}
+
+.banner-content small{
+color:var(--gold2);
+letter-spacing:2px;
+}
+
+.banner-content h3{
+font-family:"Cormorant Garamond",serif;
+font-size:48px;
+line-height:.95;
+margin:8px 0;
+}
+
+.banner-content p{
+font-size:12px;
+color:#ddd;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(6,1fr);
+gap:13px;
+}
+
+.gallery-item{
+height:250px;
+border-radius:13px;
+overflow:hidden;
+border:1px solid var(--line);
+cursor:pointer;
+position:relative;
+background:#111;
+}
+
+.gallery-item img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.5s;
+}
+
+.gallery-item:hover img{
+transform:scale(1.08);
+}
+
+.gallery-overlay{
+position:absolute;
+inset:auto 0 0;
+padding:30px 10px 10px;
+background:linear-gradient(transparent,#000);
+font-size:11px;
+color:white;
 }
 
 /* ================= INFO ================= */
 
 .info-grid{
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:16px;
+grid-template-columns:1fr 1fr 1fr;
+gap:15px;
 }
 
 .info-box{
-border:1px solid var(--border);
-border-radius:16px;
-padding:25px;
-background:rgba(20,15,10,.72);
+border:1px solid var(--line);
+border-radius:17px;
+padding:28px;
+background:rgba(17,12,7,.75);
 }
 
 .info-box h3{
 font-family:"Cormorant Garamond",serif;
-font-size:28px;
+font-size:27px;
 color:var(--gold2);
-margin-bottom:14px;
+margin-bottom:20px;
 }
 
-.info-box p{
-font-size:12px;
-color:#c9c0ad;
+.reasons{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
 }
+
+.reason{
+text-align:center;
+}
+
+.reason span{
+font-size:25px;
+display:block;
+margin-bottom:7px;
+}
+
+.reason small{
+font-size:10px;
+color:#c7bcab;
+}
+
+/* ================= STEPS ================= */
 
 .steps{
 display:grid;
@@ -657,34 +684,33 @@ gap:15px;
 }
 
 .step{
-border:1px solid var(--border);
-padding:25px 15px;
+border:1px solid var(--line);
+background:rgba(18,13,8,.7);
 border-radius:15px;
+padding:25px;
 text-align:center;
 }
 
 .step-number{
-width:42px;
-height:42px;
-border:1px solid var(--gold);
+width:45px;
+height:45px;
 border-radius:50%;
 display:grid;
 place-items:center;
-margin:0 auto 13px;
-color:var(--gold2);
-font-weight:700;
+margin:auto auto 15px;
+background:linear-gradient(135deg,#ffe19a,#c98b2d);
+color:#120d07;
+font-weight:800;
 }
 
-.step h3{
-font-family:"Cormorant Garamond",serif;
-font-size:20px;
-color:var(--gold3);
+.step h4{
+margin-bottom:8px;
 }
 
 .step p{
 font-size:11px;
-color:#aaa294;
-margin-top:5px;
+color:#bdb2a1;
+line-height:1.6;
 }
 
 /* ================= PACKAGES ================= */
@@ -696,33 +722,16 @@ gap:18px;
 }
 
 .package{
-border:1px solid var(--border);
-border-radius:18px;
-padding:30px 22px;
-background:linear-gradient(145deg,#15100b,#0b0907);
-transition:.3s;
-}
-
-.package:hover{
-transform:translateY(-8px);
-border-color:var(--gold2);
+padding:30px;
+border:1px solid var(--line);
+border-radius:20px;
+background:linear-gradient(145deg,#171008,#0c0805);
 }
 
 .package.featured{
-border:2px solid var(--gold);
-position:relative;
-}
-
-.popular{
-position:absolute;
-right:15px;
-top:15px;
-font-size:9px;
-background:var(--gold);
-color:#100d08;
-padding:5px 9px;
-border-radius:20px;
-font-weight:700;
+border-color:var(--gold2);
+box-shadow:0 0 40px rgba(232,185,95,.12);
+transform:translateY(-7px);
 }
 
 .package h3{
@@ -731,27 +740,26 @@ font-size:30px;
 color:var(--gold2);
 }
 
-.price{
+.package .price{
 font-size:28px;
-font-weight:700;
-margin:10px 0 18px;
+margin:15px 0;
 }
 
 .package ul{
 list-style:none;
-font-size:12px;
-color:#cfc6b5;
-margin-bottom:22px;
+margin:20px 0;
 }
 
 .package li{
-margin:8px 0;
+padding:8px 0;
+border-bottom:1px solid rgba(255,255,255,.07);
+font-size:12px;
+color:#d5ccbd;
 }
 
 .package li:before{
-content:"✓";
-color:var(--gold2);
-margin-right:8px;
+content:"✓ ";
+color:var(--gold);
 }
 
 /* ================= FAQ ================= */
@@ -762,116 +770,167 @@ margin:auto;
 }
 
 .faq-item{
-border:1px solid var(--border);
-border-radius:12px;
-margin-bottom:10px;
-overflow:hidden;
-background:#100d09;
+border-bottom:1px solid var(--line);
 }
 
 .faq-question{
-padding:17px 20px;
-cursor:pointer;
+width:100%;
+padding:19px 0;
+background:none;
+border:0;
+color:#fff;
 display:flex;
 justify-content:space-between;
-color:var(--gold3);
-font-weight:600;
-font-size:13px;
+text-align:left;
+cursor:pointer;
+font-size:14px;
 }
 
 .faq-answer{
 display:none;
-padding:0 20px 18px;
+padding:0 0 20px;
 font-size:12px;
-color:#aaa294;
+line-height:1.7;
+color:#bbb1a1;
 }
 
-.faq-item.open .faq-answer{
+.faq-item.active .faq-answer{
 display:block;
 }
 
 /* ================= CONTACT ================= */
 
-.contact-box{
-border:1px solid var(--gold);
-border-radius:20px;
-padding:35px;
+.contact-section{
 background:
-radial-gradient(circle at 80% 20%,rgba(217,170,85,.1),transparent 35%),
-#100d09;
-text-align:center;
+linear-gradient(90deg,rgba(7,5,3,.95),rgba(20,13,7,.75)),
+url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80")
+center/cover;
+border-top:1px solid var(--line);
+border-bottom:1px solid var(--line);
 }
 
-.contact-box h2{
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+align-items:center;
+}
+
+.contact-title{
 font-family:"Cormorant Garamond",serif;
-font-size:45px;
+font-size:58px;
+line-height:.95;
+}
+
+.contact-title span{
 color:var(--gold2);
+font-style:italic;
 }
 
-.contact-box p{
-color:#bbb09e;
+.contact-text{
+margin:18px 0;
+color:#cfc4b2;
 font-size:13px;
-margin:8px auto 25px;
+line-height:1.7;
 }
 
-.contact-buttons{
-display:flex;
-justify-content:center;
+.contact-cards{
+display:grid;
 gap:12px;
-flex-wrap:wrap;
+}
+
+.contact-card{
+border:1px solid var(--line);
+border-radius:15px;
+padding:18px;
+background:rgba(0,0,0,.4);
+display:flex;
+align-items:center;
+gap:15px;
+transition:.3s;
+}
+
+.contact-card:hover{
+border-color:var(--gold2);
+transform:translateX(5px);
+}
+
+.contact-card .icon{
+font-size:25px;
+}
+
+.contact-card small{
+color:#a99e8e;
+display:block;
+margin-bottom:3px;
+}
+
+.contact-card strong{
+color:#fff;
 }
 
 /* ================= FOOTER ================= */
 
 footer{
-border-top:1px solid var(--border);
-padding:35px 0;
-background:#070605;
+padding:30px 0;
+background:#050403;
 }
 
-.footer-grid{
-display:grid;
-grid-template-columns:2fr 1fr 1fr 1fr;
-gap:30px;
-}
-
-footer h3{
-font-family:"Cormorant Garamond",serif;
-color:var(--gold2);
-font-size:23px;
-}
-
-footer p,footer a{
-font-size:11px;
-color:#9e9688;
-display:block;
-margin:6px 0;
-}
-
-.social{
+.footer{
 display:flex;
-gap:10px;
-margin-top:15px;
+align-items:center;
+justify-content:space-between;
+gap:20px;
 }
 
-.social a{
-width:35px;
-height:35px;
-border:1px solid var(--border);
+.footer-links{
+display:flex;
+gap:20px;
+font-size:11px;
+color:#bfb5a5;
+}
+
+.socials{
+display:flex;
+gap:8px;
+}
+
+.socials a{
+width:34px;
+height:34px;
+border:1px solid var(--line);
 border-radius:50%;
 display:grid;
 place-items:center;
-color:var(--gold2);
-font-size:14px;
+font-size:13px;
+transition:.3s;
 }
 
-.copyright{
-text-align:center;
-border-top:1px solid rgba(217,170,85,.15);
-margin-top:25px;
-padding-top:20px;
-font-size:10px;
-color:#777064;
+.socials a:hover{
+background:var(--gold);
+color:#111;
+}
+
+/* ================= FLOAT BUTTONS ================= */
+
+.floating{
+position:fixed;
+right:18px;
+bottom:18px;
+z-index:900;
+display:grid;
+gap:10px;
+}
+
+.float-btn{
+width:52px;
+height:52px;
+border-radius:50%;
+display:grid;
+place-items:center;
+font-size:23px;
+box-shadow:0 10px 30px #000;
+border:2px solid rgba(255,255,255,.2);
 }
 
 /* ================= MODAL ================= */
@@ -879,7 +938,7 @@ color:#777064;
 .modal{
 position:fixed;
 inset:0;
-background:rgba(0,0,0,.8);
+background:rgba(0,0,0,.78);
 backdrop-filter:blur(12px);
 z-index:2000;
 display:none;
@@ -893,95 +952,112 @@ display:flex;
 }
 
 .modal-box{
-width:min(720px,100%);
+width:min(800px,100%);
 max-height:90vh;
 overflow:auto;
+background:linear-gradient(145deg,#1a120a,#080604);
 border:1px solid var(--gold);
-border-radius:20px;
-background:
-radial-gradient(circle at top right,rgba(217,170,85,.1),transparent 35%),
-#0d0a07;
+border-radius:22px;
 padding:30px;
 position:relative;
-box-shadow:0 30px 100px rgba(0,0,0,.8);
-animation:modalIn .3s ease;
+box-shadow:0 30px 100px #000;
+animation:pop .25s ease;
 }
 
-@keyframes modalIn{
-from{opacity:0;transform:translateY(30px) scale(.96)}
-to{opacity:1;transform:none}
+@keyframes pop{
+from{transform:scale(.92);opacity:0}
+to{transform:scale(1);opacity:1}
 }
 
 .close{
 position:absolute;
 right:18px;
-top:14px;
-width:35px;
-height:35px;
+top:15px;
+width:38px;
+height:38px;
 border-radius:50%;
-border:1px solid var(--gold);
-background:none;
-color:var(--gold2);
+background:#21160b;
+border:1px solid var(--line);
+color:white;
 font-size:20px;
 cursor:pointer;
+}
+
+.modal-icon{
+font-size:48px;
 }
 
 .modal-box h2{
 font-family:"Cormorant Garamond",serif;
 font-size:42px;
 color:var(--gold2);
-margin-bottom:10px;
+margin:10px 0;
 }
 
-.modal-box h3{
-color:#fff0cb;
-margin:20px 0 8px;
-}
-
-.modal-box p,
-.modal-box li{
+.modal-box p{
+color:#cfc4b3;
+line-height:1.8;
 font-size:13px;
-color:#c9c0ad;
 }
 
-.modal-box ul{
-padding-left:20px;
-}
-
-.modal-sample{
-height:230px;
-border-radius:15px;
-border:1px solid var(--border);
+.modal-list{
 margin:20px 0;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-background:linear-gradient(135deg,#33200c,#c48732,#120c06);
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
 }
 
-.modal-sample h3{
-font-family:"Cormorant Garamond",serif;
-font-size:50px;
-color:#fff0c9;
+.modal-list div{
+padding:12px;
+border:1px solid rgba(232,185,95,.2);
+border-radius:10px;
+font-size:11px;
+color:#ddd;
+}
+
+/* IMAGE MODAL */
+
+.image-modal img{
+max-width:100%;
+max-height:75vh;
+display:block;
+margin:auto;
+border-radius:15px;
+}
+
+/* ================= LANGUAGE ================= */
+
+.language{
+background:#0e0a06;
+border:1px solid var(--gold);
+color:#fff;
+border-radius:25px;
+padding:9px 13px;
+outline:none;
+cursor:pointer;
+font-size:11px;
+}
+
+.language option{
+background:#111;
+color:white;
 }
 
 /* ================= TOAST ================= */
 
 .toast{
 position:fixed;
-bottom:25px;
 left:50%;
+bottom:25px;
 transform:translateX(-50%) translateY(100px);
-background:#19130b;
+background:#1b1309;
 border:1px solid var(--gold);
-color:var(--gold3);
-padding:12px 20px;
+padding:13px 20px;
 border-radius:30px;
 z-index:3000;
-font-size:12px;
 opacity:0;
-transition:.4s;
+transition:.3s;
+font-size:12px;
 }
 
 .toast.show{
@@ -989,144 +1065,77 @@ opacity:1;
 transform:translateX(-50%) translateY(0);
 }
 
-/* ================= FLOATING BUTTONS ================= */
+/* ================= MOBILE ================= */
 
-.float-whatsapp,
-.float-mail{
-position:fixed;
-right:18px;
-width:52px;
-height:52px;
-border-radius:50%;
-display:grid;
-place-items:center;
-z-index:900;
-font-size:22px;
-border:1px solid var(--gold);
-box-shadow:0 10px 30px rgba(0,0,0,.5);
-}
-
-.float-whatsapp{
-bottom:85px;
-background:#168c49;
-color:white;
-}
-
-.float-mail{
-bottom:20px;
-background:#16110b;
-color:var(--gold2);
-}
-
-/* ================= RESPONSIVE ================= */
-
-@media(max-width:1000px){
+@media(max-width:900px){
 
 .nav-links{
-gap:14px;
-}
-
-.email-pill{
-display:none;
-}
-
-.services-grid{
-grid-template-columns:repeat(3,1fr);
-}
-
-.samples{
-grid-template-columns:repeat(3,1fr);
-}
-
-.hero-content{
-grid-template-columns:1fr 1fr;
-}
-
-.hero h1{
-font-size:52px;
-}
-
-}
-
-@media(max-width:760px){
-
-.nav{
-height:65px;
-}
-
-.logo-text{
-font-size:24px;
-}
-
-.logo-mark{
-width:40px;
-height:40px;
-font-size:24px;
-}
-
-.nav-links{
-display:none;
 position:absolute;
-top:65px;
+top:72px;
 left:0;
 right:0;
-background:#0b0907;
-border-bottom:1px solid var(--border);
-padding:20px;
+display:none;
 flex-direction:column;
-align-items:flex-start;
+align-items:stretch;
+background:#090704;
+padding:18px;
+border-bottom:1px solid var(--line);
 }
 
-.nav-links.active{
+.nav-links.show{
 display:flex;
+}
+
+.nav-links a,
+.dropbtn{
+padding:12px;
+}
+
+.dropdown-menu{
+position:static;
+width:100%;
+margin-top:5px;
 }
 
 .menu-btn{
 display:block;
 }
 
+.contact-pill{
+display:none;
+}
+
 .hero{
-min-height:auto;
+min-height:850px;
 }
 
 .hero-content{
-grid-template-columns:1fr;
-padding:60px 0;
+width:100%;
+padding-top:60px;
 }
 
 .hero h1{
-font-size:47px;
+font-size:53px;
 }
 
 .hero-visual{
-height:440px;
-order:-1;
-}
-
-.gif-stage{
-width:210px;
-height:330px;
-}
-
-.floating-card{
-font-size:9px;
-padding:10px;
+position:absolute;
+width:100%;
+height:450px;
+right:0;
+top:430px;
+transform:scale(.78);
 }
 
 .services-grid{
 grid-template-columns:repeat(2,1fr);
 }
 
-.samples{
+.gallery{
 grid-template-columns:repeat(2,1fr);
 }
 
-.sample{
-height:220px;
-}
-
-.info-grid,
-.packages{
+.info-grid{
 grid-template-columns:1fr;
 }
 
@@ -1134,64 +1143,101 @@ grid-template-columns:1fr;
 grid-template-columns:repeat(2,1fr);
 }
 
-.footer-grid{
-grid-template-columns:1fr 1fr;
+.packages{
+grid-template-columns:1fr;
+}
+
+.package.featured{
+transform:none;
+}
+
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.footer{
+flex-direction:column;
+text-align:center;
+}
+
+.footer-links{
+flex-wrap:wrap;
+justify-content:center;
 }
 
 }
 
-@media(max-width:450px){
+@media(max-width:520px){
 
-.container{
-width:94%;
+.logo-text h2{
+font-size:20px;
+}
+
+.logo-mark{
+width:40px;
+height:40px;
+font-size:25px;
+}
+
+.hero{
+min-height:800px;
 }
 
 .hero h1{
-font-size:41px;
+font-size:45px;
 }
 
 .hero p{
 font-size:12px;
 }
 
+.feature{
+padding:8px 12px;
+font-size:10px;
+}
+
+.hero-visual{
+top:430px;
+transform:scale(.62);
+right:-4%;
+}
+
+.section-head h2{
+font-size:39px;
+}
+
 .services-grid{
-gap:8px;
+grid-template-columns:1fr 1fr;
+gap:9px;
 }
 
 .service-card{
-padding:18px 7px;
+min-height:155px;
+padding:14px 8px;
 }
 
 .service-card h3{
-font-size:17px;
+font-size:18px;
 }
 
-.samples{
-gap:8px;
+.gallery{
+grid-template-columns:1fr 1fr;
 }
 
-.sample{
+.gallery-item{
 height:190px;
 }
 
-.sample-art h3{
-font-size:25px;
-}
-
 .steps{
+grid-template-columns:1fr 1fr;
+}
+
+.modal-list{
 grid-template-columns:1fr;
 }
 
-.footer-grid{
-grid-template-columns:1fr;
-}
-
-.contact-box{
-padding:25px 15px;
-}
-
-.contact-box h2{
-font-size:37px;
+.contact-title{
+font-size:45px;
 }
 
 }
@@ -1207,30 +1253,50 @@ font-size:37px;
 
 <div class="container nav">
 
-<a href="#home" class="logo">
-
+<div class="logo" onclick="goHome()">
 <div class="logo-mark">D</div>
 
-<div>
-<div class="logo-text">DesignMitra AI</div>
-<div class="logo-sub">CREATE • PROMOTE • GROW</div>
+<div class="logo-text">
+<h2>DesignMitra AI</h2>
+<small>CREATE • PROMOTE • GROW</small>
+</div>
 </div>
 
-</a>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
 
 <nav class="nav-links" id="navLinks">
 
-<a href="#home" data-i18n="home">Home</a>
-<a href="#services" data-i18n="services">Services</a>
-<a href="#about" data-i18n="about">About</a>
-<a href="#how" data-i18n="how">How It Works</a>
-<a href="#packages" data-i18n="packages">Packages</a>
-<a href="#faq" data-i18n="faq">FAQ</a>
-<a href="#contact" data-i18n="contact">Contact</a>
+<a href="#home" onclick="closeMenu()">Home</a>
 
-</nav>
+<div class="dropdown">
+<button class="dropbtn">Services⌄</button>
 
-<select class="language" id="language">
+<div class="dropdown-menu">
+
+<button onclick="openService('poster')">Poster Maker</button>
+<button onclick="openService('invitation')">Invitation Card</button>
+<button onclick="openService('visiting')">Visiting Card</button>
+<button onclick="openService('whatsapp')">WhatsApp Status</button>
+<button onclick="openService('instagram')">Instagram Post</button>
+<button onclick="openService('youtube')">YouTube Thumbnail</button>
+<button onclick="openService('menu')">Menu Card</button>
+<button onclick="openService('offer')">Offer / Sale Poster</button>
+<button onclick="openService('catalogue')">Product Catalogue</button>
+<button onclick="openService('flyer')">Business Flyer</button>
+<button onclick="openService('advertisement')">Advertisement</button>
+<button onclick="openService('caption')">Caption Generator</button>
+
+</div>
+</div>
+
+<a href="#about">About</a>
+<a href="#how">How It Works</a>
+<a href="#packages">Packages</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+
+<select class="language" id="language" onchange="changeLanguage()">
+
 <option value="en">English</option>
 <option value="hi">हिन्दी</option>
 <option value="hinglish">Hinglish</option>
@@ -1240,78 +1306,1516 @@ font-size:37px;
 <option value="ta">தமிழ்</option>
 <option value="te">తెలుగు</option>
 <option value="kn">ಕನ್ನಡ</option>
-<option value="ml">മലയാളം</option>
 <option value="pa">ਪੰਜਾਬੀ</option>
-<option value="or">ଓଡ଼ିଆ</option>
+
 </select>
 
-<a class="email-pill" href="mailto:jatavneeraj479@gmail.com">
-<span>✉</span>
-jatavneeraj479@gmail.com
-</a>
+</nav>
 
-<button class="menu-btn" id="menuBtn">☰</button>
+<a class="contact-pill"
+href="mailto:jatavneeraj479@gmail.com">
+✉ jatavneeraj479@gmail.com
+</a>
 
 </div>
 
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- ================= HOME ================= -->
+
+<main>
 
 <section class="hero" id="home">
 
 <div class="hero-bg"></div>
 
-<div class="container hero-content">
+<div class="container">
 
-<div>
+<div class="hero-content">
 
-<div class="badge">♛ Professional Design Services</div>
+<div class="badge" data-i18n="badge">
+♛ Professional Design Services
+</div>
 
-<h1>
+<h1 data-i18n="heroTitle">
 Designs Jo<br>
 Aapke <span>Business</span> Ko<br>
 Banaye <span>Strong!</span>
 </h1>
 
-<p>
+<p data-i18n="heroText">
 Posters, Invitation Cards, Social Media Posts, Business Cards,
 Menu Cards aur bhi bahut kuch... Sab kuch ek hi jagah,
-professional quality ke saath.
+wo bhi professional quality ke saath.
 </p>
 
 <div class="hero-features">
 
-<div class="feature">✦ Premium Quality</div>
-<div class="feature">◷ Fast Delivery</div>
-<div class="feature">✧ 100% Custom</div>
-<div class="feature">♢ Affordable Pricing</div>
+<div class="feature">
+<b>✦ Premium Quality</b>
+<span>Professional Designs</span>
+</div>
+
+<div class="feature">
+<b>◷ Fast Delivery</b>
+<span>24–48 Hours</span>
+</div>
+
+<div class="feature">
+<b>✧ 100% Custom</b>
+<span>Your Brand Style</span>
+</div>
+
+<div class="feature">
+<b>◇ Affordable</b>
+<span>Pricing</span>
+</div>
 
 </div>
 
-<a href="#services" class="btn">
-Explore All Services →
-</a>
+<button class="primary-btn"
+onclick="document.getElementById('services').scrollIntoView()">
+
+<span data-i18n="explore">Explore All Services</span>
+→
+
+</button>
+
+</div>
 
 </div>
 
 
 <div class="hero-visual">
 
-<div class="floating-card card-one">
-🍔<br>
-<b>Special Offer</b><br>
-50% OFF
+<div class="float-card card-one">
+<h4>Special Offer</h4>
+<p>Creative promotional poster design</p>
 </div>
 
-<div class="floating-card card-two">
-💍<br>
-<b>Wedding Invitation</b><br>
-Premium Design
+<div class="float-card card-two">
+<h4>Wedding</h4>
+<p>Premium invitation design</p>
 </div>
 
-<div class="floating-card card-three">
-📢<br>
-<b>New Collection</b><br>
-C
+<div class="float-card card-three">
+<h4>New Collection</h4>
+<p>Social media campaign creatives</p>
+</div>
+
+<div class="phone">
+
+<div class="phone-inner">
+<strong>DesignMitra AI</strong>
+<small>Create • Promote • Grow</small>
+<br>
+<span style="font-size:30px">✦</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= ANIMATED BANNER ================= -->
+
+<section class="banner-section">
+
+<div class="container">
+
+<div class="banner-wrap">
+
+<div class="banner-slide">
+<div class="banner-content">
+<small>DESIGN • PROMOTE • GROW</small>
+<h3>Make Your Brand Stand Out.</h3>
+<p>Premium creatives designed for modern businesses.</p>
+</div>
+</div>
+
+<div class="banner-slide">
+<div class="banner-content">
+<small>WEDDING • EVENTS • CELEBRATIONS</small>
+<h3>Moments Deserve Beautiful Designs.</h3>
+<p>Elegant invitation cards and event creatives.</p>
+</div>
+</div>
+
+<div class="banner-slide">
+<div class="banner-content">
+<small>BUSINESS • SOCIAL MEDIA</small>
+<h3>Turn Attention Into Customers.</h3>
+<p>Scroll-stopping posters, ads and social media designs.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="mini">OUR SERVICES</div>
+
+<h2 data-i18n="servicesTitle">
+Our Creative Services
+</h2>
+
+<p data-i18n="servicesSub">
+Choose your service and get stunning designs for your business or personal needs.
+</p>
+
+</div>
+
+<div class="services-grid">
+
+<div class="service-card" onclick="openService('poster')">
+<div class="service-icon">▣</div>
+<h3>Poster Maker</h3>
+<p>Business | Festival | Product</p>
+<span class="view">View More →</span>
+</div>
+
+<div class="service-card" onclick="openService('invitation')">
+<div class="service-icon">✉</div>
+<h3>Invitation Card</h3>
+<p>Wedding | Birthday | Event</p>
+<span class="view">View More →</span>
+</div>
+
+<div class="service-card" onclick="openService('visiting')">
+<div class="service-icon">▤</div>
+<h3>Visiting Card</h3>
+<p>Business | Personal | Creative</p>
+<span class="view">View More →</span>
+</div>
+
+<div class="service-card" onclick="openService('whatsapp')">
+<div class="service-icon">◉</div>
+<h3>WhatsApp Status</h3>
+<p>Festival | Quote | Business</p>
+<span class="view">View More →</span>
+</div>
+
+<div class="service-card" onclick="openService('instagram')">
+<div class="service-icon">◎</div>
+<h3>Instagram Post</h3>
+<p>Business | Promotion | Lifestyle</p>
+<span class="view">View More →</span>
+</div>
+
+<div class="service-card" onclick="openService('youtube')">
+<div class="service-icon">▶</div>
+<h3>YouTube Thumbnail</h3>
+<p>Vlog | Gaming | Business</p>
+<span class="view">View More →</span>
+</div>
+
+<div class="service-card" onclick="openService('menu')">
+<div class="service-icon">☷</div>
+<h3>Menu Card</h3>
+<p>Restaurant | Cafe | Food</p>
+<span class="view">View More →</span>
+</div>
+
+<div class="service-card" onclick="openService('offer')">
+<div class="service-icon">%</div>
+<h3>Offer / Sale Poster</h3>
+<p>Discount | Festival | Launch</p>
+<span class="view">View More →</span>
+</div>
+
+<div class="service-card" onclick="openService('catalogue')">
+<div class="service-icon">▥</div>
+<h3>Product Catalogue</h3>
+<p>Fashion | Jewellery | Electronics</p>
+<span class="view">View More →</span>
+</div>
+
+<div class="service-card" onclick="openService('flyer')">
+<div class="service-icon">▤</div>
+<h3>Business Flyer</h3>
+<p>Company | Service | Event</p>
+<span class="view">View More →</span>
+</div>
+
+<div class="service-card" onclick="openService('advertisement')">
+<div class="service-icon">📣</div>
+<h3>Advertisement</h3>
+<p>Smart Ads | Business Growth</p>
+<span class="view">View More →</span>
+</div>
+
+<div class="service-card" onclick="openService('caption')">
+<div class="service-icon">💬</div>
+<h3>Caption Generator</h3>
+<p>Social Media | Marketing</p>
+<span class="view">View More →</span>
+</div>
+
+<div class="service-card"
+onclick="openService('packages')"
+style="border-color:#d7a642">
+
+<div class="service-icon">◆</div>
+<h3>Design Packages</h3>
+<p>Save More | Best Value</p>
+<span class="view">View Packages →</span>
+
+</div>
+
+<div class="service-card"
+onclick="document.getElementById('contact').scrollIntoView()"
+style="border-color:#e8b95f">
+
+<div class="service-icon">♛</div>
+<h3>Custom Design</h3>
+<p>Tell us your requirement</p>
+<span class="view">Get Quote →</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SAMPLES ================= -->
+
+<section id="samples">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="mini">PORTFOLIO</div>
+
+<h2>Latest Design Samples</h2>
+
+<p>Click any design to open a larger preview.</p>
+
+</div>
+
+<div class="gallery">
+
+<div class="gallery-item"
+onclick="openImage(this.querySelector('img').src)">
+
+<img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=700&q=85">
+
+<div class="gallery-overlay">Festival Poster</div>
+
+</div>
+
+<div class="gallery-item"
+onclick="openImage(this.querySelector('img').src)">
+
+<img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=85">
+
+<div class="gallery-overlay">Food Promotion</div>
+
+</div>
+
+<div class="gallery-item"
+onclick="openImage(this.querySelector('img').src)">
+
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=700&q=85">
+
+<div class="gallery-overlay">Wedding Design</div>
+
+</div>
+
+<div class="gallery-item"
+onclick="openImage(this.querySelector('img').src)">
+
+<img src="https://images.unsplash.com/photo-1523726491678-bf852e717f6a?auto=format&fit=crop&w=700&q=85">
+
+<div class="gallery-overlay">Brand Identity</div>
+
+</div>
+
+<div class="gallery-item"
+onclick="openImage(this.querySelector('img').src)">
+
+<img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=700&q=85">
+
+<div class="gallery-overlay">Fitness Campaign</div>
+
+</div>
+
+<div class="gallery-item"
+onclick="openImage(this.querySelector('img').src)">
+
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=85">
+
+<div class="gallery-overlay">Real Estate Ad</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="mini">ABOUT US</div>
+
+<h2>Why Choose DesignMitra AI?</h2>
+
+<p>Creative design solutions built for brands, businesses and people.</p>
+
+</div>
+
+<div class="info-grid">
+
+<div class="info-box">
+
+<h3>Why Choose Us?</h3>
+
+<div class="reasons">
+
+<div class="reason">
+<span>✦</span>
+<small>Creative & Unique Designs</small>
+</div>
+
+<div class="reason">
+<span>◷</span>
+<small>On-Time Delivery</small>
+</div>
+
+<div class="reason">
+<span>♧</span>
+<small>Affordable Packages</small>
+</div>
+
+<div class="reason">
+<span>♢</span>
+<small>Dedicated Support</small>
+</div>
+
+</div>
+
+</div>
+
+<div class="info-box">
+
+<h3>Our Promise</h3>
+
+<p style="font-size:12px;line-height:1.8;color:#c9bfaf">
+
+We combine modern visual trends, premium typography,
+strong branding and AI-assisted creative workflows to
+create designs that look professional and help your
+business communicate better.
+
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h3>Perfect For</h3>
+
+<p style="font-size:12px;line-height:2;color:#c9bfaf">
+
+✓ Small Businesses<br>
+✓ Shops & Restaurants<br>
+✓ Creators & Influencers<br>
+✓ Weddings & Events<br>
+✓ Startups & Brands<br>
+✓ Local Promotions<br>
+✓ Social Media Marketing
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section id="how">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="mini">SIMPLE PROCESS</div>
+
+<h2>How It Works?</h2>
+
+<p>From idea to final design in four simple steps.</p>
+
+</div>
+
+<div class="steps">
+
+<div class="step">
+
+<div class="step-number">1</div>
+
+<h4>Select Service</h4>
+
+<p>Choose the design service you need.</p>
+
+</div>
+
+<div class="step">
+
+<div class="step-number">2</div>
+
+<h4>Share Details</h4>
+
+<p>Send your text, photos, logo and requirements.</p>
+
+</div>
+
+<div class="step">
+
+<div class="step-number">3</div>
+
+<h4>Make Payment</h4>
+
+<p>Payment details are confirmed before work begins.</p>
+
+</div>
+
+<div class="step">
+
+<div class="step-number">4</div>
+
+<h4>Get Your Design</h4>
+
+<p>Receive your finished design on time.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PACKAGES ================= -->
+
+<section id="packages">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="mini">PRICING</div>
+
+<h2>Design Packages</h2>
+
+<p>Choose a package or request a custom quote.</p>
+
+</div>
+
+<div class="packages">
+
+<div class="package">
+
+<h3>Starter</h3>
+
+<div class="price">₹299+</div>
+
+<ul>
+<li>1 Creative Design</li>
+<li>Social Media Poster</li>
+<li>Basic Revision</li>
+<li>High Quality JPG/PNG</li>
+</ul>
+
+<button class="primary-btn"
+onclick="requestPackage('Starter Package')">
+
+Get Started →
+
+</button>
+
+</div>
+
+<div class="package featured">
+
+<h3>Business</h3>
+
+<div class="price">₹799+</div>
+
+<ul>
+<li>3 Creative Designs</li>
+<li>Business Promotion</li>
+<li>Multiple Revisions</li>
+<li>Premium JPG/PNG</li>
+<li>Fast Delivery</li>
+</ul>
+
+<button class="primary-btn"
+onclick="requestPackage('Business Package')">
+
+Choose Business →
+
+</button>
+
+</div>
+
+<div class="package">
+
+<h3>Premium</h3>
+
+<div class="price">₹1499+</div>
+
+<ul>
+<li>6 Creative Designs</li>
+<li>Brand Promotion</li>
+<li>Social Media Set</li>
+<li>Priority Support</li>
+<li>Premium Design Quality</li>
+</ul>
+
+<button class="primary-btn"
+onclick="requestPackage('Premium Package')">
+
+Go Premium →
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FAQ ================= -->
+
+<section id="faq">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="mini">QUESTIONS</div>
+
+<h2>Frequently Asked Questions</h2>
+
+</div>
+
+<div class="faq">
+
+<div class="faq-item">
+
+<button class="faq-question"
+onclick="toggleFaq(this)">
+How can I order a design?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+Select any service, read the details and click the WhatsApp
+button. Send your requirement, text, photos and logo.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question"
+onclick="toggleFaq(this)">
+How quickly will I receive my design?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+Most standard designs can be delivered within 24–48 hours,
+depending on the project and revision requirements.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question"
+onclick="toggleFaq(this)">
+Can I request custom designs?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+Yes. You can request a completely custom design based on
+your business, event, brand colours, content and style.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question"
+onclick="toggleFaq(this)">
+Which file formats are available?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+Final designs can generally be supplied in JPG or PNG.
+Other formats can be discussed for suitable projects.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<button class="faq-question"
+onclick="toggleFaq(this)">
+How do I contact DesignMitra AI?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+WhatsApp: 7047489824<br>
+Email: jatavneeraj479@gmail.com
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact-section" id="contact">
+
+<div class="container">
+
+<div class="contact-grid">
+
+<div>
+
+<div class="mini" style="color:var(--gold)">
+ORDER NOW / ENQUIRY
+</div>
+
+<h2 class="contact-title">
+Let's Create<br>
+<span>Something Amazing.</span>
+</h2>
+
+<p class="contact-text">
+Have a custom requirement? Send your requirement on WhatsApp
+or email. Tell us what you need and we'll get back to you.
+</p>
+
+<a class="primary-btn"
+href="https://wa.me/917047489824?text=Hello%20DesignMitra%20AI%2C%20I%20want%20to%20order%20a%20design."
+target="_blank">
+
+💬 WhatsApp Now →
+
+</a>
+
+</div>
+
+
+<div class="contact-cards">
+
+<a class="contact-card"
+href="https://wa.me/917047489824?text=Hello%20DesignMitra%20AI%2C%20I%20need%20a%20design."
+target="_blank">
+
+<div class="icon">💬</div>
+
+<div>
+<small>WhatsApp</small>
+<strong>7047489824</strong>
+</div>
+
+</a>
+
+
+<a class="contact-card"
+href="mailto:jatavneeraj479@gmail.com?subject=Design%20Enquiry">
+
+<div class="icon">✉</div>
+
+<div>
+<small>Email</small>
+<strong>jatavneeraj479@gmail.com</strong>
+</div>
+
+</a>
+
+
+<div class="contact-card"
+onclick="showToast('Please send your design requirement on WhatsApp.')"
+style="cursor:pointer">
+
+<div class="icon">✦</div>
+
+<div>
+<small>Custom Design</small>
+<strong>Request a Quote →</strong>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="container footer">
+
+<div class="logo">
+
+<div class="logo-mark">D</div>
+
+<div class="logo-text">
+
+<h2>DesignMitra AI</h2>
+
+<small>CREATE • PROMOTE • GROW</small>
+
+</div>
+
+</div>
+
+
+<div class="footer-links">
+
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#how">How It Works</a>
+<a href="#packages">Packages</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+
+<div class="socials">
+
+<a href="https://wa.me/917047489824" target="_blank">◉</a>
+
+<a href="mailto:jatavneeraj479@gmail.com">✉</a>
+
+<a href="#samples">◎</a>
+
+</div>
+
+</div>
+
+<div style="
+text-align:center;
+margin-top:25px;
+font-size:10px;
+color:#766d61;
+">
+
+© 2026 DesignMitra AI. All rights reserved.
+
+</div>
+
+</footer>
+
+
+<!-- ================= FLOATING BUTTONS ================= -->
+
+<div class="floating">
+
+<a class="float-btn"
+style="background:#159447"
+href="https://wa.me/917047489824?text=Hello%20DesignMitra%20AI%2C%20I%20want%20a%20design."
+target="_blank">
+◉
+</a>
+
+<a class="float-btn"
+style="background:#a87828"
+href="mailto:jatavneeraj479@gmail.com">
+✉
+</a>
+
+</div>
+
+
+<!-- ================= SERVICE MODAL ================= -->
+
+<div class="modal" id="serviceModal">
+
+<div class="modal-box">
+
+<button class="close" onclick="closeModal()">×</button>
+
+<div class="modal-icon" id="modalIcon">▣</div>
+
+<h2 id="modalTitle">Poster Maker</h2>
+
+<p id="modalDescription"></p>
+
+<div class="modal-list" id="modalList"></div>
+
+<a id="modalWhatsApp"
+class="primary-btn"
+target="_blank">
+💬 Order This Service →
+</a>
+
+</div>
+
+</div>
+
+
+<!-- ================= IMAGE MODAL ================= -->
+
+<div class="modal" id="imageModal">
+
+<div class="modal-box image-modal">
+
+<button class="close" onclick="closeImage()">×</button>
+
+<img id="previewImage" src="">
+
+</div>
+
+</div>
+
+
+<div class="toast" id="toast"></div>
+
+
+<script>
+
+/* =========================================================
+   DESIGNMITRA AI - MAIN JAVASCRIPT
+   Everything works inside this single HTML file.
+========================================================= */
+
+
+/* ================= MOBILE MENU ================= */
+
+function toggleMenu(){
+
+const nav=document.getElementById("navLinks");
+
+nav.classList.toggle("show");
+
+}
+
+function closeMenu(){
+
+document.getElementById("navLinks").classList.remove("show");
+
+}
+
+function goHome(){
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+
+/* ================= SERVICE DATA ================= */
+
+const services={
+
+poster:{
+icon:"▣",
+title:"Poster Maker",
+description:"Professional posters for businesses, festivals, products, shops, events and promotions. We create visually strong designs that grab attention.",
+items:[
+"Business Promotion Posters",
+"Festival Posters",
+"Product Posters",
+"Shop Offers",
+"Event Posters",
+"Social Media Posters"
+]
+},
+
+invitation:{
+icon:"✉",
+title:"Invitation Card",
+description:"Elegant invitation designs for weddings, birthdays, anniversaries, parties, engagements and special occasions.",
+items:[
+"Wedding Invitation",
+"Birthday Invitation",
+"Engagement Card",
+"Anniversary",
+"Party Invitation",
+"Event Invitation"
+]
+},
+
+visiting:{
+icon:"▤",
+title:"Visiting Card",
+description:"Professional business and personal visiting cards designed to make your first impression memorable.",
+items:[
+"Business Card",
+"Personal Card",
+"Digital Visiting Card",
+"QR Code Card",
+"Premium Brand Card",
+"Minimal Card"
+]
+},
+
+whatsapp:{
+icon:"◉",
+title:"WhatsApp Status",
+description:"Creative WhatsApp status designs for promotions, offers, festivals, announcements, quotes and business marketing.",
+items:[
+"Business Status",
+"Festival Status",
+"Offer Status",
+"Quote Status",
+"Product Status",
+"Animated Status"
+]
+},
+
+instagram:{
+icon:"◎",
+title:"Instagram Post",
+description:"Scroll-stopping Instagram creatives for brands, creators, influencers, shops and businesses.",
+items:[
+"Square Posts",
+"Carousel Designs",
+"Product Promotion",
+"Festival Posts",
+"Quote Posts",
+"Brand Posts"
+]
+},
+
+youtube:{
+icon:"▶",
+title:"YouTube Thumbnail",
+description:"High-impact thumbnails designed to improve attention and make your videos stand out.",
+items:[
+"Gaming Thumbnail",
+"Vlog Thumbnail",
+"Business Thumbnail",
+"Education Thumbnail",
+"News Thumbnail",
+"Click-Worthy Designs"
+]
+},
+
+menu:{
+icon:"☷",
+title:"Menu Card",
+description:"Beautiful restaurant, cafe, food business and digital menu card designs.",
+items:[
+"Restaurant Menu",
+"Cafe Menu",
+"Food Menu",
+"Digital Menu",
+"Price List",
+"Special Offers"
+]
+},
+
+offer:{
+icon:"%",
+title:"Offer / Sale Poster",
+description:"Promotional sale creatives for discounts, launches, seasonal offers and business campaigns.",
+items:[
+"Sale Poster",
+"Discount Poster",
+"Festival Offer",
+"New Launch",
+"Limited Time Offer",
+"Shop Promotion"
+]
+},
+
+catalogue:{
+icon:"▥",
+title:"Product Catalogue",
+description:"Organize your products in a professional visual catalogue that customers can easily understand.",
+items:[
+"Fashion Catalogue",
+"Jewellery Catalogue",
+"Electronics Catalogue",
+"Product Collection",
+"Price Catalogue",
+"Digital Catalogue"
+]
+},
+
+flyer:{
+icon:"▤",
+title:"Business Flyer",
+description:"Promotional flyers for companies, services, events, shops and local businesses.",
+items:[
+"Business Flyer",
+"Service Flyer",
+"Event Flyer",
+"Restaurant Flyer",
+"Real Estate Flyer",
+"Marketing Flyer"
+]
+},
+
+advertisement:{
+icon:"📣",
+title:"Advertisement",
+description:"Creative advertisements designed for digital campaigns, local promotion and business growth.",
+items:[
+"Social Media Ads",
+"Product Ads",
+"Local Business Ads",
+"Event Ads",
+"Brand Ads",
+"Promotional Ads"
+]
+},
+
+caption:{
+icon:"💬",
+title:"Caption Generator",
+description:"Creative captions and marketing copy ideas for social media posts, products and campaigns.",
+items:[
+"Instagram Captions",
+"Product Captions",
+"Business Captions",
+"Festival Captions",
+"Marketing Copy",
+"Hashtag Ideas"
+]
+},
+
+packages:{
+icon:"◆",
+title:"Design Packages",
+description:"Save more with bundled design packages created for businesses and regular content requirements.",
+items:[
+"Starter Package",
+"Business Package",
+"Premium Package",
+"Social Media Bundle",
+"Brand Bundle",
+"Custom Package"
+]
+}
+
+};
+
+
+/* ================= OPEN SERVICE ================= */
+
+function openService(type){
+
+const data=services[type];
+
+if(!data){
+
+document.getElementById("packages").scrollIntoView({
+behavior:"smooth"
+});
+
+return;
+
+}
+
+document.getElementById("modalIcon").textContent=data.icon;
+
+document.getElementById("modalTitle").textContent=data.title;
+
+document.getElementById("modalDescription").textContent=data.description;
+
+
+const list=document.getElementById("modalList");
+
+list.innerHTML="";
+
+data.items.forEach(item=>{
+
+const div=document.createElement("div");
+
+div.textContent="✓ "+item;
+
+list.appendChild(div);
+
+});
+
+
+const message=
+"Hello DesignMitra AI,%0A%0AI want to order:%20"+
+encodeURIComponent(data.title)+
+"%0A%0APlease share details and pricing.";
+
+document.getElementById("modalWhatsApp").href=
+"https://wa.me/917047489824?text="+message;
+
+
+document.getElementById("serviceModal").classList.add("show");
+
+document.body.style.overflow="hidden";
+
+}
+
+
+/* ================= CLOSE MODAL ================= */
+
+function closeModal(){
+
+document.getElementById("serviceModal").classList.remove("show");
+
+document.body.style.overflow="";
+
+}
+
+
+/* ================= IMAGE PREVIEW ================= */
+
+function openImage(src){
+
+document.getElementById("previewImage").src=src;
+
+document.getElementById("imageModal").classList.add("show");
+
+document.body.style.overflow="hidden";
+
+}
+
+function closeImage(){
+
+document.getElementById("imageModal").classList.remove("show");
+
+document.body.style.overflow="";
+
+}
+
+
+/* ================= FAQ ================= */
+
+function toggleFaq(button){
+
+const item=button.parentElement;
+
+const wasActive=item.classList.contains("active");
+
+
+document.querySelectorAll(".faq-item").forEach(el=>{
+
+el.classList.remove("active");
+
+const span=el.querySelector(".faq-question span");
+
+if(span) span.textContent="+";
+
+});
+
+
+if(!wasActive){
+
+item.classList.add("active");
+
+button.querySelector("span").textContent="−";
+
+}
+
+}
+
+
+/* ================= PACKAGE ================= */
+
+function requestPackage(packageName){
+
+const message=
+"Hello DesignMitra AI,%0A%0AI am interested in the "+
+encodeURIComponent(packageName)+
+".%0A%0APlease send me the details and pricing.";
+
+window.open(
+"https://wa.me/917047489824?text="+message,
+"_blank"
+);
+
+}
+
+
+/* ================= TOAST ================= */
+
+function showToast(message){
+
+const toast=document.getElementById("toast");
+
+toast.textContent=message;
+
+toast.classList.add("show");
+
+setTimeout(()=>{
+
+toast.classList.remove("show");
+
+},3000);
+
+}
+
+
+/* ================= CLOSE OUTSIDE MODAL ================= */
+
+document.getElementById("serviceModal").addEventListener("click",function(e){
+
+if(e.target===this){
+
+closeModal();
+
+}
+
+});
+
+
+document.getElementById("imageModal").addEventListener("click",function(e){
+
+if(e.target===this){
+
+closeImage();
+
+}
+
+});
+
+
+/* ================= LANGUAGE SYSTEM ================= */
+
+const translations={
+
+en:{
+badge:"♛ Professional Design Services",
+heroTitle:'Designs Jo Aapke Business Ko Banaye Strong!',
+heroText:"Posters, Invitation Cards, Social Media Posts, Business Cards, Menu Cards aur bhi bahut kuch... Sab kuch ek hi jagah, wo bhi professional quality ke saath.",
+explore:"Explore All Services",
+servicesTitle:"Our Creative Services",
+servicesSub:"Choose your service and get stunning designs for your business or personal needs."
+},
+
+hi:{
+badge:"♛ प्रोफेशनल डिजाइन सेवाएं",
+heroTitle:"ऐसे डिजाइन जो आपके बिजनेस को मजबूत बनाएं!",
+heroText:"पोस्टर, इनविटेशन कार्ड, सोशल मीडिया पोस्ट, बिजनेस कार्ड, मेनू कार्ड और बहुत कुछ — प्रोफेशनल क्वालिटी के साथ।",
+explore:"सभी सेवाएं देखें",
+servicesTitle:"हमारी क्रिएटिव सेवाएं",
+servicesSub:"अपने बिजनेस या पर्सनल जरूरत के अनुसार डिजाइन सेवा चुनें।"
+},
+
+hinglish:{
+badge:"♛ Professional Design Services",
+heroTitle:"Aapke Business Ko Banaye Aur Bhi Strong!",
+heroText:"Poster, invitation, social media, business card aur bahut kuch — sab ek hi jagah professional quality ke saath.",
+explore:"Saari Services Dekho",
+servicesTitle:"Hamari Creative Services",
+servicesSub:"Apni requirement ke according service choose karo aur premium design pao."
+},
+
+mr:{
+badge:"♛ प्रोफेशनल डिझाईन सेवा",
+heroTitle:"तुमच्या व्यवसायाला मजबूत बनवणारे डिझाईन्स!",
+heroText:"पोस्टर, आमंत्रण कार्ड, सोशल मीडिया पोस्ट, बिझनेस कार्ड आणि बरेच काही.",
+explore:"सर्व सेवा पहा",
+servicesTitle:"आमच्या क्रिएटिव्ह सेवा",
+servicesSub:"तुमच्या व्यवसायासाठी योग्य डिझाईन सेवा निवडा."
+},
+
+bn:{
+badge:"♛ পেশাদার ডিজাইন পরিষেবা",
+heroTitle:"আপনার ব্যবসাকে আরও শক্তিশালী করুন!",
+heroText:"পোস্টার, ইনভাইটেশন কার্ড, সোশ্যাল মিডিয়া পোস্ট, বিজনেস কার্ড এবং আরও অনেক কিছু।",
+explore:"সব পরিষেবা দেখুন",
+servicesTitle:"আমাদের ক্রিয়েটিভ পরিষেবা",
+servicesSub:"আপনার ব্যবসা বা ব্যক্তিগত প্রয়োজনের জন্য ডিজাইন বেছে নিন।"
+},
+
+gu:{
+badge:"♛ પ્રોફેશનલ ડિઝાઇન સેવાઓ",
+heroTitle:"તમારા બિઝનેસને વધુ મજબૂત બનાવો!",
+heroText:"પોસ્ટર, ઇન્વિટેશન કાર્ડ, સોશિયલ મીડિયા પોસ્ટ, બિઝનેસ કાર્ડ અને ઘણું બધું.",
+explore:"બધી સેવાઓ જુઓ",
+servicesTitle:"અમારી ક્રિએટિવ સેવાઓ",
+servicesSub:"તમારી જરૂરિયાત મુજબ ડિઝાઇન સેવા પસંદ કરો."
+},
+
+ta:{
+badge:"♛ தொழில்முறை வடிவமைப்பு சேவைகள்",
+heroTitle:"உங்கள் வணிகத்தை மேலும் வலிமையாக்குங்கள்!",
+heroText:"போஸ்டர், அழைப்பிதழ், சமூக ஊடக வடிவமைப்பு, வணிக அட்டை மற்றும் பல.",
+explore:"அனைத்து சேவைகளையும் பார்க்க",
+servicesTitle:"எங்கள் கிரியேட்டிவ் சேவைகள்",
+servicesSub:"உங்கள் வணிகம் அல்லது தனிப்பட்ட தேவைக்கேற்ப வடிவமைப்பை தேர்வு செய்யுங்கள்."
+},
+
+te:{
+badge:"♛ ప్రొఫెషనల్ డిజైన్ సేవలు",
+heroTitle:"మీ వ్యాపారాన్ని మరింత బలంగా చేయండి!",
+heroText:"పోస్టర్లు, ఇన్విటేషన్ కార్డులు, సోషల్ మీడియా పోస్టులు, బిజినెస్ కార్డులు మరియు మరెన్నో.",
+explore:"అన్ని సేవలను చూడండి",
+servicesTitle:"మా క్రియేటివ్ సేవలు",
+servicesSub:"మీ వ్యాపారం లేదా వ్యక్తిగత అవసరాలకు సరైన డిజైన్‌ను ఎంచుకోండి."
+},
+
+kn:{
+badge:"♛ ವೃತ್ತಿಪರ ವಿನ್ಯಾಸ ಸೇವೆಗಳು",
+heroTitle:"ನಿಮ್ಮ ವ್ಯವಹಾರವನ್ನು ಇನ್ನಷ್ಟು ಬಲಪಡಿಸಿ!",
+heroText:"ಪೋಸ್ಟರ್, ಆಹ್ವಾನ ಕಾರ್ಡ್, ಸಾಮಾಜಿಕ ಮಾಧ್ಯಮ ಪೋಸ್ಟ್, ಬಿಸಿನೆಸ್ ಕಾರ್ಡ್ ಮತ್ತು ಇನ್ನಷ್ಟು.",
+explore:"ಎಲ್ಲಾ ಸೇವೆಗಳನ್ನು ನೋಡಿ",
+servicesTitle:"ನಮ್ಮ ಕ್ರಿಯೇಟಿವ್ ಸೇವೆಗಳು",
+servicesSub:"ನಿಮ್ಮ ವ್ಯವಹಾರ ಅಥವಾ ವೈಯಕ್ತಿಕ ಅಗತ್ಯಕ್ಕೆ ಸೂಕ್ತವಾದ ವಿನ್ಯಾಸವನ್ನು ಆಯ್ಕೆಮಾಡಿ."
+},
+
+pa:{
+badge:"♛ ਪ੍ਰੋਫੈਸ਼ਨਲ ਡਿਜ਼ਾਈਨ ਸੇਵਾਵਾਂ",
+heroTitle:"ਆਪਣੇ ਬਿਜ਼ਨਸ ਨੂੰ ਹੋਰ ਮਜ਼ਬੂਤ ਬਣਾਓ!",
+heroText:"ਪੋਸਟਰ, ਇਨਵਿਟੇਸ਼ਨ ਕਾਰਡ, ਸੋਸ਼ਲ ਮੀਡੀਆ ਪੋਸਟ, ਬਿਜ਼ਨਸ ਕਾਰਡ ਅਤੇ ਹੋਰ ਬਹੁਤ ਕੁਝ।",
+explore:"ਸਾਰੀਆਂ ਸੇਵਾਵਾਂ ਵੇਖੋ",
+servicesTitle:"ਸਾਡੀਆਂ ਕ੍ਰੀਏਟਿਵ ਸੇਵਾਵਾਂ",
+servicesSub:"ਆਪਣੇ ਬਿਜ਼ਨਸ ਜਾਂ ਨਿੱਜੀ ਲੋੜ ਲਈ ਡਿਜ਼ਾਈਨ ਚੁਣੋ।"
+}
+
+};
+
+
+function changeLanguage(){
+
+const lang=document.getElementById("language").value;
+
+const t=translations[lang] || translations.en;
+
+
+document.querySelector('[data-i18n="badge"]').textContent=t.badge;
+
+document.querySelector('[data-i18n="heroTitle"]').innerHTML=
+t.heroTitle.replace(
+/(Business|Strong|व्यवसाय|மற்றும்|వ్యాపారం)/g,
+'<span>$1</span>'
+);
+
+document.querySelector('[data-i18n="heroText"]').textContent=t.heroText;
+
+document.querySelector('[data-i18n="explore"]').textContent=t.explore;
+
+document.querySelector('[data-i18n="servicesTitle"]').textContent=t.servicesTitle;
+
+document.querySelector('[data-i18n="servicesSub"]').textContent=t.servicesSub;
+
+
+showToast(
+lang==="hi" ? "भाषा बदल दी गई ✓" :
+lang==="mr" ? "भाषा बदलली ✓" :
+lang==="bn" ? "ভাষা পরিবর্তন হয়েছে ✓" :
+lang==="gu" ? "ભાષા બદલાઈ ગઈ ✓" :
+lang==="ta" ? "மொழி மாற்றப்பட்டது ✓" :
+lang==="te" ? "భాష మార్చబడింది ✓" :
+lang==="kn" ? "ಭಾಷೆ ಬದಲಾಯಿಸಲಾಗಿದೆ ✓" :
+lang==="pa" ? "ਭਾਸ਼ਾ ਬਦਲੀ ਗਈ ✓" :
+"Language changed ✓"
+);
+
+}
+
+
+/* ================= ESC KEY ================= */
+
+document.addEventListener("keydown",function(e){
+
+if(e.key==="Escape"){
+
+closeModal();
+
+closeImage();
+
+}
+
+});
+
+
+/* ================= ACTIVE NAV FEEL ================= */
+
+window.addEventListener("scroll",function(){
+
+const sections=document.querySelectorAll("section[id]");
+
+let current="home";
+
+sections.forEach(section=>{
+
+const top=section.offsetTop-120;
+
+if(window.scrollY>=top){
+
+current=section.id;
+
+}
+
+});
+
+document.querySelectorAll(".nav-links a").forEach(a=>{
+
+a.style.color="";
+
+if(a.getAttribute("href")==="#"+current){
+
+a.style.color="var(--gold2)";
+
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
